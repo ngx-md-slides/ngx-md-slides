@@ -28,5 +28,5 @@ jobs:
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           source_repo_path: teodorachiosa/ngx-md-slides
-          upstream_branch: main # defaults to main
+          upstream_branch: master # defaults to main
           pr_labels: template_sync # defaults to template_sync
