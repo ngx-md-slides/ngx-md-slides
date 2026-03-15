@@ -1,5 +1,4 @@
 import roSlideSetTranslations from '@slides/slide-set1/i18n/ro';
-import roSlideSet2Translations from '@slides/slide-set2/i18n/ro';
 
 const ro = {
   ui: {
@@ -26,8 +25,7 @@ const ro = {
     notFoundSubtitle: '\\Încearcă una din paginile din meniu'
   },
   sets: {
-    set1: roSlideSetTranslations,
-    set2: roSlideSet2Translations,
+    set1: roSlideSetTranslations
   },
 };
 

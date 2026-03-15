@@ -7,7 +7,7 @@ import { CurrentRouteService } from '@shared/services/current-route.service';
   selector: 'app-not-found',
   imports: [TranslatePipe, RouterLink],
   templateUrl: './not-found.html',
-  styleUrl: './not-found.css',
+  styleUrl: './not-found.scss',
 })
 export class NotFound implements OnInit {
   currentRouteService = inject(CurrentRouteService);

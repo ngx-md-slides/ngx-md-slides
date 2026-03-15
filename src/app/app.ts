@@ -22,7 +22,7 @@ const ANCHOR_SCROLL_OFFSET = 200;
   selector: 'app-root',
   imports: [Header, RouterLink, RouterOutlet, TranslatePipe],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.scss',
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
   router = inject(Router);

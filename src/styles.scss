@@ -36,23 +36,23 @@
     /**
   COLORS
   **/
-    --transparency: 80%;
-    --red: color-mix(in srgb, oklch(60% 0.32 25), var(--background) var(--transparency));
-    --orange: color-mix(in srgb, oklch(70% 0.29 70), var(--background) var(--transparency));
-    --yellow: color-mix(in srgb, oklch(75% 0.28 95), var(--background) var(--transparency));
-    --lime: color-mix(in srgb, oklch(72% 0.27 130), var(--background) var(--transparency));
-    --green: color-mix(in srgb, oklch(65% 0.26 145), var(--background) var(--transparency));
-    --emerald: color-mix(in srgb, oklch(62% 0.25 160), var(--background) var(--transparency));
-    --teal: color-mix(in srgb, oklch(60% 0.25 175), var(--background) var(--transparency));
-    --cyan: color-mix(in srgb, oklch(65% 0.24 195), var(--background) var(--transparency));
-    --azure: color-mix(in srgb, oklch(60% 0.25 215), var(--background) var(--transparency));
-    --blue: color-mix(in srgb, oklch(55% 0.27 250), var(--background) var(--transparency));
-    --indigo: color-mix(in srgb, oklch(50% 0.28 270), var(--background) var(--transparency));
-    --violet: color-mix(in srgb, oklch(52% 0.29 290), var(--background) var(--transparency));
-    --purple: color-mix(in srgb, oklch(50% 0.3 305), var(--background) var(--transparency));
-    --magenta: color-mix(in srgb, oklch(55% 0.31 320), var(--background) var(--transparency));
-    --pink: color-mix(in srgb, oklch(65% 0.31 345), var(--background) var(--transparency));
-    --rose: color-mix(in srgb, oklch(68% 0.3 5), var(--background) var(--transparency));
+    --transparency: 85%;
+    --red: color-mix(in srgb, oklch(60% 0.32 25), var(--inverted-text) var(--transparency));
+    --orange: color-mix(in srgb, oklch(70% 0.29 70), var(--inverted-text) var(--transparency));
+    --yellow: color-mix(in srgb, oklch(75% 0.28 95), var(--inverted-text) var(--transparency));
+    --lime: color-mix(in srgb, oklch(72% 0.27 130), var(--inverted-text) var(--transparency));
+    --green: color-mix(in srgb, oklch(65% 0.26 145), var(--inverted-text) var(--transparency));
+    --emerald: color-mix(in srgb, oklch(62% 0.25 160), var(--inverted-text) var(--transparency));
+    --teal: color-mix(in srgb, oklch(60% 0.25 175), var(--inverted-text) var(--transparency));
+    --cyan: color-mix(in srgb, oklch(65% 0.24 195), var(--inverted-text) var(--transparency));
+    --azure: color-mix(in srgb, oklch(60% 0.25 215), var(--inverted-text) var(--transparency));
+    --blue: color-mix(in srgb, oklch(55% 0.27 250), var(--inverted-text) var(--transparency));
+    --indigo: color-mix(in srgb, oklch(50% 0.28 270), var(--inverted-text) var(--transparency));
+    --violet: color-mix(in srgb, oklch(52% 0.29 290), var(--inverted-text) var(--transparency));
+    --purple: color-mix(in srgb, oklch(50% 0.3 305), var(--inverted-text) var(--transparency));
+    --magenta: color-mix(in srgb, oklch(55% 0.31 320), var(--inverted-text) var(--transparency));
+    --pink: color-mix(in srgb, oklch(65% 0.31 345), var(--inverted-text) var(--transparency));
+    --rose: color-mix(in srgb, oklch(68% 0.3 5), var(--inverted-text) var(--transparency));
   }
 
   html.fullscreen {
@@ -155,6 +155,10 @@
 
   .center {
     text-align: center;
+  }
+
+  .bold {
+    font-weight: 700;
   }
 
   .sr-only:not(:focus):not(:focus-visible):not(:active),

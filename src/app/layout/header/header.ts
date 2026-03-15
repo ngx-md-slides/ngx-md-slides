@@ -27,7 +27,7 @@ const WIDTH_MAX = 100;
     PresentationIcon,
   ],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrl: './header.scss',
 })
 export class Header implements OnInit, AfterViewInit {
   stateService = inject(StateService);

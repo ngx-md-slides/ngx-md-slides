@@ -16,6 +16,7 @@
   background: var(--background-color);
   color: var(--slide-text);
 
+
   ::ng-deep .slide-number {
     position: absolute;
     top: 0;
@@ -124,7 +125,19 @@
 
 :host-context(.slide-view) {
   :host {
-    font-size: 3cqi;
+    font-size: 2cqi;
+
+    ::ng-deep h1 {
+      font-size: 6cqi;
+    }
+
+    ::ng-deep h2 {
+      font-size: 4.5cqi;
+    }
+
+    ::ng-deep h3 {
+      font-size: 3cqi;
+    }
 
     aspect-ratio: 16 / 9;
     overflow-x: visible;

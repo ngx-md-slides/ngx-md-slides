@@ -3,18 +3,13 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'slide-set1',
+    redirectTo: 'web-a11y-for-everyone',
     pathMatch: 'full',
   },
   {
-    path: 'slide-set1',
+    path: 'web-a11y-for-everyone',
     loadComponent: () => import('./slides/slide-set1/slide-set1').then((m) => m.SlideSet1),
     data: { title: 'sets.set1.title' },
-  },
-  {
-    path: 'slide-set2',
-    loadComponent: () => import('./slides/slide-set2/slide-set2').then((m) => m.SlideSet2),
-    data: { title: 'sets.set2.title' },
   },
   {
     path: '**',

@@ -9,7 +9,7 @@ import { SlideSet } from '@shared/directives/slide-set/slide-set';
   selector: 'app-slide-set1',
   imports: [SlidesContainer, Slide, Markdown],
   templateUrl: './slide-set1.html',
-  styleUrl: './slide-set1.css',
+  styleUrl: './slide-set1.scss',
 })
 export class SlideSet1 extends SlideSet {
   override setName = 'sets.set1.slides';

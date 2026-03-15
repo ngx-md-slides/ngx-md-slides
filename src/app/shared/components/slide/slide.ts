@@ -5,7 +5,7 @@ import { StateService } from '@shared/services/state.service';
   selector: 'app-slide',
   imports: [],
   templateUrl: './slide.html',
-  styleUrl: './slide.css',
+  styleUrl: './slide.scss',
 })
 export class Slide {
   stateService = inject(StateService);
@@ -25,7 +25,7 @@ export class Slide {
 
   @HostBinding('style.padding')
   @Input()
-  padding: string = '1.5em';
+  padding: string = '2.5em';
 
   @HostBinding('style.boxShadow') get boxShadow() {
     return this.stateService.getState().isFullscreen

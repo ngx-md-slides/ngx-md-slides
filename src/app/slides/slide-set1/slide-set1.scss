@@ -1,0 +1,54 @@
+#slide-1 ::ng-deep {
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(115, 0, 255, 0.25), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 20% 80%, rgba(255, 0, 132, 0.2), transparent 65%),
+    linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 100%);
+
+  .title-slide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span:last-child {
+        font-weight: normal;
+      }
+    }
+
+    .angular-component {
+      --icon-size: 7cqi;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      border: 0.5cqi solid;
+      border-radius: 50%;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+#slide-2 ::ng-deep {
+  .about-me-images {
+    display: inline-flex;
+    gap: 1cqi;
+
+    img {
+      border-radius: 50%;
+      width: 9cqi;
+      height: auto;
+    }
+  }
+}

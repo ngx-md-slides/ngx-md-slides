@@ -1,5 +1,4 @@
 import enSlideSet1Translations from "@slides/slide-set1/i18n/en";
-import enSlideSet2Translations from "@slides/slide-set2/i18n/en";
 
 const en = {
   ui: {
@@ -26,8 +25,7 @@ const en = {
     notFoundSubtitle: '\\Try one of the pages from the menu instead'
   },
   sets: {
-    set1: enSlideSet1Translations,
-    set2: enSlideSet2Translations,
+    set1: enSlideSet1Translations
   },
 };
 

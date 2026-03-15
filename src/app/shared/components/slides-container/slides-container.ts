@@ -15,7 +15,7 @@ import { StateService } from '@shared/services/state.service';
   selector: 'app-slides-container',
   imports: [],
   templateUrl: './slides-container.html',
-  styleUrl: './slides-container.css',
+  styleUrl: './slides-container.scss',
 })
 export class SlidesContainer implements AfterViewInit {
   stateService = inject(StateService);

@@ -3,32 +3,57 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 const md = String.raw;
 
 const enSlideSet1Translations: TranslatedSlideSet = {
-  title: '\\My awesome presentation',
+  title: '\\Web Accessibility for Everyone',
   slides: [
     {
-      backgroundColor: '\\var(--teal)',
+      backgroundColor: '\\var(--violet)',
       content: md`
-# My awesome presentation
+<div class="title-slide">
 
-(made with <span aria-hidden="true">🩷</span><span class="sr-only">love</span>)
+<!--A11yIcon-->
 
-<!--MenuIcon-->
+  <h1>
+    <span>Web Accessibility</span>
+    <span>for Everyone</span>
+  </h1>
 
-<!--SettingsIcon-->
+  <div class="footer">
+    <span>Teodora Chiosa</span>
+    <span>March 2026</span>
+  </div>
+
+</div>
       `,
     },
     {
       backgroundColor: '\\var(--violet)',
       content: md`
-## Some awesome content goes here
+## About me
 
-Link: [Cat - Wikipedia](https://en.wikipedia.org/wiki/Cat)
+<div class="about-me-images">
+  <img src="img/avatar.png" alt="a portrait photo of Teodora smiling at the camera">
+  <img src="img/was.png" alt="the Web Accessibility Specialist badge">
+</div>
 
-> Quote
+### Teodora Chiosa
+- Web Accessibility Specialist, certified by the International Association of Accessibility Professionals (IAAP)
+- Programmer (Frontend Developer), with experience in building reusable interface components for the web
+      `,
+    },
+    {
+      backgroundColor: '\\var(--violet)',
+      content: md`
+## What is Accessibility?
 
-~~~html
-<button>Button text</button>
-~~~
+- The design of products, devices, services, vehicles, or environments to be usable by disabled people. [Accessibility - Wikipedia](https://en.wikipedia.org/wiki/Accessibility)
+      `,
+    },
+    {
+      backgroundColor: '\\var(--violet)',
+      content: md`
+## What is Web Accessibility?
+
+- The design and implementation of websites (as well as PDF documents) so that they can be accessed and used by people with disabilities.
       `,
     },
   ],

@@ -3,10 +3,11 @@ import { inject, signal, OnInit, AfterViewInit, OnDestroy, Directive, WritableSi
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { MenuIcon } from '@shared/components/icons/menu-icon/menu-icon';
-import { SettingsIcon } from '@shared/components/icons/settings-icon/settings-icon';
 import { AttachComponentService } from '@shared/services/attach-component.service';
 import { TranslatedSlide } from '@shared/models/translation.model';
+import { A11yIcon } from '@shared/components/icons/a11y-icon/a11y-icon';
+
+const SHAMEFUL_TIMEOUT = 300;
 
 @Directive({
   selector: '[slide-set]',
@@ -15,8 +16,9 @@ export class SlideSet implements OnInit, AfterViewInit, OnDestroy {
   setName = '';
   attachComponentService = inject(AttachComponentService);
   translateService = inject(TranslateService);
-  components = [MenuIcon, SettingsIcon];
+  components = [A11yIcon];
   slidesContent = signal<TranslatedSlide[]>([]);
+  destroyed = signal<boolean>(false);
   baseTranslation: WritableSignal<TranslatedSlide[]> = signal<TranslatedSlide[]>([]);
   translationsSubscription = Subscription.EMPTY;
   languageChangeSubscription = Subscription.EMPTY;
@@ -44,7 +46,7 @@ export class SlideSet implements OnInit, AfterViewInit, OnDestroy {
     if (this.components?.length) {
       setTimeout(() => {
         this.attachComponents();
-      });
+      }, SHAMEFUL_TIMEOUT);
 
       this.languageChangeSubscription = this.translateService.onLangChange.subscribe(() => {
         setTimeout(() => {
@@ -57,11 +59,14 @@ export class SlideSet implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this.translationsSubscription.unsubscribe();
     this.languageChangeSubscription.unsubscribe();
+    this.destroyed.set(true);
   }
 
   attachComponents(): void {
     this.components.forEach((component) => {
-      this.attachComponentService.attachComponent(component);
+      if(!this.destroyed()) {
+        this.attachComponentService.attachComponent(component);
+      }
     });
   }
 
