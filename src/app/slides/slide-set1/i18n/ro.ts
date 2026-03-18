@@ -71,7 +71,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 ## Ce este accesibilitatea web?
 
 - Proiectarea și implementarea de **site-uri web** (inclusiv documente PDF) astfel încât acestea să poată fi accesate și utilizate de către persoanele cu dizabilități.
-- Aceste site-uri trebuie să fie utilizabile și pe **calculator**, dar și de pe **telefonul mobil**.
+- Aceste site-uri trebuie să fie utilizabile și de pe **calculator**, dar și de pe **telefonul mobil**.
 
 
 <div aria-hidden="true" class="decorative center-text desktop-mobile-emoji">
