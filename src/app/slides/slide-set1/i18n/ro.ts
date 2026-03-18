@@ -17,8 +17,11 @@ const roSlideSetTranslations: TranslatedSlideSet = {
   </h1>
 
   <div class="footer">
-    <span>Teodora Chiosa</span>
-    <span>Martie 2026</span>
+    <span class="presenters">
+      <img src="img/ced-logo.png" alt="CED România - Centrul de excelență prin diversitate">
+      și <strong>Teodora Chiosa</strong>
+    </span>
+    <span>23 Martie 2026</span>
   </div>
 
 </div>
@@ -26,23 +29,41 @@ const roSlideSetTranslations: TranslatedSlideSet = {
     },
     {
       content: md`
-## Despre mine
+## Despre prezentatori: Teodora Chiosa
 
 <div class="about-me-images">
   <img src="img/avatar.png" alt="o poză tip portret cu Teodora zâmbind la cameră">
   <img src="img/was.png" alt="Insigna pentru Specialist în accesibilitate digitală">
 </div>
 
-### Teodora Chiosa
 - Specialist în accesibilitate web, cu certificat obținut de Asociația Internațională a Profesioniștilor în Accesibilitate
-- Programator (Frontend Developer), cu experiență în crearea de componente reutilizabile pentru interfețe web
+- Programator Web, cu experiență în crearea de componente pentru site-uri web
+      `,
+    },
+    {
+      content: md`
+## Despre prezentatori: Constantin Cristache
+
+- Tester accesibilitate web și digitală, utilizator de soluții asistive pentru nevăzători
       `,
     },
     {
       content: md`
 ## Ce este accesibilitatea?
 
-- Proiectarea produselor, dispozitivelor, serviciilor, vehiculelor sau mediilor pentru a fi utilizabile de către **persoanele cu dizabilități**. Sursa: [Accesibilitate - Wikipedia](https://ro.wikipedia.org/wiki/Accesibilitate)
+> Proiectarea produselor, dispozitivelor, serviciilor, vehiculelor sau mediilor pentru a fi utilizabile de către **persoanele cu dizabilități**.
+>
+> Sursa: [Accesibilitate - Wikipedia](https://ro.wikipedia.org/wiki/Accesibilitate)
+      `,
+    },
+    {
+      content: md`
+<img class="fullscreen" src="img/environment/braille-buttons.png" alt="butoane de lift care folosesc sistemul braille">
+      `,
+    },
+    {
+      content: md`
+<img class="fullscreen" src="img/environment/wheelchair-ramp.jpg" alt="o persoană în scaun rulant folosind o rampă de autoturism">
       `,
     },
     {
@@ -50,6 +71,12 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 ## Ce este accesibilitatea web?
 
 - Proiectarea și implementarea de **site-uri web** (inclusiv documente PDF) astfel încât acestea să poată fi accesate și utilizate de către persoanele cu dizabilități.
+- Aceste site-uri trebuie să fie utilizabile și pe **calculator**, dar și de pe **telefonul mobil**.
+
+
+<div style="text-align: center; font-size: 7cqi">
+💻📱📄
+</div>
       `,
     },
   ],

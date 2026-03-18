@@ -9,7 +9,7 @@ export class StateService {
   private state: WritableSignal<State> = signal({} as State);
   private defaultState: State = {
     view: 'slide',
-    maxWidth: 100,
+    maxWidth: 80,
     isDarkMode: true,
     isFullscreen: false,
     currentSlide: 0

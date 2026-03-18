@@ -16,7 +16,6 @@
   background: var(--background-color);
   color: var(--slide-text);
 
-
   ::ng-deep .slide-number {
     position: absolute;
     top: 0;
@@ -24,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.5em;
+    font-size: 0.7em;
     padding: 0 0.6em;
     translate: -100%;
     z-index: -1;
@@ -60,6 +59,7 @@
 
   ::ng-deep img {
     width: 100%;
+    border-radius: 4px;
   }
 
   ::ng-deep blockquote {
@@ -121,14 +121,14 @@
 
 :host-context(.slide-view) {
   :host {
-    font-size: 2cqi;
+    font-size: 2.2cqi;
 
     ::ng-deep h1 {
       font-size: 6cqi;
     }
 
     ::ng-deep h2 {
-      font-size: 4.5cqi;
+      font-size: 3.5cqi;
     }
 
     ::ng-deep h3 {
@@ -138,5 +138,12 @@
     aspect-ratio: 16 / 9;
     overflow-x: visible;
     overflow-y: clip;
+
+    ::ng-deep img.fullscreen {
+      aspect-ratio: 16 / 9;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
   }
 }

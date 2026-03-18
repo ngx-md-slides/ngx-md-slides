@@ -18,8 +18,11 @@ const enSlideSet1Translations: TranslatedSlideSet = {
   </h1>
 
   <div class="footer">
-    <span>Teodora Chiosa</span>
-    <span>March 2026</span>
+    <span class="presenters">
+      <img src="img/ced-logo.png" alt="CED Romania - Center of Excellence Through Diversity">
+      and <strong>Teodora Chiosa</strong>
+    </span>
+    <span>March 23<sup>rd</sup> 2026</span>
   </div>
 
 </div>
@@ -28,32 +31,57 @@ const enSlideSet1Translations: TranslatedSlideSet = {
     {
       backgroundColor: '\\var(--violet)',
       content: md`
-## About me
+## About the speakers: Teodora Chiosa
 
 <div class="about-me-images">
   <img src="img/avatar.png" alt="a portrait photo of Teodora smiling at the camera">
   <img src="img/was.png" alt="the Web Accessibility Specialist badge">
 </div>
 
-### Teodora Chiosa
 - Web Accessibility Specialist, certified by the International Association of Accessibility Professionals (IAAP)
-- Programmer (Frontend Developer), with experience in building reusable interface components for the web
+- Web Programmer, with experience in building interface components for websites
       `,
     },
     {
-      backgroundColor: '\\var(--violet)',
+      content: md`
+## About the speakers: Constantin Cristache
+
+- Web & digital accessibility tester, assistive technology user
+      `,
+    },
+    {
+      backgroundColor: '\\var(--orange)',
       content: md`
 ## What is Accessibility?
 
-- The design of products, devices, services, vehicles, or environments to be usable by disabled people. [Accessibility - Wikipedia](https://en.wikipedia.org/wiki/Accessibility)
+> The design of products, devices, services, vehicles, or environments to be usable by disabled people.
+>
+> Source: [Accessibility - Wikipedia](https://en.wikipedia.org/wiki/Accessibility)
+      `,
+    },
+
+    {
+      content: md`
+<img class="fullscreen" src="img/environment/braille-buttons.png" alt="elevator buttons using the braille system">
       `,
     },
     {
-      backgroundColor: '\\var(--violet)',
+      content: md`
+<img class="fullscreen" src="img/environment/wheelchair-ramp.jpg" alt="a person in a wheelchair using a van's ramp">
+      `,
+    },
+    {
+      backgroundColor: '\\var(--blue)',
       content: md`
 ## What is Web Accessibility?
 
-- The design and implementation of websites (as well as PDF documents) so that they can be accessed and used by people with disabilities.
+- The design and implementation of **websites** (as well as PDF documents) so that they can be accessed and used by people with disabilities.
+- These websites must work well when used from a **personal computer** and from a **mobile device**.
+
+
+<div style="text-align: center; font-size: 7cqi">
+💻📱📄
+</div>
       `,
     },
   ],
