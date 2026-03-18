@@ -20,7 +20,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
   <div class="footer">
     <span class="presenters">
       <img src="img/ced-logo.png" alt="CED Romania - Center of Excellence Through Diversity">
-      and <strong>Teodora Chiosa</strong>
+       and <strong>Teodora Chiosa</strong>
     </span>
     <span>March 23<sup>rd</sup> 2026</span>
   </div>

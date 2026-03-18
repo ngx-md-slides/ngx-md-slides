@@ -19,7 +19,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
   <div class="footer">
     <span class="presenters">
       <img src="img/ced-logo.png" alt="CED România - Centrul de excelență prin diversitate">
-      și <strong>Teodora Chiosa</strong>
+       și <strong>Teodora Chiosa</strong>
     </span>
     <span>23 Martie 2026</span>
   </div>

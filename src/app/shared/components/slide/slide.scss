@@ -116,6 +116,15 @@
 :host-context(.web-view) {
   :host {
     border-radius: var(--radius);
+
+    ::ng-deep img.fullscreen {
+      display: flex;
+      object-fit: cover;
+    }
+
+    &:has(img.fullscreen) {
+      padding: 0 !important;
+    }
   }
 }
 

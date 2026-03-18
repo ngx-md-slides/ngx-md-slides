@@ -1,4 +1,4 @@
-import enSlideSet1Translations from "@slides/slide-set1/i18n/en";
+import enSlideSet1Translations from '@slides/slide-set1/i18n/en';
 
 const en = {
   ui: {
@@ -22,10 +22,12 @@ const en = {
     language: '\\Language',
     present: '\\Present',
     notFoundTitle: '\\Page not found',
-    notFoundSubtitle: '\\Try one of the pages from the menu instead'
+    notFoundSubtitle: '\\Try one of the pages from the menu instead',
+    creditsCreatedUsing: '\\Slides created using the',
+    creditsBy: '\\template developed by',
   },
   sets: {
-    set1: enSlideSet1Translations
+    set1: enSlideSet1Translations,
   },
 };
 
