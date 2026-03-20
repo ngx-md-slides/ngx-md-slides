@@ -241,6 +241,7 @@ Second EU directive
       `,
     },
     {
+      backgroundColor: '\\var(--violet)',
       content: md`
 ## Useful links and sources
       `,

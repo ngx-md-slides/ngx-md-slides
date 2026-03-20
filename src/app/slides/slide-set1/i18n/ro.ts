@@ -324,7 +324,14 @@ Atunci când accesibilitatea este luată în considerare cu adevărat:
     },
     {
       content: md`
-## Cum detectăm un site accesibil?
+## <span aria-hidden="true" class="decorative">💚</span> Cum detectăm un site accesibil?
+
+- Conține o **Declarație de accesibilitate**
+- Este o plăcere să folosești acel site, oricum ai încerca să interacționezi cu acesta
+
+### Demo:
+
+- [Verificări rapide](https://www.w3.org/WAI/test-evaluate/easy-checks/) aplicate pe site-ul [GOV.uk](https://gov.uk).
       `,
     },
     {
