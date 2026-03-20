@@ -248,7 +248,12 @@ Second EU directive
     },
     {
       content: md`
-## QR code presentation
+## Q&A
+      `,
+    },
+    {
+      content: md`
+## QR code
       `,
     },
   ],

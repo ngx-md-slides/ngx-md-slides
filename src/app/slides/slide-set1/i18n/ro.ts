@@ -341,6 +341,11 @@ Atunci când accesibilitatea este luată în considerare cu adevărat:
     },
     {
       content: md`
+## Q&A
+      `,
+    },
+    {
+      content: md`
 ## Cod QR
       `,
     },
