@@ -1,8 +1,8 @@
 #slide-1 ::ng-deep {
   /*title slide*/
   background:
-    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(115, 0, 255, 0.25), transparent 65%),
-    radial-gradient(ellipse 70% 60% at 20% 80%, rgba(255, 0, 132, 0.2), transparent 65%),
+    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(115, 0, 255, 0.20), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 20% 80%, rgba(255, 0, 132, 0.15), transparent 65%),
     linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 100%);
 
   .title-slide {
