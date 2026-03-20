@@ -34,7 +34,6 @@ const enSlideSet1Translations: TranslatedSlideSet = {
 ## About the speakers: </br> <span class="f-w-normal">Teodora Chiosa</span>
 
 <div class="about-me-images">
-  <img src="img/avatar.png" alt="a portrait photo of Teodora smiling at the camera">
   <img src="img/was.png" alt="the Web Accessibility Specialist badge">
 </div>
 
@@ -46,7 +45,8 @@ const enSlideSet1Translations: TranslatedSlideSet = {
       content: md`
 ## About the speakers: </br> <span class="f-w-normal">Constantin Cristache</span>
 
-- Web & digital accessibility tester, blind assistive technology user
+- Web & digital accessibility tester
+- Blind assistive technology user
       `,
     },
     {
@@ -56,7 +56,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
 
 > The design of products, devices, services, vehicles, or environments to be usable by disabled people.
 >
-> Source: [Accessibility - Wikipedia](https://en.wikipedia.org/wiki/Accessibility)
+> [Accessibility - Wikipedia](https://en.wikipedia.org/wiki/Accessibility)
       `,
     },
     {
@@ -94,6 +94,8 @@ const enSlideSet1Translations: TranslatedSlideSet = {
 ## What does a website look like "under the hood"?
 
 We could imagine a website's structure as a box with various other boxes inside.
+
+<div aria-hidden="true" class="decorative package-emoji">📦</div>
       `,
     },
     {
@@ -121,7 +123,7 @@ Reminder: Translate image and add image description...
       `,
     },
     {
-      backgroundColor: '\\var(--green)',
+      backgroundColor: '\\var(--emerald)',
       content: md`
 ## <span aria-hidden="true" class="decorative">✅</span> Example: an accessible button
 
@@ -141,7 +143,7 @@ Spoken screen reader output: <code>Remove button</code>.
       content: md`
 ## <span aria-hidden="true" class="decorative">❌</span> Example: an inaccessible button
 
-Worst case scenario, the boxes:
+Sometimes, the boxes:
 
 - don't have labels
 - have the wrong labels
@@ -158,11 +160,11 @@ Spoken screen reader output: <code>button</code>.
       content: md`
 ## What is the experience of a an actual screen reader user?
 
-Constantin will now speak about his experience...
+**Constantin** will now speak about his experience...
       `,
     },
     {
-      backgroundColor: '\\var(--red)',
+      backgroundColor: '\\var(--emerald)',
       content: md`
 ## Why is web accessibility important?
       `,
@@ -171,11 +173,41 @@ Constantin will now speak about his experience...
       backgroundColor: '\\var(--violet)',
       content: md`
 ## <span aria-hidden="true" class="decorative">⚖️</span> What does the law say?
+
+First EU directive
+      `,
+    },
+    {
+      backgroundColor: '\\var(--violet)',
+      content: md`
+## <span aria-hidden="true" class="decorative">⚖️</span> What does the law say?
+
+Second EU directive
       `,
     },
     {
       content: md`
-### The 4 principles of the accessibility guidelines
+### WCAG
+      `,
+    },
+    {
+      content: md`
+### POUR: Perceivable
+      `,
+    },
+    {
+      content: md`
+### POUR: Operable
+      `,
+    },
+    {
+      content: md`
+### POUR: Understandable
+      `,
+    },
+    {
+      content: md`
+### POUR: Robust
       `,
     },
     {
@@ -185,7 +217,22 @@ Constantin will now speak about his experience...
     },
     {
       content: md`
+## Artificial Intelligence
+      `,
+    },
+    {
+      content: md`
 ## How to tell if a website might truly be accessible?
+      `,
+    },
+    {
+      content: md`
+## Useful links and sources
+      `,
+    },
+    {
+      content: md`
+## QR code presentation
       `,
     },
   ],

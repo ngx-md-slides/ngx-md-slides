@@ -104,8 +104,24 @@
   }
 
   ::ng-deep .interaction-diagram {
-    display: flex;;
+    display: flex;
     place-self: center;
     width: 50%;
+  }
+
+  ::ng-deep .package-emoji {
+    text-align: center;
+    font-size: calc(15 * var(--unit));
+    margin-top: 2%;
+  }
+
+  ::ng-deep .center-pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ::ng-deep :has(.smaller) {
+    font-size: calc(2 * var(--unit));
   }
 }

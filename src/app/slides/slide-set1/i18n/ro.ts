@@ -32,7 +32,6 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 ## Despre prezentatori: </br> <span class="f-w-normal">Teodora Chiosa</span>
 
 <div class="about-me-images">
-  <img src="img/avatar.png" alt="o poză tip portret cu Teodora zâmbind la cameră">
   <img src="img/was.png" alt="Insigna pentru Specialist în accesibilitate digitală">
 </div>
 
@@ -44,7 +43,8 @@ const roSlideSetTranslations: TranslatedSlideSet = {
       content: md`
 ## Despre prezentatori: </br> <span class="f-w-normal">Constantin Cristache</span>
 
-- Tester accesibilitate web și digitală, utilizator de soluții asistive pentru nevăzători
+- Tester accesibilitate web și digitală
+- Utilizator de soluții asistive pentru nevăzători
       `,
     },
     {
@@ -53,7 +53,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 
 > Proiectarea produselor, dispozitivelor, serviciilor, vehiculelor sau mediilor pentru a fi utilizabile de către **persoanele cu dizabilități**.
 >
-> Sursa: [Accesibilitate - Wikipedia](https://ro.wikipedia.org/wiki/Accesibilitate)
+> [Accesibilitate - Wikipedia](https://ro.wikipedia.org/wiki/Accesibilitate)
       `,
     },
     {
@@ -98,6 +98,8 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 ## Cum arată „în spate” un site web?
 
 Ne putem imagina că structura unui site este ca o cutie, cu diverse alte cutii înăuntru.
+
+<div aria-hidden="true" class="decorative package-emoji">📦</div>
       `,
     },
     {
@@ -152,23 +154,23 @@ Rezultat vorbit de un cititor de ecran: <code>Șterge buton</code>.
       content: md`
 ## <span aria-hidden="true" class="decorative">❌</span> Exemplu: un buton inaccesibil
 
-În cel mai rau caz, cutiile:
+Câteodată, cutiile:
 
 - nu au etichete
-- sau au etichetele greșite
+- au etichetele greșite
 
 <!--RemoveButtonBad-->
 
 Rezultat vorbit de un cititor de ecran: <code>buton</code>.
 
-**Ce face butonul?** Nu știu...
+**Ce face butonul?** Nu știu, fiindcă nu are etichetă.
       `,
     },
     {
       content: md`
 ## <span aria-hidden="true" class="decorative">💬</span> Care este experiența unui utilizator de cititor de ecran?
 
-Constantin va vorbi acum despre experiența sa...
+**Constantin** va vorbi acum despre experiența sa...
       `,
     },
     {
@@ -190,17 +192,95 @@ O persoană cu dizabilități ar trebui să poată:
       content: md`
 ## <span aria-hidden="true" class="decorative">⚖️</span> Ce spune legislația?
 
-1. [Directiva (UE) 2016/2102](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32016L2102) privind accesibilitatea site-urilor web și a aplicațiilor mobile ale organismelor din sectorul public
-   - Transpusă în [Ordonanța de urgență nr. 112](https://legislatie.just.ro/Public/DetaliiDocumentAfis/209421)
-2. [Directiva (UE) 2019/882](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32019L0882) privind cerințele de accesibilitate aplicabile produselor și serviciilor
-   - Transpusă în [Legea nr. 232](https://legislatie.just.ro/Public/DetaliiDocument/257778)
+Există **2** legi relevante pentru mediul digital:
 
-Legislația cere ca site-urile să respecte **Ghidul pentru Conținut Web Accesibil**.
+1. [Directiva (UE) 2016/2102](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32016L2102) privind accesibilitatea site-urilor web și a aplicațiilor mobile ale organismelor din sectorul public, transpusă în [Ordonanța de urgență nr. 112/2018](https://legislatie.just.ro/Public/DetaliiDocumentAfis/209421)
+   - Intrată în vigoare între 2019 și 2021
+   - Vizează doar **interacțiunea cu serviciile statului**
       `,
     },
     {
       content: md`
-### Cele 4 principii ale ghidului de accesibilitate
+2. [Directiva (UE) 2019/882](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32019L0882) privind cerințele de accesibilitate aplicabile produselor și serviciilor, transpusă în [Legea nr. 232/2022](https://legislatie.just.ro/Public/DetaliiDocument/257778)
+   - Cunoscută și drept **European Accessibility Act**
+   - Intrată în vigoare în 2025 pentru:
+     - <span aria-hidden="true" class="decorative smaller">💻</span> calculatoare, telefoane (smartphone) și sisteme de operare
+     - <span aria-hidden="true" class="decorative smaller">💵</span> ATM-uri, terminale de plată
+     - <span aria-hidden="true" class="decorative smaller">📺</span> comunicații audio-vizuale (televizor)
+     - <span aria-hidden="true" class="decorative smaller">📞</span> numărul de urgență 112
+     - <span aria-hidden="true" class="decorative smaller">🚋</span> serviciile de transport
+     - <span aria-hidden="true" class="decorative smaller">🪙</span> serviciile bancare
+     - <span aria-hidden="true" class="decorative smaller">🛒</span> site-uri de comerț online (shopping)
+      `,
+    },
+    {
+      content: md`
+### Ghidul de accesibilitate
+
+Legislația cere ca site-urile să respecte **minimul** cerințelor din **Ghidul pentru Conținut Web Accesibil**.
+
+Conținutul trebuie să fie:
+
+- **P**erceptibil
+- **O**perabil
+- **U**șor de înțeles
+- **R**obust
+      `,
+    },
+    {
+      content: md`
+#### Perceptibil
+
+- Text alternativ la imagini
+- Subtitrări la clipuri video
+- Transcrieri la podcasturi și clipuri video
+      `,
+    },
+    {
+      content: md`
+#### Operabil
+
+- Interacțiune fără bariere folosind tastatura
+- Destul timp la dispoziție pentru interacțiune
+- Fără flash-uri de lumină care pot provoca crize epileptice
+- Navigarea ușoară în pagină
+  - Titluri pentru delimitarea conținutului
+  - Câmp de căutare
+  - Focus de la tastatură vizibil, butoane destul de mari
+      `,
+    },
+    {
+      content: md`
+#### Ușor de înțeles
+
+- Conținut clar
+- Așezare în pagină previzibilă
+- Ajutor în identificarea și repararea erorilor
+      `,
+    },
+    {
+      content: md`
+#### Robust
+
+- Respectarea standardelor pentru a îmbunătăți compatibiltatea cu tehnologiile asistive („etichetarea cutiilor”)
+
+<img class="interaction-diagram" src="img/website/user-interaction.png" alt="Diagramă care prezintă în mod simplificat metodele de interacțiune dintre utilizatori și site-uri web. Detalii mai jos.">
+<div class="sr-only">
+  <p>În partea stângă se află un chenar care reprezintă o fereastră de browser. </p>
+  <p>Înăuntrul acestei ferestre se află alte 2 chenare: unul arată reprezentarea vizuală a unui site web, iar cealaltă arată structura arborescentă a aceluiași site - sub formă de cutii.</p>
+  <p>Diagrama arată faptul că primul utilizator navighează vizual și interacționează folosind mouse-ul. Pentru acest lucru folosește reprezentarea vizuală a site-ului.</p>
+  <p>Al doilea utilizator folosește tehnologie asistivă (spre exemplu, un cititor de ecran) și interacționează de fapt cu structura site-ului.</p>
+      `,
+    },
+    {
+      content: md`
+<h3 style="text-align: center">
+  „Minimul <span class="f-w-normal">cerințelor din</span> Ghidul pentru Conținut Web Accesibil”?
+</h3>
+
+<div class="center-pyramid">
+  <img src="img/wcag/levels.png" alt="Diagramă sub formă de piramidă: Nivel A - Suport de bază, Nivel AA - Suport ideal - minimul adoptat de legislație, Nivel AAA - Suport specializat">
+</div>
       `,
     },
     {
@@ -210,7 +290,22 @@ Legislația cere ca site-urile să respecte **Ghidul pentru Conținut Web Accesi
     },
     {
       content: md`
+## Inteligența artificială
+      `,
+    },
+    {
+      content: md`
 ## Cum îți dai seama dacă un site ar putea fi cu adevărat accesibil?
+      `,
+    },
+    {
+      content: md`
+## Linkuri utile și surse
+      `,
+    },
+    {
+      content: md`
+## QR code prezentare
       `,
     },
   ],

@@ -4,8 +4,22 @@
   gap: calc(1 * var(--unit));
 
   button {
+    position: relative;
     padding: calc(1 * var(--unit));
     display: inline-flex;
     gap: calc(1 * var(--unit));
+
+    &:active {
+      scale: 0.95;
+      opacity: 1;
+
+      &::after {
+        content: '';
+        opacity: 1;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+      }
+    }
   }
 }
