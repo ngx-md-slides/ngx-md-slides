@@ -141,13 +141,14 @@ Exemple:
 
 În cel mai fericit caz, cutiile au etichete.
 
-### Persoanele văzătoare văd direct conținutul cutiei:
+Persoanele văzătoare văd direct conținutul cutiei:
 
 <!--RemoveButtonRo-->
 
-### Utilizatorii de cititor de ecran vor auzi eticheta cutiei:
 
-Rezultat vorbit de un cititor de ecran: <code>Șterge buton</code>.
+Utilizatorii de cititor de ecran vor auzi eticheta cutiei:
+
+**Rezultat vorbit de un cititor de ecran**: <code>Șterge buton</code>.
       `,
     },
     {
@@ -161,9 +162,9 @@ Câteodată, cutiile:
 
 <!--RemoveButtonBad-->
 
-Rezultat vorbit de un cititor de ecran: <code>buton</code>.
+**Rezultat vorbit de un cititor de ecran**: <code>buton</code>.
 
-**Ce funcționalitate are butonul?** Nu știu, fiindcă nu are etichetă.
+Ce funcționalitate are butonul? Nu știu, fiindcă nu are etichetă.
       `,
     },
     {

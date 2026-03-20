@@ -129,13 +129,14 @@ Reminder: Translate image and add image description...
 
 Best case scenario, the "boxes" have labels.
 
-### A sighted user sees the box contents directly:
+A sighted user sees the box contents directly:
 
 <!--RemoveButtonEn-->
 
-### Screen reader users hear the label of the box:
 
-Spoken screen reader output: <code>Remove button</code>.
+Screen reader users hear the label of the box:
+
+**Spoken screen reader output**: <code>Remove button</code>.
       `,
     },
     {
@@ -150,7 +151,7 @@ Sometimes, the boxes:
 
 <!--RemoveButtonBad-->
 
-Spoken screen reader output: <code>button</code>.
+**Spoken screen reader output**: <code>button</code>.
 
 **What does the button do?** I don't know...
       `,
