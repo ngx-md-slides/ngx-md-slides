@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: calc(1 * var(--unit));
+  flex-wrap: wrap;
 
   button {
     position: relative;
