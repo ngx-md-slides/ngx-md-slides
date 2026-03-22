@@ -309,11 +309,11 @@ Se prezintă sub forma unui buton poziționat pe deasupra conținutului unui sit
 - Fac **promisiuni pe care nu le pot îndeplini**.
   - Nu abordează toate criteriile cerute de legislație.
   - Nu pot repara structura sau conținutul paginii ci se axează pe îmbunătățiri vizuale.
-- Promovează **lipsa de standardizare**, fiecare overlay fiind puțin diferit de celelalte și oferind funcționalități diferite.
+- Promovează **lipsa de standardizare și compatibilitate**, fiecare overlay fiind diferit.
 - Funcționalitatea oferită de overlay poate fi **greu de găsit** (e.g. buton fără etichetă, buton plasat ultimul în pagină).
 - Poate crea noi bariere.
 
-<span class="smaller">Detalii</span>: [OverlayFactsheet.com](https://overlayfactsheet.com/en/).
+<span class="smaller">Detalii</span>: [Overlay Factsheet](https://overlayfactsheet.com/en/) și [Overlay Timeline](https://overlaytimeline.com/).
       `,
     },
     {
