@@ -80,6 +80,9 @@ export class SlidesContainer implements AfterViewInit {
     }
 
     this.goToSlide(this.currentSlide);
+
+    this.state['currentSlide'] = this.currentSlide;
+    this.stateService.setState(this.state);
   }
 
   goToSlide(slideNumber: number): void {
