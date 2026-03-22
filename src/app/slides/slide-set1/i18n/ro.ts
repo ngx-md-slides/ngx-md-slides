@@ -165,6 +165,8 @@ Câteodată, cutiile:
 **Rezultat vorbit de un cititor de ecran**: <code>buton</code>.
 
 Ce funcționalitate are butonul? Nu știu, fiindcă nu are etichetă.
+
+**Concluzie**: Structura corectă este esențială pentru accesibilitate!
       `,
     },
     {

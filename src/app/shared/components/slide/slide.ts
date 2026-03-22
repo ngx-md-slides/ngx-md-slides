@@ -25,7 +25,7 @@ export class Slide {
 
   @HostBinding('style.padding')
   @Input()
-  padding: string = '2.5em';
+  padding: string = 'calc(5.1 * var(--unit))';
 
   @HostBinding('style.boxShadow') get boxShadow() {
     return this.stateService.getState().isFullscreen
