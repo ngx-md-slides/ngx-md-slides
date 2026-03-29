@@ -37,16 +37,19 @@ const enSlideSet1Translations: TranslatedSlideSet = {
   <img src="img/was.png" alt="the Web Accessibility Specialist badge">
 </div>
 
-- Web Accessibility Specialist, certified by the International Association of Accessibility Professionals (IAAP)
+- [Web Accessibility Specialist](https://www.credly.com/badges/8c7936b4-35be-4aa2-9064-eb57ce746db3/public_url) Web Accessibility Specialist, certified by the International Association of Accessibility Professionals (IAAP)
 - Web Programmer, with experience in building interface components for websites
+- About 6 years of experience with Web Accessibility
       `,
     },
     {
       content: md`
 ## About the speakers: </br> <span class="f-w-normal">Constantin Cristache</span>
 
-- Web & digital accessibility tester
-- Blind assistive technology user
+- **Teacher** at "Iris" Special Theoretical Highschool from Timișoara, Romania
+- **Trainer** at CED Romania
+- Web & digital accessibility **tester**
+- **Blind assistive technology user**
       `,
     },
     {
@@ -73,6 +76,18 @@ const enSlideSet1Translations: TranslatedSlideSet = {
       backgroundColor: '\\var(--blue)',
       content: md`
 ## Types of disabilities
+
+- <span aria-hidden="true" class="decorative">👁️</span> Persons with color blindness, visual impairments (glaucoma, cataracts) or blindness
+- <span aria-hidden="true" class="decorative">👂</span> Persons with hearing impairments or deafness
+- <span aria-hidden="true" class="decorative">🖐️</span> Persons with arthritis, Parkinson's or paralysis
+- <span aria-hidden="true" class="decorative">🧠</span> Persons with ADHD, dyslexia, autism or intelectual disability
+
+<br/>
+
+> Some people have:
+>
+> - **multiple disabilities**
+> - **invisible disabilities**
       `,
     },
     {
@@ -108,18 +123,26 @@ We could imagine a website's structure as a box with various other boxes inside.
       `,
     },
     {
-      backgroundColor: '\\var(--orange)',
+      backgroundColor: '\\var(--pink)',
       content: md`
-## How does a person with disabilities use a website?
+<h2 style="text-align: center">
+  How does a person with disabilities use a website?
+</h2>
 
-Reminder: Translate image and add image description...
+<img class="interaction-diagram" src="img/website/user-interaction-en.png" alt="Diagramă care prezintă în mod simplificat metodele de interacțiune dintre utilizatori și site-uri web. Detalii mai jos.">
       `,
     },
     {
       content: md`
 ## What is assistive technology?
 
-...
+Assistive technology includes software or hardware which **helps persons with disabilities have a better experience when interacting with the digital world**.
+
+Exemple:
+
+- <span aria-hidden="true" class="decorative">🔊</span> **Screen readers** - transforms text to speech
+- <span aria-hidden="true" class="decorative">🔍</span> **Lupa** - makes displayed content larger but more zoomed in
+- <span aria-hidden="true" class="decorative">🗣️</span> **Recunoașterea vocală** - transforms vocal commands into interactions
       `,
     },
     {
@@ -133,7 +156,9 @@ A sighted user sees the box contents directly:
 
 <!--RemoveButtonEn-->
 
-Screen reader users hear the label of the box:
+Screen reader users hear the label of the box.
+
+<br/>
 
 **Spoken screen reader output**: <code>Remove button</code>.
       `,
@@ -150,15 +175,32 @@ Sometimes, the boxes:
 
 <!--RemoveButtonBad-->
 
+<br/>
+<br/>
+
 **Spoken screen reader output**: <code>button</code>.
 
-**What does the button do?** I don't know...
+> The right code and the right structure are essential for accessibility!
       `,
     },
     {
-      backgroundColor: '\\var(--blue)',
+      backgroundColor: '\\var(--yellow)',
       content: md`
 ## Why is web accessibility important?
+
+> Every person has the right to **autonomy**.
+
+A person with disabilities should not encounter barriers when:
+
+<span aria-hidden="true" class="decorative barrier">🚧</span>
+
+- looking up information
+- enjoying a movie
+- shopping online
+- buying museum tickets
+- using their banking app
+- etc.
+
       `,
     },
     {

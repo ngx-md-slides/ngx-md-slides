@@ -37,6 +37,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 
 - [Specialist în accesibilitate web](https://www.credly.com/badges/8c7936b4-35be-4aa2-9064-eb57ce746db3/public_url), cu certificat obținut de la Asociația Internațională a Profesioniștilor în Accesibilitate
 - **Programator Web**, cu experiență în crearea de componente pentru site-uri web
+- În jur de 6 ani de experiență cu Accesibilitatea Web
       `,
     },
     {
@@ -77,6 +78,8 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 - <span aria-hidden="true" class="decorative">🖐️</span> Persoane cu artrită, boala Parkinson sau paralizie
 - <span aria-hidden="true" class="decorative">🧠</span> Persoane cu ADHD, dislexie, autism sau cu dizabilitate intelectuală
 
+<br/>
+
 > Unele persoane pot avea:
 >
 > - **multiple dizabilități**
@@ -114,9 +117,11 @@ Ne putem imagina că structura unui site este ca o cutie, cu diverse alte cutii 
     },
     {
       content: md`
-## Cum folosește o persoană cu dizabilități un site?
+<h2 style="text-align: center">
+  Cum folosește o persoană cu dizabilități un site?
+</h2>
 
-<img class="interaction-diagram" src="img/website/user-interaction.png" alt="Diagramă care prezintă în mod simplificat metodele de interacțiune dintre utilizatori și site-uri web. Detalii mai jos.">
+<img class="interaction-diagram" src="img/website/user-interaction-ro.png" alt="Diagramă care prezintă în mod simplificat metodele de interacțiune dintre utilizatori și site-uri web. Detalii mai jos.">
 <div class="sr-only">
   <p>În partea stângă se află un chenar care reprezintă o fereastră de browser. </p>
   <p>Înăuntrul acestei ferestre se află alte 2 chenare: unul arată reprezentarea vizuală a unui site web, iar cealaltă arată structura arborescentă a aceluiași site - sub formă de cutii.</p>
@@ -128,13 +133,13 @@ Ne putem imagina că structura unui site este ca o cutie, cu diverse alte cutii 
       content: md`
 ## Ce este tehnologia asistivă?
 
-Tehnologia asistivă include software sau hardware ce **permite persoanelor cu dizabilități să interacționeze cu site-urile web**.
+Tehnologia asistivă include software sau hardware ce **oferă persoanelor cu dizabilități o experiență mai bună în interacțiunea cu mediul digital**.
 
 Exemple:
 
-- <span aria-hidden="true" class="decorative">🔊</span> **Cititoare de ecran** - transformă textul în sunet pentru cei ce nu pot citi textul afișat pe ecran
+- <span aria-hidden="true" class="decorative">🔊</span> **Cititoare de ecran** - transformă textul în sunet
 - <span aria-hidden="true" class="decorative">🔍</span> **Lupa** - mărește ce este afișat pe ecran
-- <span aria-hidden="true" class="decorative">🗣️</span> **Recunoașterea vocală** - transformă comenzile vocale în interacțiuni cu site-ul web
+- <span aria-hidden="true" class="decorative">🗣️</span> **Recunoașterea vocală** - transformă comenzile vocale în interacțiuni
       `,
     },
     {
@@ -147,7 +152,9 @@ Persoanele văzătoare văd direct conținutul cutiei:
 
 <!--RemoveButtonRo-->
 
-Utilizatorii de cititor de ecran vor auzi eticheta cutiei:
+Utilizatorii de cititor de ecran vor auzi eticheta cutiei.
+
+<br/>
 
 **Rezultat vorbit de un cititor de ecran**: <code>Șterge buton</code>.
       `,
@@ -163,26 +170,31 @@ Câteodată, cutiile:
 
 <!--RemoveButtonBad-->
 
+<br/>
+<br/>
+
 **Rezultat vorbit de un cititor de ecran**: <code>buton</code>.
 
-Ce funcționalitate are butonul? Nu știu, fiindcă nu are etichetă.
-
-**Concluzie**: Structura corectă și codul corect sunt esențiale pentru accesibilitate!
+> Structura corectă și codul corect sunt esențiale pentru accesibilitate!
       `,
     },
     {
       content: md`
 ## De ce este importantă accesibilitatea web?
 
-Orice persoană are dreptul la **autonomie**.
+> Orice persoană are dreptul la **autonomie**.
 
-O persoană cu dizabilități ar trebui să poată:
+O persoană cu dizabilități nu ar trebui să întâmpine bariere atunci când:
 
-- să găsească informații
-- să vizioneze un film
-- să facă cumpărături
-- să cumpere bilete la muzeu
-- să interogheze un cont bancar etc.
+<span aria-hidden="true" class="decorative barrier">🚧</span>
+
+- caută informații
+- urmărește un film
+- face cumpărături online
+- cumpără bilete la muzeu
+- interoghează un cont bancar
+- etc.
+
       `,
     },
     {
@@ -279,7 +291,7 @@ Exemplu: Text alternativ pentru imaginea cu norul?
 
 - Respectarea **standardelor** pentru a îmbunătăți **compatibiltatea** cu tehnologiile asistive („etichetarea cutiilor”)
 
-<img class="interaction-diagram" style="width: 47%" src="img/website/user-interaction.png" alt="Diagramă care prezintă în mod simplificat metodele de interacțiune dintre utilizatori și site-uri web. Detalii mai jos.">
+<img class="interaction-diagram" style="width: 47%" src="img/website/user-interaction-ro.png" alt="Diagramă care prezintă în mod simplificat metodele de interacțiune dintre utilizatori și site-uri web. Detalii mai jos.">
 <div class="sr-only">
   <p>În partea stângă se află un chenar care reprezintă o fereastră de browser. </p>
   <p>Înăuntrul acestei ferestre se află alte 2 chenare: unul arată reprezentarea vizuală a unui site web, iar cealaltă arată structura arborescentă a aceluiași site - sub formă de cutii.</p>

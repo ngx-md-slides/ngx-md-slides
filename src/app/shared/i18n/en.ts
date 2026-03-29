@@ -23,8 +23,7 @@ const en = {
     present: '\\Present',
     notFoundTitle: '\\Page not found',
     notFoundSubtitle: '\\Try one of the pages from the menu instead',
-    creditsCreatedUsing: '\\Slides created using the',
-    creditsBy: '\\template developed by',
+    creditsBy: '\\Content created by',
   },
   sets: {
     set1: enSlideSet1Translations,
