@@ -172,7 +172,7 @@
     width: 1px;
   }
 
-  @media screen and (width <= 450px) {
+  @media screen and (width <= 500px) {
     .sr-only-mobile {
       clip: rect(0 0 0 0);
       clip-path: inset(100%);
