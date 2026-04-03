@@ -24,7 +24,9 @@ const ro = {
     notFoundTitle: '\\Pagina nu a fost găsită',
     notFoundSubtitle: '\\Încearcă una din paginile din meniu',
     creditsBy: '\\Conținut creat de',
-    external: '\\extern'
+    external: '\\extern',
+    disclaimerTitle: '\\Notă',
+    disclaimerBody: '\\Acest site este în curs de dezvoltare!'
   },
   sets: {
     set1: roSlideSetTranslations
