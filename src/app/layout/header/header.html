@@ -5,7 +5,7 @@
           command="toggle-popover"
           aria-haspopup="dialog">
     <app-menu-icon class="icon"></app-menu-icon>
-    {{'ui.menu' | translate}}
+    <span class="sr-only-mobile">{{'ui.menu' | translate}}</span>
   </button>
 
   <dialog popover
@@ -32,7 +32,7 @@
           command="toggle-popover"
           aria-haspopup="dialog">
     <app-settings-icon class="icon"></app-settings-icon>
-    {{'ui.settings' | translate}}
+    <span class="sr-only-mobile">{{'ui.settings' | translate}}</span>
   </button>
 
   <dialog popover
@@ -139,7 +139,7 @@
           id="present"
           class="header-option">
     <app-presentation-icon class="icon"></app-presentation-icon>
-    {{'ui.present' | translate}}
+    <span class="sr-only-mobile">{{'ui.present' | translate}}</span>
     <span aria-hidden="true"
           class="kbd-shortcut">(<kbd>Ctrl</kbd> + <kbd>F5</kbd>)
     </span>
