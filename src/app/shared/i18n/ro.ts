@@ -23,7 +23,8 @@ const ro = {
     present: '\\Prezintă',
     notFoundTitle: '\\Pagina nu a fost găsită',
     notFoundSubtitle: '\\Încearcă una din paginile din meniu',
-    creditsBy: '\\Conținut creat de'
+    creditsBy: '\\Conținut creat de',
+    external: '\\extern'
   },
   sets: {
     set1: roSlideSetTranslations
