@@ -201,16 +201,16 @@ O persoană cu dizabilități nu ar trebui să întâmpine bariere atunci când:
       content: md`
 ## <span aria-hidden="true" class="decorative">⚖️</span> Ce spune legislația?
 
-Există două legi relevante pentru mediul digital:
+Există două legi relevante pentru mediul digital (în Europa):
 
-1. [Directiva (UE) 2016/2102](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32016L2102) privind accesibilitatea site-urilor web și a aplicațiilor mobile ale organismelor din sectorul public, transpusă în [Ordonanța de urgență nr. 112/2018](https://legislatie.just.ro/Public/DetaliiDocumentAfis/209421)
+1. [Directiva (UE) 2016/2102](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32016L2102) - accesibilitatea site-urilor web și a aplicațiilor mobile ale organismelor din sectorul public, transpusă în [Ordonanța de urgență nr. 112/2018](https://legislatie.just.ro/Public/DetaliiDocumentAfis/209421)
    - Intrată în vigoare între 2019 și 2021
-   - Vizează doar **interacțiunea cu serviciile statului**
+   - Vizează doar **serviciile statului**
       `,
     },
     {
       content: md`
-2. [Directiva (UE) 2019/882](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32019L0882) privind cerințele de accesibilitate aplicabile produselor și serviciilor, transpusă în [Legea nr. 232/2022](https://legislatie.just.ro/Public/DetaliiDocument/257778)
+2. [Directiva (UE) 2019/882](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32019L0882) - cerințele de accesibilitate aplicabile produselor și serviciilor, transpusă în [Legea nr. 232/2022](https://legislatie.just.ro/Public/DetaliiDocument/257778)
    - Cunoscută și drept **European Accessibility Act**
    - Intrată în vigoare în 2025 pentru:
      - <span aria-hidden="true" class="decorative smaller">💻</span> calculatoare, telefoane (smartphone) și sisteme de operare

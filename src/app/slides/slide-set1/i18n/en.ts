@@ -200,28 +200,41 @@ A person with disabilities should not encounter barriers when:
 - buying museum tickets
 - using their banking app
 - etc.
-
       `,
     },
     {
       backgroundColor: '\\var(--violet)',
       content: md`
-## <span aria-hidden="true" class="decorative">⚖️</span> What does the law say (1)?
+## <span aria-hidden="true" class="decorative">⚖️</span> What does the law say?
 
-First EU directive
+There two main laws relevant for the digital world (in Europe):
+
+1. [EU Directive 2016/2102](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32016L2102) - website and mobile application accessibility for the public sector
+   - Came into effect between 2019 and 2021
+   - Only applies to **government services**
       `,
     },
     {
       backgroundColor: '\\var(--violet)',
       content: md`
-## <span aria-hidden="true" class="decorative">⚖️</span> What does the law say (2)?
-
-Second EU directive
+2. [EU Directive 2019/882](https://eur-lex.europa.eu/legal-content/RO/TXT/HTML/?uri=CELEX:32019L0882) - accessability requirements for products and services
+   - Also known as **European Accessibility Act**
+   - Came into effect in 2025 and covers:
+     - <span aria-hidden="true" class="decorative smaller">💻</span> PCs, smartphones and operating systems
+     - <span aria-hidden="true" class="decorative smaller">💵</span> ATMs, self-pay terminals
+     - <span aria-hidden="true" class="decorative smaller">📺</span> audio-visual communication (TV)
+     - <span aria-hidden="true" class="decorative smaller">📞</span> the 112 emergency number
+     - <span aria-hidden="true" class="decorative smaller">🚋</span> transport services
+     - <span aria-hidden="true" class="decorative smaller">🪙</span> banking services
+     - <span aria-hidden="true" class="decorative smaller">🛒</span> e-commerce (shopping) websites
+     - <span aria-hidden="true" class="decorative smaller">📙</span> e-books
       `,
     },
     {
       content: md`
-### WCAG
+### The accessibility guidelines
+
+The laws require that websites apply the **minimum** requirements of the **[Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG22/)** (WCAG)
       `,
     },
     {
