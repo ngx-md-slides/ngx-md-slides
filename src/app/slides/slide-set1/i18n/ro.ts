@@ -111,7 +111,7 @@ Ne putem imagina că structura unui site este ca o cutie, cu diverse alte cutii 
       content: md`
 <div class="side-by-side">
   <img src="img/website/boxes.jpg" alt="cutii de carton aranjate haotic și fără etichete">
-  <img src="img/website/boxes-labelled-ro.png" alt="cutii de carton cu etichete. Pe majoritatea cutiilor există etichete pe care scrie: cabluri, haine, cărți, documente, poze">
+  <img src="img/website/boxes-labelled-ro.png" alt="cutii de carton cu etichete. Pe majoritatea cutiilor există etichete: cabluri, haine, cărți, documente, poze">
 </div>
       `,
     },
@@ -137,7 +137,7 @@ Tehnologia asistivă include software sau hardware ce **oferă persoanelor cu di
 
 Exemple:
 
-- <span aria-hidden="true" class="decorative">🔊</span> **Cititoare de ecran** - transformă textul în sunet
+- <span aria-hidden="true" class="decorative">🔊</span> **Cititoare de ecran** - transformă textul în vorbire (sunet)
 - <span aria-hidden="true" class="decorative">🔍</span> **Lupa** - mărește ce este afișat pe ecran
 - <span aria-hidden="true" class="decorative">🗣️</span> **Recunoașterea vocală** - transformă comenzile vocale în interacțiuni
       `,
@@ -168,7 +168,7 @@ Câteodată, cutiile:
 - nu au etichete
 - au etichetele greșite
 
-<!--RemoveButtonBad-->
+<!--RemoveButtonBad--> (nu se vede, dar acest buton nu are etichetă în cod)
 
 <br/>
 <br/>

@@ -138,11 +138,11 @@ We could imagine a website's structure as a box with various other boxes inside.
 
 Assistive technology includes software or hardware which **helps persons with disabilities have a better experience when interacting with the digital world**.
 
-Exemple:
+Examples:
 
 - <span aria-hidden="true" class="decorative">🔊</span> **Screen readers** - transforms text to speech
 - <span aria-hidden="true" class="decorative">🔍</span> **Lupa** - makes displayed content larger but more zoomed in
-- <span aria-hidden="true" class="decorative">🗣️</span> **Recunoașterea vocală** - transforms vocal commands into interactions
+- <span aria-hidden="true" class="decorative">🗣️</span> **Recunoașterea vocală** - transforms vocal commands to interactions
       `,
     },
     {
@@ -150,7 +150,7 @@ Exemple:
       content: md`
 ## <span aria-hidden="true" class="decorative">✅</span> Example: an accessible button
 
-Best case scenario, the "boxes" have labels.
+Best case scenario, the boxes have labels.
 
 A sighted user sees the box contents directly:
 
@@ -173,7 +173,7 @@ Sometimes, the boxes:
 - don't have labels
 - have the wrong labels
 
-<!--RemoveButtonBad-->
+<!--RemoveButtonBad--> (you can't see it, but this button doesn't have a label in the code)
 
 <br/>
 <br/>
