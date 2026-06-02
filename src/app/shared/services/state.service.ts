@@ -13,10 +13,10 @@ export class StateService {
   private defaultState: State = {
     view: 'slide',
     maxWidth: 100,
-    isDarkMode: true,
+    isDarkMode: this.getPrefersColorScheme(),
     isFullscreen: false,
     currentSlide: 0,
-    language: 'en'
+    language: 'en',
   };
 
   constructor() {
@@ -28,7 +28,6 @@ export class StateService {
         this.setState(localStorageDefault);
       }
     }
-
   }
 
   getState(): State {
@@ -41,5 +40,12 @@ export class StateService {
     if (newState !== this.defaultState) {
       this.localStorageService.setToLocalStorage(this.state());
     }
+  }
+
+  getPrefersColorScheme(): boolean {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return true;
   }
 }

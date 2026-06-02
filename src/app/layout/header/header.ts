@@ -63,9 +63,6 @@ export class Header implements OnInit, AfterViewInit {
     this.maxWidth = this.stateService.getState().maxWidth;
     this.updateMaxWidth();
 
-    if (typeof window !== 'undefined') {
-      this.isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
     this.isDarkMode = this.stateService.getState().isDarkMode;
     this.updateDarkMode();
 
