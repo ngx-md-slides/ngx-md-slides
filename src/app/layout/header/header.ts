@@ -26,7 +26,7 @@ const WIDTH_MAX = 100;
     MenuIcon,
     SettingsIcon,
     PresentationIcon,
-    Logo
+    Logo,
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
@@ -58,12 +58,19 @@ export class Header implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.view = this.stateService.getState().view;
+    this.updateView();
+
     this.maxWidth = this.stateService.getState().maxWidth;
-    this.isDarkMode = this.stateService.getState().isDarkMode;
+    this.updateMaxWidth();
 
     if (typeof window !== 'undefined') {
       this.isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
+    this.isDarkMode = this.stateService.getState().isDarkMode;
+    this.updateDarkMode();
+
+    this.language = this.stateService.getState().language as ContentLanguage;
+    this.switchLanguage(this.language);
   }
 
   ngAfterViewInit(): void {
@@ -94,7 +101,12 @@ export class Header implements OnInit, AfterViewInit {
   }
 
   setColorScheme(): void {
-    document.documentElement.style.setProperty('color-scheme', this.isDarkMode ? 'dark' : 'light');
+    if (typeof document !== 'undefined') {
+      document.documentElement.style.setProperty(
+        'color-scheme',
+        this.isDarkMode ? 'dark' : 'light',
+      );
+    }
   }
 
   toggleDarkMode(): void {
@@ -134,7 +146,9 @@ export class Header implements OnInit, AfterViewInit {
       this.rootElement?.classList.add('fullscreen');
       this.updateFullscreenStateAndUI(true);
       setTimeout(() => {
-        this.document.querySelectorAll<HTMLElement>('app-slide')[this.stateService.getState().currentSlide ?? 0]?.focus();
+        this.document
+          .querySelectorAll<HTMLElement>('app-slide')
+          [this.stateService.getState().currentSlide ?? 0]?.focus();
       });
     }
   }
@@ -145,19 +159,22 @@ export class Header implements OnInit, AfterViewInit {
     this.rootElement?.classList.remove('fullscreen');
     this.updateFullscreenStateAndUI(false);
 
-    this.document.querySelectorAll<HTMLElement>('app-slide')[this.stateService.getState().currentSlide ?? 0]?.focus();
+    this.document
+      .querySelectorAll<HTMLElement>('app-slide')
+      [this.stateService.getState().currentSlide ?? 0]?.focus();
   }
 
   updateFullscreenStateAndUI(isFullscreen: boolean): void {
     this.state['isFullscreen'] = isFullscreen;
     this.stateService.setState(this.state);
-
   }
 
   switchLanguage(language: ContentLanguage): void {
     this.translateService.use(language);
-
     this.document.documentElement.setAttribute('lang', language);
+
+    this.state['language'] = language;
+    this.stateService.setState(this.state);
   }
 
   closeMenuPopover(): void {
