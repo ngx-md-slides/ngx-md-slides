@@ -19,7 +19,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
 
   <div class="footer">
     <span class="presenters">
-      <img src="img/ced-logo.png" class="ced-logo" width="480" height="100" alt="CED Romania - Center of Excellence Through Diversity">
+      <img src="img/ced-logo.webp" class="ced-logo" width="480" height="100" alt="CED Romania - Center of Excellence Through Diversity">
        and <strong>Teodora Chiosa</strong>
     </span>
     <span>March 23<sup>rd</sup> 2026</span>
@@ -34,7 +34,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
 ## About the speakers: </br> <span class="f-w-normal">Teodora Chiosa</span>
 
 <div class="about-me-images">
-  <img src="img/was.png" width="1" height="1" alt="the Web Accessibility Specialist badge">
+  <img src="img/was.webp" width="1" height="1" alt="the Web Accessibility Specialist badge">
 </div>
 
 - [Web Accessibility Specialist](https://www.credly.com/badges/8c7936b4-35be-4aa2-9064-eb57ce746db3/public_url) Web Accessibility Specialist, certified by the International Association of Accessibility Professionals (IAAP)
