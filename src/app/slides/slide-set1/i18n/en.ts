@@ -34,7 +34,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
 ## About the speakers: </br> <span class="f-w-normal">Teodora Chiosa</span>
 
 <div class="about-me-images">
-  <img fetchpriority="high" src="img/was.webp" width="1" height="1" alt="the Web Accessibility Specialist badge">
+  <img fetchpriority="high" src="img/was.webp" width="600" height="600" alt="the Web Accessibility Specialist badge">
 </div>
 
 - [Web Accessibility Specialist](https://www.credly.com/badges/8c7936b4-35be-4aa2-9064-eb57ce746db3/public_url) Web Accessibility Specialist, certified by the International Association of Accessibility Professionals (IAAP)

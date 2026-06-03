@@ -34,7 +34,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 ## Despre prezentatori: </br> <span class="f-w-normal">Teodora Chiosa</span>
 
 <div class="about-me-images">
-  <img fetchpriority="high" src="img/was.webp" width="1" height="1" alt="Insigna pentru Specialist în accesibilitate digitală">
+  <img fetchpriority="high" src="img/was.webp" width="600" height="600" alt="Insigna pentru Specialist în accesibilitate digitală">
 </div>
 
 - [Specialist în accesibilitate web](https://www.credly.com/badges/8c7936b4-35be-4aa2-9064-eb57ce746db3/public_url), cu certificat obținut de la Asociația Internațională a Profesioniștilor în Accesibilitate
