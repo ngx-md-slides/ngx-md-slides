@@ -154,13 +154,13 @@ Exemple:
       content: md`
 ## <span aria-hidden="true" class="decorative">✅</span> Exemplu: un buton accesibil
 
-În cel mai fericit caz, cutiile au etichete.
+În cel mai fericit caz, „cutiile” au etichete.
 
-Persoanele văzătoare văd direct conținutul cutiei:
+Persoanele văzătoare văd direct conținutul „cutiei”:
 
 <!--RemoveButtonRo-->
 
-Utilizatorii de cititor de ecran vor auzi eticheta cutiei.
+Utilizatorii de cititor de ecran vor auzi eticheta „cutiei”.
 
 <br/>
 
@@ -172,17 +172,17 @@ Utilizatorii de cititor de ecran vor auzi eticheta cutiei.
       content: md`
 ## <span aria-hidden="true" class="decorative">❌</span> Exemplu: un buton inaccesibil
 
-Câteodată, cutiile:
+Câteodată, „cutiile”:
 
 - nu au etichete
 - au etichetele greșite
 
-<!--RemoveButtonBad--> (nu se vede, dar acest buton nu are etichetă în cod)
+<!--RemoveButtonBad--> (Nu se vede, dar acest buton nu are etichetă în cod)
 
 <br/>
 <br/>
 
-**Rezultat vorbit de un cititor de ecran**: <code>buton</code>.
+**Rezultat vorbit de un cititor de ecran**: <code>buton</code>. **Ce scop are butonul?**
 
 > Structura corectă și codul corect sunt esențiale pentru accesibilitate!
       `,
@@ -318,7 +318,7 @@ Exemplu: Text alternativ pentru imaginea cu norul?
 </h3>
 
 <div class="center-pyramid">
-  <img src="img/wcag/levels.png" alt="Diagramă sub formă de piramidă: Nivel A - Suport de bază, Nivel AA - Suport ideal - minimul adoptat de legislație, Nivel AAA - Suport specializat">
+  <img src="img/wcag/levels-ro.png" alt="Diagramă sub formă de piramidă: Nivel A - Suport de bază, Nivel AA - Suport ideal - minimul adoptat de legislație, Nivel AAA - Suport specializat">
 </div>
       `,
     },
@@ -345,7 +345,7 @@ Se prezintă sub forma unui buton poziționat pe deasupra conținutului unui sit
   - Nu abordează toate criteriile cerute de legislație.
   - Nu pot repara structura sau conținutul paginii ci se axează pe îmbunătățiri vizuale.
 - Promovează **lipsa de standardizare și compatibilitate**, fiecare overlay fiind diferit.
-- Funcționalitatea oferită de overlay poate fi **greu de găsit** (e.g. buton fără etichetă, buton plasat ultimul în pagină).
+- Funcționalitatea oferită de overlay poate fi **greu de găsit** (e.g. buton fără etichetă, buton plasat printre ultimele elemente în pagină).
 - Poate crea noi bariere.
 
 <span class="smaller">Detalii</span>: [Overlay Factsheet](https://overlayfactsheet.com/en/) și [Overlay Timeline](https://overlaytimeline.com/).
@@ -364,7 +364,7 @@ Se prezintă sub forma unui buton poziționat pe deasupra conținutului unui sit
 Atunci când accesibilitatea este luată în considerare cu adevărat:
 
 - este **planificată** și **integrată în procesul de lucru** al designerilor, programatorilor, testerilor
-- poate dura de la câteva luni până la câțiva ani pentru o remediere inițială (depinde de dimensiunea site-ului)
+- poate dura câteva luni pentru o remediere inițială (pentru site-uri complexe și cu multe pagini)
 - este mereu luată în considerare când un site primește funcționalități noi
       `,
     },
@@ -373,8 +373,8 @@ Atunci când accesibilitatea este luată în considerare cu adevărat:
       content: md`
 ## <span aria-hidden="true" class="decorative">💚</span> Cum detectăm un site accesibil?
 
-- Conține o **Declarație de accesibilitate**.
-- Este o plăcere să folosești site-ul, oricum ai încerca să interacționezi cu acesta.
+- Conține o **Declarație de Accesibilitate**.
+- Este o plăcere să folosești site-ul, oricum ai încerca să interacționezi cu acesta (cu mouse-ul, tastatura, tehnologia asistivă etc.).
 
 ### Demo:
 

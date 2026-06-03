@@ -105,7 +105,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
     {
       backgroundColor: '\\var(--orange)',
       content: md`
-## What does a website look like "under the hood"?
+## What does a website look like "behind the scenes"?
 
 We could imagine a website's structure as a box with various other boxes inside.
 
@@ -149,13 +149,13 @@ Examples:
       content: md`
 ## <span aria-hidden="true" class="decorative">✅</span> Example: an accessible button
 
-Best case scenario, the boxes have labels.
+Best case scenario, the "boxes" have labels.
 
-A sighted user sees the box contents directly:
+A sighted user sees the "box" contents directly:
 
 <!--RemoveButtonEn-->
 
-Screen reader users hear the label of the box.
+Screen reader users hear the label of the "box".
 
 <br/>
 
@@ -167,17 +167,17 @@ Screen reader users hear the label of the box.
       content: md`
 ## <span aria-hidden="true" class="decorative">❌</span> Example: an inaccessible button
 
-Sometimes, the boxes:
+Sometimes, the "boxes":
 
 - don't have labels
 - have the wrong labels
 
-<!--RemoveButtonBad--> (you can't see it, but this button doesn't have a label in the code)
+<!--RemoveButtonBad--> (You can't see it, but this button doesn't have a label in the code)
 
 <br/>
 <br/>
 
-**Spoken screen reader output**: <code>button</code>.
+**Spoken screen reader output**: <code>button</code>. **What's its purpose?**
 
 > The right code and the right structure are essential for accessibility!
       `,
@@ -295,49 +295,90 @@ Example: Alternative text for the cloud image?
     },
     {
       content: md`
-## Minimum support?
+<h3 style="text-align: center">
+  <span class="f-w-normal">"The </span>minimum <span class="f-w-normal">requirements of the Web Content Accessibility Guidelines"?</span>
+</h3>
+
+<div class="center-pyramid">
+  <img src="img/wcag/levels-en.png" alt="Pyramid diagram showing WCAG levels: Level A - Essential support, Level AA - Ideal support - the minimum adopted by legislation, and Level AAA - Specialized support">
+</div>
       `,
     },
     {
       backgroundColor: '\\var(--blue)',
       content: md`
-## Quick solutions... are they effective?
-      `,
-    },
+<img class="float-overlay" src="img/website/overlay.png" alt="">
 
+## Quick fixes... </br><span class="f-w-normal">Are they effective?</span>
+
+Some companies offer accessibility solutions called **overlays**.
+
+They are easy to install on websites.
+
+They usually look like a button that goes on top of the website's content.
+      `,
+    },
     {
       backgroundColor: '\\var(--red)',
       content: md`
-### The issues with overlays
+### <span aria-hidden="true" class="decorative">❌</span> The problem with overlays
+
+- They **make promises they can't keep**.
+  - They don't handle all the criteria required by legislation
+  - They can't repair the structure or content of the web page, instead focusing mostly on visual improvements
+- They promote **poor standardization and compatibility** because each overlay product is different.
+- Overlay functionalities can be **hard to reach** (e.g. unlabeled button, overlay button as one of the last elements in the page).
+- They can create new barriers.
+
+<span class="smaller">Details</span>: [Overlay Factsheet](https://overlayfactsheet.com/en/) and [Overlay Timeline](https://overlaytimeline.com/).
       `,
     },
     {
       content: md`
-Lawsuit screenshot
+<img class="fullscreen" src="img/website/lawsuit.png" alt="a screenshot of an article with the title: FTC orders AI accessibility startup accessiBe to pay $1M for misleading advertising">
       `,
     },
     {
       backgroundColor: '\\var(--red)',
       content: md`
-## A website with an overlay does not mean an accessible website!
+### A website with an overlay <br> <span class="nu">doesn't mean</span> an accessible website!
+
+When accessibility is truly taken into consideration:
+
+- it's **planned** and **integrated into the workflow** of designers, engineers, testers
+- it can take months for an initial remediation (for large and complex websites)
+- accessibility is always taken into account when new features are added
       `,
     },
     {
       backgroundColor: '\\var(--green)',
       content: md`
-## How to tell if a website might truly be accessible?
+## <span aria-hidden="true" class="decorative">💚</span> How to tell if a website is indeed accessible?
+
+- It contains an **Accessibility Statement**.
+- It's a breeze to use the website, no matter how you try to interact with it (using mouse, keyboard, assistive technology etc.).
+
+### Demo:
+
+- [Easy checks](https://www.w3.org/WAI/test-evaluate/easy-checks/) that can be applied to [GOV.uk](https://gov.uk).
       `,
     },
     {
       backgroundColor: '\\var(--violet)',
       content: md`
-## Useful links and sources
+## Resources
+
+- [European Accessibility Act (EAA)](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en)
+- [WCAG 2 at a Glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)
+- [NVDA](https://www.nvaccess.org/download/) - Screen reader (Windows)
       `,
     },
     {
       backgroundColor: '\\var(--green)',
       content: md`
-## Q&A
+## <span aria-hidden="true" class="decorative">💭</span> Questions and answers
+
+<img class="q-and-a-img" src="img/q-and-a.png" alt="">
       `,
     },
   ],
