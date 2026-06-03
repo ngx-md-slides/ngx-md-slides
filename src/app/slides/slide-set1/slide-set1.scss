@@ -48,6 +48,7 @@
 
         img {
           width: calc(18 * var(--unit));
+          height: auto;
           padding: calc(1.1 * var(--unit));
           background: #fff;
           border-radius: calc(1 * var(--unit));

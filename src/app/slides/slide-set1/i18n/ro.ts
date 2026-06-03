@@ -19,7 +19,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 
   <div class="footer">
     <span class="presenters">
-      <img src="img/ced-logo.png" class="ced-logo" alt="CED România - Centrul de excelență prin diversitate">
+      <img src="img/ced-logo.png" class="ced-logo" width="480" height="100" alt="CED România - Centrul de excelență prin diversitate">
        și <strong>Teodora Chiosa</strong>
     </span>
     <span>23 Martie 2026</span>
@@ -34,7 +34,7 @@ const roSlideSetTranslations: TranslatedSlideSet = {
 ## Despre prezentatori: </br> <span class="f-w-normal">Teodora Chiosa</span>
 
 <div class="about-me-images">
-  <img src="img/was.png" alt="Insigna pentru Specialist în accesibilitate digitală">
+  <img src="img/was.png" width="1" height="1" alt="Insigna pentru Specialist în accesibilitate digitală">
 </div>
 
 - [Specialist în accesibilitate web](https://www.credly.com/badges/8c7936b4-35be-4aa2-9064-eb57ce746db3/public_url), cu certificat obținut de la Asociația Internațională a Profesioniștilor în Accesibilitate
