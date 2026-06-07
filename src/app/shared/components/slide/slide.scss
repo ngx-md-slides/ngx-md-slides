@@ -92,13 +92,13 @@
 
   ::ng-deep code.hljs {
     background: oklch(0 0 347 / 0.87);
-    font-family: var(--mono-font);
+    font-family: var(--code-font);
     border-radius: var(--radius);
   }
 
   ::ng-deep code:not(.hljs) {
     background: var(--slides-background-light);
-    font-family: var(--mono-font);
+    font-family: var(--code-font);
     padding: 0.2em;
     border-radius: var(--radius);
   }
