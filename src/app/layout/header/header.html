@@ -127,10 +127,11 @@
     <div class="option">
       <span class="span-label"
             id="dark-mode-title">{{'ui.darkMode' | translate}}</span>
-      <button id="dark-mode"
-              [attr.aria-pressed]="isDarkMode"
-              aria-labelledby="dark-mode-title"
-              (click)="toggleDarkMode()">{{isDarkMode ? ('ui.on' | translate) : ('ui.off' | translate)}}</button>
+      <input id="dark-mode"
+             type="checkbox"
+             aria-labelledby="dark-mode-title"
+             [checked]="isDarkMode"
+             (click)="toggleDarkMode()">
     </div>
   </dialog>
 </div>

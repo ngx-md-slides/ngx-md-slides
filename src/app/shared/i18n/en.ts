@@ -17,8 +17,6 @@ const en = {
     decreaseMaxWidth: '\\Decrease maximum width',
     increaseMaxWidth: '\\Increase maximum width',
     darkMode: '\\Dark mode',
-    on: '\\On',
-    off: '\\Off',
     language: '\\Language',
     present: '\\Present',
     notFoundTitle: '\\Page not found',

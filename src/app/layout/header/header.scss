@@ -35,7 +35,7 @@
       grid-template-columns: subgrid;
       grid-column-gap: calc(var(--spacing) / 2);
       grid-column: 1 / -1;
-      align-items: baseline;
+      align-items: center;
       min-height: var(--min-height-controls);
       padding: 0 calc(var(--spacing) / 3);
 
@@ -94,6 +94,27 @@
 
       ::-webkit-slider-runnable-track {
         border-radius: 0;
+      }
+    }
+
+    #dark-mode {
+      appearance: none;
+      border: 2px solid var(--shadow-color);
+      border-radius: var(--radius);
+      width: var(--min-height-controls-smaller);
+      height: var(--min-height-controls-smaller);
+      margin: 0;
+
+      &:checked {
+        &::after {
+          content: '✓' / '';
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 17px;
+        }
       }
     }
 
@@ -156,10 +177,6 @@
           }
         }
       }
-    }
-
-    select {
-      border: 2px solid var(--shadow-color);
     }
   }
 

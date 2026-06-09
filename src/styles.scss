@@ -1,6 +1,6 @@
 @layer base, highlight;
 
-@import url('styles/fonts.css');
+@import url('styles/fonts.scss');
 @import url('../node_modules/highlight.js/styles/a11y-dark.min.css') layer(highlight);
 
 @layer base {
@@ -30,6 +30,7 @@
     --shadow-spread: 10px;
     --radius: 4px;
     --min-height-controls: 36px;
+    --min-height-controls-smaller: 24px;
     --header-min-height: 52px;
 
     /**
