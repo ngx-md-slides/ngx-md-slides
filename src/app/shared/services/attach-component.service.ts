@@ -11,12 +11,14 @@ export class AttachComponentService {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const componentName = (component as any).name.slice(1);
 
-    const hostElement = this.document.getElementById(componentName) as Element;
+    const hostElements = this.document.querySelectorAll<Element>(`.${componentName}`);
 
     const environmentInjector = this.applicationRef.injector;
-    const componentRef = createComponent(component, { hostElement, environmentInjector });
 
-    this.applicationRef.attachView(componentRef.hostView);
-    componentRef.changeDetectorRef.detectChanges();
+    for (const hostElement of hostElements) {
+      const componentRef = createComponent(component, { hostElement, environmentInjector });
+      this.applicationRef.attachView(componentRef.hostView);
+      componentRef.changeDetectorRef.detectChanges();
+    }
   }
 }

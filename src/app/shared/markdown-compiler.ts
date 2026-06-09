@@ -38,7 +38,7 @@ export class MarkdownCompiler extends TranslateCompiler {
             return text.replace(
               COMPONENT_NAME_REGEX,
               (_, componentName: string) =>
-                `<div id="${componentName}" class="angular-component"></div>`,
+                `<div class="${componentName} angular-component"></div>`,
             );
           },
         };
