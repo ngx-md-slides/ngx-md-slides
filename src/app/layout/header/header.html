@@ -121,9 +121,11 @@
           <span aria-hidden="true">+</span>
         </button>
         <output class="margin-left">{{maxWidth}}%</output>
-        <button (click)="resetWidth()">
-          <span>{{ 'ui.reset' | translate}}</span>
-        </button>
+        @if (maxWidth !== 100) {
+          <button (click)="resetWidth()">
+            <span>{{ 'ui.reset' | translate}}</span>
+          </button>
+        }
       </span>
     </div>
 
