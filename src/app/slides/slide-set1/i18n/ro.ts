@@ -242,7 +242,7 @@ Legislația cere ca site-urile să respecte **minimul** cerințelor din **[Ghidu
 
 Conținutul unui site trebuie să fie:
 
-<img loading="lazy" class="pour-img" src="img/wcag/pour.webp" alt="">
+<img loading="lazy" width="364" height="113" class="pour-img" src="img/wcag/pour.webp" alt="">
 
 - **P**erceptibil
 - **O**perabil
@@ -261,7 +261,7 @@ Conținutul unui site trebuie să fie:
     },
     {
       content: md`
-<img loading="lazy" class="cloud-img" src="img/website/cloudy.webp" alt="o captură de ecran cu textul: 10 grade celsius, precipitații 19%, umiditate 49%, vânt 10 km pe oră. Captura de ecran include de asemenea și o ilustrație cu un nor">
+<img loading="lazy" width="145" height="65" class="cloud-img" src="img/website/cloudy.webp" alt="o captură de ecran cu textul: 10 grade celsius, precipitații 19%, umiditate 49%, vânt 10 km pe oră. Captura de ecran include de asemenea și o ilustrație cu un nor">
 
 Exemplu: Text alternativ pentru imaginea cu norul?
 

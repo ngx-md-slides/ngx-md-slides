@@ -237,7 +237,7 @@ The laws require that websites apply the **minimum** requirements of the **[Web 
 
 Website content must be:
 
-<img loading="lazy" class="pour-img" src="img/wcag/pour.webp" alt="">
+<img loading="lazy" width="364" height="113" class="pour-img" src="img/wcag/pour.webp" alt="">
 
 - **P**erceivable
 - **O**perable
@@ -256,7 +256,7 @@ Website content must be:
     },
     {
       content: md`
-<img loading="lazy" class="cloud-img" src="img/website/cloudy.webp" alt="a screenshot with the text: 10 degrees celsius, 19% chance of rain, humidity 49%, wind 10 kilometers per hour. The screenshot also includes an illustration of a cloud">
+<img loading="lazy" width="145" height="65" class="cloud-img" src="img/website/cloudy.webp" alt="a screenshot with the text: 10 degrees celsius, 19% chance of rain, humidity 49%, wind 10 kilometers per hour. The screenshot also includes an illustration of a cloud">
 
 Example: Alternative text for the cloud image?
 
