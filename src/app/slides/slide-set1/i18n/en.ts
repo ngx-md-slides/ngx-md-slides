@@ -341,7 +341,7 @@ They usually look like a button that goes on top of the website's content.
     {
       backgroundColor: '\\var(--red)',
       content: md`
-### A website with an overlay <br> <span class="nu">doesn't mean</span> an accessible website!
+### A website with an overlay <br> <span class="nu">doesn't</span> mean an accessible website!
 
 When accessibility is truly taken into consideration:
 
