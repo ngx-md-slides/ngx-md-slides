@@ -2,10 +2,6 @@
 
 A way to make multi-lingual presentations, using markdown and Angular components.
 
-## Motivation
-
-I don't like working with PowerPoint.
-
 ## Implemented:
 
 - [x] Add Max width / Zoom option
