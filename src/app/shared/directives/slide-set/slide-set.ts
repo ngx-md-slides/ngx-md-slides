@@ -1,6 +1,15 @@
-import { inject, signal, OnInit, AfterViewInit, OnDestroy, Directive, WritableSignal, Type } from '@angular/core';
+import {
+  inject,
+  signal,
+  OnInit,
+  AfterViewInit,
+  OnDestroy,
+  Directive,
+  WritableSignal,
+  Type,
+} from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
 import { AttachComponentService } from '@shared/services/attach-component.service';
@@ -21,10 +30,11 @@ export class SlideSet implements OnInit, AfterViewInit, OnDestroy {
   baseTranslation: WritableSignal<TranslatedSlide[]> = signal<TranslatedSlide[]>([]);
   translationsSubscription = Subscription.EMPTY;
   languageChangeSubscription = Subscription.EMPTY;
+  previousTranslationData: LangChangeEvent = { lang: '', translations: {} };
 
   ngOnInit(): void {
     const baseTranslationRaw = this.translateService.instant(this.setName);
-    if(typeof baseTranslationRaw === 'string' && baseTranslationRaw === this.setName) {
+    if (typeof baseTranslationRaw === 'string' && baseTranslationRaw === this.setName) {
       return;
     }
 
@@ -47,11 +57,18 @@ export class SlideSet implements OnInit, AfterViewInit, OnDestroy {
         this.attachComponents();
       }, SHAMEFUL_TIMEOUT);
 
-      this.languageChangeSubscription = this.translateService.onLangChange.subscribe(() => {
-        setTimeout(() => {
-          this.attachComponents();
-        }, SHAMEFUL_TIMEOUT);
-      });
+      this.languageChangeSubscription = this.translateService.onLangChange.subscribe(
+        (translationData: LangChangeEvent) => {
+          if (JSON.stringify(translationData) === JSON.stringify(this.previousTranslationData)) {
+            return;
+          }
+
+          this.previousTranslationData = translationData;
+          setTimeout(() => {
+            this.attachComponents();
+          }, SHAMEFUL_TIMEOUT);
+        },
+      );
     }
   }
 
@@ -63,7 +80,7 @@ export class SlideSet implements OnInit, AfterViewInit, OnDestroy {
 
   attachComponents(): void {
     this.components.forEach((component) => {
-      if(!this.destroyed()) {
+      if (!this.destroyed()) {
         this.attachComponentService.attachComponent(component);
       }
     });

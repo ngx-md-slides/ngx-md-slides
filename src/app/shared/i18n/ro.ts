@@ -16,7 +16,7 @@ const ro = {
     maxWidth: '\\Lățime maximă',
     decreaseMaxWidth: '\\Micșorează lățimea maximă',
     increaseMaxWidth: '\\Mărește lățimea maximă',
-    reset: '\\Resetează',
+    reset: '\\Resetează toate',
     darkMode: '\\Mod întunecat',
     language: '\\Limba',
     present: '\\Prezintă',

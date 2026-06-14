@@ -11,17 +11,32 @@ export class LocalStorageService {
   document = inject(DOCUMENT);
 
   getLocalStorage(): State | null {
-    const settings = localStorage.getItem(LOCAL_STORAGE_ITEM_NAME);
-    if (settings !== null) {
-      return JSON.parse(settings) as State;
+    if (typeof window != 'undefined') {
+      const settings = localStorage.getItem(LOCAL_STORAGE_ITEM_NAME);
+      if (settings !== null) {
+        return JSON.parse(settings) as State;
+      }
     }
 
     return null;
   }
 
-  setToLocalStorage(settings: State): void {
-    if (settings !== null && typeof localStorage !== 'undefined') {
-      localStorage.setItem(LOCAL_STORAGE_ITEM_NAME, JSON.stringify(settings));
+  clearLocalStorage(): void {
+    if (typeof window != 'undefined') {
+      localStorage.clear();
+    }
+  }
+
+  setToLocalStorage(newSettings: State): void {
+    if (newSettings !== null && typeof localStorage !== 'undefined') {
+      const existingSettings = this.getLocalStorage();
+
+      if (existingSettings !== null) {
+        const updatedSettings = Object.assign(existingSettings, newSettings);
+        localStorage.setItem(LOCAL_STORAGE_ITEM_NAME, JSON.stringify(updatedSettings));
+      } else {
+        localStorage.setItem(LOCAL_STORAGE_ITEM_NAME, JSON.stringify(newSettings));
+      }
     }
   }
 }

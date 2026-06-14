@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, DOCUMENT, HostListener, inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  DOCUMENT,
+  HostListener,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive, Routes } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -11,6 +19,7 @@ import { SettingsIcon } from '@shared/components/icons/settings-icon/settings-ic
 import { PresentationIcon } from '@shared/components/icons/presentation-icon/presentation-icon';
 import { routes } from 'app/app.routes';
 import { Logo } from '@shared/components/icons/logo/logo';
+import { LocalStorageService } from '@shared/services/local-storage.service';
 
 const WIDTH_STEP = 10;
 const WIDTH_MIN = 10;
@@ -35,10 +44,14 @@ export class Header implements OnInit, AfterViewInit {
   stateService = inject(StateService);
   document = inject(DOCUMENT);
   translateService = inject(TranslateService);
+  changeDetector = inject(ChangeDetectorRef);
+  localStorageService = inject(LocalStorageService);
   router = inject(Router);
   state: State = {};
+  localStorageSettings: State = {};
   view?: View;
   maxWidth?: number;
+  darkModeMediaQuery?: MediaQueryList;
   isDarkMode?: boolean;
   language: ContentLanguage = 'en';
   rootElement?: HTMLElement | null;
@@ -57,17 +70,54 @@ export class Header implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.view = this.stateService.getState().view;
-    this.updateView();
+    if (this.localStorageService.getLocalStorage()?.view) {
+      this.view = this.localStorageService.getLocalStorage()?.view;
+    } else {
+      this.view = this.stateService.getState().view;
+    }
+    this.updateView(true);
 
-    this.maxWidth = this.stateService.getState().maxWidth;
-    this.updateMaxWidth();
+    if (this.localStorageService.getLocalStorage()?.maxWidth) {
+      this.maxWidth = this.localStorageService.getLocalStorage()?.maxWidth;
+    } else {
+      this.maxWidth = this.stateService.getState().maxWidth;
+    }
+    this.updateMaxWidth(true);
 
-    this.isDarkMode = this.stateService.getState().isDarkMode;
-    this.updateDarkMode();
+    if (typeof window !== 'undefined') {
+      this.darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      this.isDarkMode = this.darkModeMediaQuery.matches;
+      this.changeDetector.markForCheck();
 
-    this.language = this.stateService.getState().language as ContentLanguage;
-    this.switchLanguage(this.language);
+      if (
+        typeof this.localStorageService.getLocalStorage()?.isDarkMode === 'undefined' &&
+        typeof this.stateService.getState().isDarkMode === 'undefined'
+      ) {
+        this.darkModeMediaQuery?.addEventListener('change', (event: MediaQueryListEvent) => {
+          this.isDarkMode = event.matches;
+          console.log(this.isDarkMode);
+
+          this.changeDetector.markForCheck();
+        });
+      }
+    }
+
+    if (typeof this.localStorageService.getLocalStorage()?.isDarkMode !== 'undefined') {
+      this.isDarkMode = this.localStorageService.getLocalStorage()?.isDarkMode;
+      this.updateDarkMode(true);
+    } else {
+      if (this.stateService.getState().isDarkMode) {
+        this.isDarkMode = this.stateService.getState().isDarkMode;
+        this.updateDarkMode(true);
+      }
+    }
+
+    if (this.localStorageService.getLocalStorage()?.language) {
+      this.language = this.localStorageService.getLocalStorage()?.language as ContentLanguage;
+    } else {
+      this.language = this.stateService.getState().language as ContentLanguage;
+    }
+    this.updateLanguage(this.language, true);
   }
 
   ngAfterViewInit(): void {
@@ -84,17 +134,27 @@ export class Header implements OnInit, AfterViewInit {
     }
   }
 
-  updateView(): void {
+  updateView(noLocalStorageChanges: boolean = false): void {
     this.state['view'] = this.view;
     this.stateService.setState(this.state);
 
-    this.rootElement?.classList.remove(this.view === 'slide' ? 'web-view' : 'slide-view');
-    this.rootElement?.classList.add(this.view === 'slide' ? 'slide-view' : 'web-view');
+    if (!noLocalStorageChanges) {
+      this.localStorageService.setToLocalStorage({ view: this.view });
+    }
+
+    setTimeout(() => {
+      this.rootElement?.classList.remove(this.view === 'slide' ? 'web-view' : 'slide-view');
+      this.rootElement?.classList.add(this.view === 'slide' ? 'slide-view' : 'web-view');
+    });
   }
 
-  updateMaxWidth(): void {
+  updateMaxWidth(noLocalStorageChanges: boolean = false): void {
     this.state['maxWidth'] = this.maxWidth;
     this.stateService.setState(this.state);
+
+    if (!noLocalStorageChanges) {
+      this.localStorageService.setToLocalStorage({ maxWidth: this.maxWidth });
+    }
   }
 
   setColorScheme(): void {
@@ -111,10 +171,17 @@ export class Header implements OnInit, AfterViewInit {
     this.updateDarkMode();
   }
 
-  updateDarkMode(): void {
+  updateDarkMode(noLocalStorageChanges: boolean = false): void {
     this.state['isDarkMode'] = this.isDarkMode;
     this.stateService.setState(this.state);
-    this.setColorScheme();
+
+    if (!noLocalStorageChanges) {
+      this.localStorageService.setToLocalStorage({ isDarkMode: this.isDarkMode });
+    }
+
+    if (typeof this.isDarkMode !== 'undefined') {
+      this.setColorScheme();
+    }
   }
 
   isDecreaseButtonDisabled(): boolean {
@@ -137,10 +204,20 @@ export class Header implements OnInit, AfterViewInit {
     this.updateMaxWidth();
   }
 
-  resetWidth(): void {
-    if (!this.maxWidth) return;
-    this.maxWidth = 100;
-    this.updateMaxWidth();
+  resetAll(): void {
+    this.view = this.stateService.getDefaultState().view;
+    this.updateView(true);
+
+    this.maxWidth = this.stateService.getDefaultState().maxWidth;
+    this.updateMaxWidth(true);
+
+    this.isDarkMode = this.darkModeMediaQuery?.matches;
+    this.updateDarkMode(true);
+
+    this.language = this.stateService.getDefaultState().language as ContentLanguage;
+    this.updateLanguage(this.language, true);
+
+    this.localStorageService.clearLocalStorage();
   }
 
   async present(): Promise<void> {
@@ -172,12 +249,16 @@ export class Header implements OnInit, AfterViewInit {
     this.stateService.setState(this.state);
   }
 
-  switchLanguage(language: ContentLanguage): void {
+  updateLanguage(language: ContentLanguage, noLocalStorageChanges: boolean = false): void {
     this.translateService.use(language);
     this.document.documentElement.setAttribute('lang', language);
 
     this.state['language'] = language;
     this.stateService.setState(this.state);
+
+    if (!noLocalStorageChanges) {
+      this.localStorageService.setToLocalStorage({ language: language });
+    }
   }
 
   closeMenuPopover(): void {
