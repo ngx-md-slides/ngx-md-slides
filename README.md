@@ -1,6 +1,6 @@
 # ngx-md-slides
 
-A way to make multi-lingual presentations, using markdown and Angular components.
+A way to make multi-lingual presentations, using Markdown and Angular components for live examples.
 
 ## Implemented:
 
