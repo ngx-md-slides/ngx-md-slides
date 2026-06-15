@@ -1,18 +1,4 @@
 {
-  "workbench.colorCustomizations": {
-    "editorIndentGuide.background1": "#00000001",
-    "activityBar.background": "#5a052f",
-    "titleBar.activeBackground": "#800b45",
-    "titleBar.activeForeground": "#fcf5f9",
-    "titleBar.inactiveBackground": "#800b45",
-    "titleBar.inactiveForeground": "#FDF9FC",
-    "statusBar.background": "#800b45",
-    "statusBar.foreground": "#FDF9FC",
-    "statusBar.debuggingBackground": "#800b45",
-    "statusBar.debuggingForeground": "#FDF9FC",
-    "statusBar.noFolderBackground": "#800b45",
-    "statusBar.noFolderForeground": "#FDF9FC"
-  },
   "html.format.wrapAttributes": "force-aligned",
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
