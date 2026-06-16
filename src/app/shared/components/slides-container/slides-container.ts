@@ -33,9 +33,9 @@ export class SlidesContainer implements AfterViewInit {
       this.allSlides = this.elementRef.nativeElement.querySelectorAll('app-slide');
     }
 
-    this.assignSlideNumber();
+    this.addSlideNumber();
 
-    this.observeSlides();
+    this.watchForCurrentSlide();
   }
 
   @HostBinding('style.width')
@@ -98,7 +98,7 @@ export class SlidesContainer implements AfterViewInit {
     this.stateService.setState(this.state);
   }
 
-  assignSlideNumber(): void {
+  addSlideNumber(): void {
     this.allSlides?.forEach((slide, index) => {
       if (typeof window === 'undefined') return;
 
@@ -111,7 +111,7 @@ export class SlidesContainer implements AfterViewInit {
     });
   }
 
-  observeSlides(): void {
+  watchForCurrentSlide(): void {
     if (typeof window !== 'undefined') {
       const slidesObserver = new IntersectionObserver(
         (entries) => {
