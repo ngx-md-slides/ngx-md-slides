@@ -158,8 +158,7 @@
     }
   }
 
-  .sr-only:not(:focus):not(:focus-visible):not(:active),
-  .cdk-visually-hidden {
+  .sr-only:not(:focus):not(:focus-visible):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
     height: 1px;
