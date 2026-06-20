@@ -1,11 +1,10 @@
-import { Component, HostBinding, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, HostBinding, inject } from '@angular/core';
 import { StateService } from '@shared/services/state.service';
 
 @Component({
   selector: 'app-slide',
   imports: [],
   templateUrl: './slide.html',
-
   styleUrl: './slide.scss',
 })
 export class Slide {
