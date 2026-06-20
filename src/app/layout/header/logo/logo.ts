@@ -5,7 +5,7 @@ import { CurrentRouteService } from '@shared/services/current-route.service';
   selector: 'app-logo',
   imports: [],
   templateUrl: './logo.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+
   styleUrl: './logo.scss',
 })
 export class Logo {

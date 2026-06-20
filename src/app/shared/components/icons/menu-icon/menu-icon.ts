@@ -4,7 +4,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-menu-icon',
   imports: [],
   templateUrl: './menu-icon.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+
   styleUrl: './menu-icon.scss',
 })
 export class MenuIcon {

@@ -5,7 +5,7 @@ import { StateService } from '@shared/services/state.service';
   selector: 'app-slide',
   imports: [],
   templateUrl: './slide.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+
   styleUrl: './slide.scss',
 })
 export class Slide {

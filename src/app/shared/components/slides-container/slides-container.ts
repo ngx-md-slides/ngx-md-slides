@@ -18,7 +18,7 @@ const INTERSECTION_RATIO = 0.75;
   selector: 'app-slides-container',
   imports: [],
   templateUrl: './slides-container.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+
   styleUrl: './slides-container.scss',
 })
 export class SlidesContainer implements AfterViewInit {

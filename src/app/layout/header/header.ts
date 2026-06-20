@@ -42,7 +42,7 @@ const WIDTH_MAX = 100;
     Logo,
   ],
   templateUrl: './header.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+
   styleUrl: './header.scss',
 })
 export class Header implements OnInit, AfterViewInit {

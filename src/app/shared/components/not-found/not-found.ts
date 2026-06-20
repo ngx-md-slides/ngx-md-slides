@@ -7,7 +7,7 @@ import { CurrentRouteService } from '@shared/services/current-route.service';
   selector: 'app-not-found',
   imports: [TranslatePipe, RouterLink],
   templateUrl: './not-found.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+
   styleUrl: './not-found.scss',
 })
 export class NotFound implements OnInit {
