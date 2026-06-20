@@ -6,7 +6,7 @@ import {
   AfterViewInit,
   ElementRef,
   DOCUMENT,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import { State } from '@shared/models/state.model';
 import { StateService } from '@shared/services/state.service';
@@ -34,14 +34,13 @@ export class SlidesContainer implements AfterViewInit {
     }
 
     this.addSlideNumber();
-
     this.watchForCurrentSlide();
   }
 
   @HostBinding('style.width')
   get maxWidth() {
-    return this.stateService.getState().maxWidth && !this.stateService.getState().isFullscreen
-      ? `${this.stateService.getState().maxWidth}%`
+    return this.stateService.getState()().maxWidth && !this.stateService.getState()().isFullscreen
+      ? `${this.stateService.getState()().maxWidth}%`
       : '100%';
   }
 
@@ -51,14 +50,14 @@ export class SlidesContainer implements AfterViewInit {
 
     if (
       !this.allSlides ||
-      this.stateService.getState().layout === 'flexible' ||
-      !this.stateService.getState().isFullscreen ||
+      this.stateService.getState()().layout === 'flexible' ||
+      !this.stateService.getState()().isFullscreen ||
       !allowedKeys.includes(event.key)
     )
       return;
 
     event.preventDefault();
-    this.currentSlide = this.stateService.getState().currentSlide ?? 0;
+    this.currentSlide = this.stateService.getState()().currentSlide ?? 0;
 
     if (event.key === 'ArrowRight' || event.key === 'PageDown') {
       if (this.currentSlide < this.allSlides.length - 1) {

@@ -16,14 +16,14 @@ export class Slide {
   /* Allow programmatic focus in fullscreen mode (for keyboard interaction) */
   @HostBinding('attr.tabindex')
   get tabindex() {
-    return this.stateService.getState().layout === 'flexible' || !this.stateService.getState().isFullscreen
+    return this.stateService.getState()().layout === 'flexible' || !this.stateService.getState()().isFullscreen
       ? null
       : '-1';
   }
 
   @HostBinding('style.boxShadow')
   get boxShadow() {
-    return this.stateService.getState().isFullscreen
+    return this.stateService.getState()().isFullscreen
       ? 'none'
       : '0 0 var(--shadow-spread) 0 var(--shadow-color)';
   }
