@@ -138,6 +138,8 @@ export class Header implements OnInit, AfterViewInit {
     this.state['maxWidth'] = this.maxWidth;
     this.stateService.setState(this.state);
 
+    this.focusCurrentSlide();
+
     if (!noLocalStorageChanges) {
       this.localStorageService.setToLocalStorage({ maxWidth: this.maxWidth });
     }
@@ -192,13 +194,15 @@ export class Header implements OnInit, AfterViewInit {
 
   async present(): Promise<void> {
     if (!document.fullscreenElement) {
+      const currentSlide = this.stateService.getState()().currentSlide;
+
       await document.documentElement.requestFullscreen();
       this.rootElement?.classList.add('fullscreen');
       this.updateFullscreenStateAndUI(true);
       setTimeout(() => {
         this.document
           .querySelectorAll<HTMLElement>('app-slide')
-          [this.stateService.getState()().currentSlide ?? 0]?.focus();
+          [currentSlide ?? 0]?.focus();
       });
     }
   }
@@ -207,18 +211,23 @@ export class Header implements OnInit, AfterViewInit {
     this.rootElement?.classList.remove('fullscreen');
     this.updateFullscreenStateAndUI(false);
 
-    const slideNumberAtTheTimeOfExit = this.stateService.getState()().currentSlide ?? 0;
-
     if (this.document.fullscreenElement === null) {
-      const currentSlideElement =
-        this.document.querySelectorAll<HTMLElement>('app-slide')[slideNumberAtTheTimeOfExit];
+      this.focusCurrentSlide();
+    }
+  }
 
+  focusCurrentSlide(): void {
+    const currentSlide = this.stateService.getState()().currentSlide ?? 0;
+
+    const currentSlideElement =
+      this.document.querySelectorAll<HTMLElement>('app-slide')[currentSlide];
+
+    if (currentSlideElement) {
       setTimeout(() => {
-        currentSlideElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'center',
-        });
+        currentSlideElement.setAttribute('tabindex', '0');
+        currentSlideElement.focus();
+        currentSlideElement.scrollIntoView({behavior: 'instant', block: 'center', inline: 'center'});
+        currentSlideElement.removeAttribute('tabindex');
       });
     }
   }
