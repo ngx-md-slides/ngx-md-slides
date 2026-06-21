@@ -11,7 +11,7 @@ import {
 import { State } from '@shared/models/state.model';
 import { StateService } from '@shared/services/state.service';
 
-const INTERSECTION_RATIO = 0.75;
+const INTERSECTION_RATIO = 0.9;
 
 @Component({
   selector: 'app-slides-container',
@@ -114,13 +114,15 @@ export class SlidesContainer implements AfterViewInit {
     if (typeof window !== 'undefined') {
       const slidesObserver = new IntersectionObserver(
         (entries) => {
-          const match = entries[0];
-          if (match.intersectionRatio >= INTERSECTION_RATIO) {
-            const currentIndex = match.target.id.split('-')[1];
+          for (const entry of entries) {
+            const match = entry;
+            if (match.isIntersecting) {
+              const currentIndex = match.target.id.split('-')[1];
 
-            this.currentSlide = Number(currentIndex) - 1;
-            this.state['currentSlide'] = this.currentSlide;
-            this.stateService.setState(this.state);
+              this.currentSlide = Number(currentIndex) - 1;
+              this.state['currentSlide'] = this.currentSlide;
+              this.stateService.setState(this.state);
+            }
           }
         },
         {

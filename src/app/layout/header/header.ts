@@ -5,7 +5,7 @@ import {
   DOCUMENT,
   HostListener,
   inject,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive, Routes } from '@angular/router';
@@ -18,10 +18,7 @@ import { MenuIcon } from '@shared/components/icons/menu-icon/menu-icon';
 import { SettingsIcon } from '@shared/components/icons/settings-icon/settings-icon';
 import { PresentationIcon } from '@shared/components/icons/presentation-icon/presentation-icon';
 import { routes } from 'app/app.routes';
-import {
-  LOCAL_STORAGE_ITEM_NAME,
-  LocalStorageService,
-} from '@shared/services/local-storage.service';
+import { LocalStorageService } from '@shared/services/local-storage.service';
 import { Logo } from './logo/logo';
 
 const WIDTH_STEP = 10;
@@ -114,7 +111,9 @@ export class Header implements OnInit, AfterViewInit {
       }
 
       document.addEventListener('fullscreenchange', () => {
-        this.exitFullscreen();
+        if (this.document.fullscreenElement === null) {
+          this.exitFullscreen();
+        }
       });
     }
   }
@@ -128,7 +127,9 @@ export class Header implements OnInit, AfterViewInit {
     }
 
     setTimeout(() => {
-      this.rootElement?.classList.remove(this.layout === 'fixed' ? 'flexible-layout' : 'fixed-layout');
+      this.rootElement?.classList.remove(
+        this.layout === 'fixed' ? 'flexible-layout' : 'fixed-layout',
+      );
       this.rootElement?.classList.add(this.layout === 'fixed' ? 'fixed-layout' : 'flexible-layout');
     });
   }
@@ -203,14 +204,23 @@ export class Header implements OnInit, AfterViewInit {
   }
 
   exitFullscreen(): void {
-    if (document.fullscreenElement) return;
-
     this.rootElement?.classList.remove('fullscreen');
     this.updateFullscreenStateAndUI(false);
 
-    this.document
-      .querySelectorAll<HTMLElement>('app-slide')
-      [this.stateService.getState()().currentSlide ?? 0]?.focus();
+    const slideNumberAtTheTimeOfExit = this.stateService.getState()().currentSlide ?? 0;
+
+    if (this.document.fullscreenElement === null) {
+      const currentSlideElement =
+        this.document.querySelectorAll<HTMLElement>('app-slide')[slideNumberAtTheTimeOfExit];
+
+      setTimeout(() => {
+        currentSlideElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'center',
+        });
+      });
+    }
   }
 
   updateFullscreenStateAndUI(isFullscreen: boolean): void {
