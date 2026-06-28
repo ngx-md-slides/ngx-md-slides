@@ -168,7 +168,7 @@ export class SlidesContainer implements AfterViewInit {
   }
 
   rememberActiveHeading(element: HTMLElement): void {
-    const newActiveHeading = element.querySelector('h1,h2,h3,h4,h5,h6');
+    const newActiveHeading = element?.querySelector('h1,h2,h3,h4,h5,h6');
 
     if (newActiveHeading !== null) {
       this.state['activeHeading'] = newActiveHeading;

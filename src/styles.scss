@@ -10,6 +10,8 @@
     --text: light-dark(black, white);
     --inverted-text: light-dark(white, black);
 
+    --link-color: light-dark(oklch(32.082% 0.21567 267.244), oklch(81.021% 0.09582 276.211));
+
     --base-font: 'Inclusive Sans', sans-serif;
     --code-font: 'Fira Code', monospace;
 
@@ -153,7 +155,12 @@
   }
 
   a {
+    color: var(--link-color);
     text-underline-offset: 0.15rem;
+
+    &:visited {
+      color: var(--link-color);
+    }
 
     &:hover,
     &:focus-visible {
