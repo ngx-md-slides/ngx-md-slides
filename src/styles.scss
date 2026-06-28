@@ -17,14 +17,14 @@
     --foreground: light-dark(rgb(15 15 25), rgb(230 230 240));
     --background: light-dark(rgb(230 230 240), rgb(15 15 25));
     --surface-background: light-dark(rgb(255 255 255), rgb(30 30 40));
-    --light-grey: rgba(117 117 127 / 0.15);
-    --dark-grey: rgba(117 117 127 / 0.7);
+    --light-grey: rgba(117 117 137 / 0.15);
+    --dark-grey: rgba(117 117 137 / 0.7);
     --blur: 30px;
 
     --surface-transparency: 0.93;
     --surface-background-transparent: light-dark(
       rgba(255, 255, 255, var(--surface-transparency)),
-      rgba(50, 50, 60, var(--surface-transparency))
+      rgba(35, 35, 45, var(--surface-transparency))
     );
 
     --shadow-color: light-dark(rgba(0 0 0 / 0.2), rgb(0 0 0));

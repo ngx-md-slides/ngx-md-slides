@@ -21,6 +21,17 @@
       text-decoration: none;
       align-items: baseline;
 
+      &.active-heading {
+        .heading-level {
+          background: var(--body);
+          box-shadow: 0 0 0 2px var(--dark-grey);
+        }
+
+        .heading-title {
+          font-weight: 700;
+        }
+      }
+
       .heading-level {
         display: inline-block;
         margin-right: 6px;
