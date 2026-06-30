@@ -11,7 +11,7 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { State } from 'app/shared/models/state.model';
 import { TranslatedSlide } from 'app/shared/models/translation.model';
@@ -34,10 +34,8 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
   stateService = inject(StateService);
   translateService = inject(TranslateService);
   currentRouteService = inject(CurrentRouteService);
-  router = inject(Router);
   allHeadings: WritableSignal<HTMLHeadingElement[]> = signal([]);
   languageChangeSubscription: Subscription = Subscription.EMPTY;
-  routerEventsSubscription: Subscription = Subscription.EMPTY;
   currentRoute = '';
   state: WritableSignal<State> = signal({});
 
@@ -65,26 +63,21 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.currentRoute = this.currentRouteService.getCurrentRoute();
+    console.log('HERE', this.currentRoute);
     this.watchForPositionChanges();
     this.state = this.stateService.getState();
   }
 
   ngAfterViewInit(): void {
-    this.routerEventsSubscription = this.router.events.subscribe((navigationEvent) => {
-      this.currentRoute = this.currentRouteService.getCurrentRoute();
+    this.getUpdatedHeadings();
 
-      if (navigationEvent instanceof NavigationEnd) {
-        this.getUpdatedHeadings();
-
-        this.languageChangeSubscription = this.translateService.onLangChange.subscribe(() => {
-          this.getUpdatedHeadings();
-        });
-      }
+    this.languageChangeSubscription = this.translateService.onLangChange.subscribe(() => {
+      this.getUpdatedHeadings();
     });
   }
 
   ngOnDestroy(): void {
-    this.routerEventsSubscription.unsubscribe();
     this.languageChangeSubscription.unsubscribe();
   }
 
