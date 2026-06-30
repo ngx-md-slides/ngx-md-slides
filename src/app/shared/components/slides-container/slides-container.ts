@@ -11,7 +11,8 @@ import {
 import { State } from '@shared/models/state.model';
 import { StateService } from '@shared/services/state.service';
 
-const INTERSECTION_RATIO = 0.9;
+const INTERSECTION_RATIO_MORE_VISIBLE = 0.9;
+const INTERSECTION_RATIO_LESS_VISIBLE = 0.6;
 
 @Component({
   selector: 'app-slides-container',
@@ -141,12 +142,12 @@ export class SlidesContainer implements AfterViewInit {
           this.state.currentSlide = this.currentSlide;
           this.stateService.setState(this.state);
 
-          if(typeof this.allSlides !== 'undefined') {
+          if (typeof this.allSlides !== 'undefined') {
             this.rememberActiveHeading(this.allSlides[this.currentSlide]);
           }
         },
         {
-          threshold: [INTERSECTION_RATIO],
+          threshold: [INTERSECTION_RATIO_MORE_VISIBLE, INTERSECTION_RATIO_LESS_VISIBLE],
         },
       );
 
