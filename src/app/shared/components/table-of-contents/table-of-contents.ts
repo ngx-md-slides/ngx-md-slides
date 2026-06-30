@@ -42,6 +42,7 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
   constructor() {
     afterRenderEffect({
       read: () => {
+        this.currentRoute = this.currentRouteService.getCurrentRoute();
         this.getUpdatedHeadings();
 
         if (this.allHeadings()) {
@@ -64,7 +65,6 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.currentRoute = this.currentRouteService.getCurrentRoute();
-    console.log('HERE', this.currentRoute);
     this.watchForPositionChanges();
     this.state = this.stateService.getState();
   }
