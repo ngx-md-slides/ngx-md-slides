@@ -65,13 +65,14 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.currentRoute = this.currentRouteService.getCurrentRoute();
     this.watchForPositionChanges();
     this.state = this.stateService.getState();
   }
 
   ngAfterViewInit(): void {
     this.routerEventsSubscription = this.router.events.subscribe((navigationEvent) => {
+      this.currentRoute = this.currentRouteService.getCurrentRoute();
+
       if (navigationEvent instanceof NavigationEnd) {
         this.getUpdatedHeadings();
 
