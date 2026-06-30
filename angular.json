@@ -37,7 +37,7 @@
               "entry": "src/server.ts"
             },
             "security": {
-              "allowedHosts": ["all"]
+              "allowedHosts": ["localhost", "ngx-md-slides.vercel.app"]
             }
           },
           "configurations": {
