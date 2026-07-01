@@ -3,7 +3,6 @@ import {
   HostBinding,
   HostListener,
   inject,
-  ElementRef,
   DOCUMENT,
   Renderer2,
   afterNextRender,
