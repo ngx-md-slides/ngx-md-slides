@@ -3,10 +3,10 @@ import {
   HostBinding,
   HostListener,
   inject,
-  AfterViewInit,
   ElementRef,
   DOCUMENT,
   Renderer2,
+  afterNextRender,
 } from '@angular/core';
 import { State } from '@shared/models/state.model';
 import { StateService } from '@shared/services/state.service';
@@ -20,9 +20,8 @@ const INTERSECTION_RATIO_LESS_VISIBLE = 0.6;
   templateUrl: './slides-container.html',
   styleUrl: './slides-container.scss',
 })
-export class SlidesContainer implements AfterViewInit {
+export class SlidesContainer {
   stateService = inject(StateService);
-  elementRef = inject(ElementRef);
   renderer = inject(Renderer2);
   document = inject(DOCUMENT);
   allSlides?: NodeListOf<HTMLElement>;
@@ -31,13 +30,17 @@ export class SlidesContainer implements AfterViewInit {
   visibleIndices = new Set<number>();
   previousActiveHeading?: Element;
 
-  ngAfterViewInit(): void {
-    if (typeof this.document !== 'undefined') {
-      this.allSlides = this.elementRef.nativeElement.querySelectorAll('app-slide');
-    }
+  constructor() {
+    afterNextRender({
+      read: () => {
+        if (typeof this.document !== 'undefined') {
+          this.allSlides = this.document.querySelectorAll('app-slide');
+        }
 
-    this.addSlideNumber();
-    this.watchForCurrentSlide();
+        this.addSlideNumber();
+        this.watchForCurrentSlide();
+      },
+    });
   }
 
   @HostBinding('style.width')
