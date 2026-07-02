@@ -1,5 +1,5 @@
 :host {
-  --background-color: var(--surface-background);
+  --background-color: var(--inverted-text);
   --slide-text: color-mix(in hsl, var(--background-color), var(--text) 85%);
   --slides-link-hover: color-mix(in hsl, var(--background-color), var(--text) 70%);
   --slides-borders: color-mix(in hsl, var(--background-color), var(--text) 30%);
