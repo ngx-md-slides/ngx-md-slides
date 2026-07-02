@@ -1,5 +1,5 @@
 :host {
-  --slides-spacing: 40px;
+  --slides-spacing: calc(var(--spacing) + 10px);
   container: slides / inline-size;
   display: flex;
   flex-direction: column;
