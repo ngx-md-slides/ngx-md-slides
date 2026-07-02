@@ -1,8 +1,8 @@
 @layer fonts, base, colors, other-variables, code-highlight;
 
-@import url('styles/fonts.scss') layer(fonts);
-@import url('styles/variables/colors.scss') layer(colors);
-@import url('styles/variables/other.scss') layer(other-variables);
+@import url('styles/_fonts.scss') layer(fonts);
+@import url('styles/variables/_colors.scss') layer(colors);
+@import url('styles/variables/_other.scss') layer(other-variables);
 @import url('../node_modules/highlight.js/styles/a11y-dark.min.css') layer(code-highlight);
 
 @layer base {
