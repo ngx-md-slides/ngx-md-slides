@@ -3,12 +3,12 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 const md = String.raw;
 
 const enSlideSet1Translations: TranslatedSlideSet = {
-  title: '\\ngx-md-slides',
+  title: '\\Welcome to ngx-md-slides',
   slides: [
     {
       backgroundColor: '\\var(--purple)',
       content: md`
-# Welcome to <br/><span class="project-name"><a href="https://github.com/ngx-md-slides/ngx-md-slides"><img alt="" src="favicon.svg">ngx-md-slides</a></span>
+# Welcome to <br/><a href="https://github.com/ngx-md-slides/ngx-md-slides"><img alt="" src="favicon.svg">ngx-md-slides</a>
       `,
     },
     {
@@ -60,7 +60,7 @@ This project uses Markdown ([Marked](https://marked.js.org/)) with [Marked Defau
   <tr>
     <td><a href="https://en.wikipedia.org/wiki/Ezo_flying_squirrel">Ezo flying squirrel</a></td>
     <td style="padding: 0;">
-      <img style="display: flex; width: calc(25 * var(--unit))"
+      <img style="display: flex; width: auto; height: 4lh"
            src="img/ezo-squirrel.png"
            alt="A photo of an Ezo flying squirrel. It looks like a regular squirrel but it's cuter, smaller, rounder, has very big black eyes.">
     </td>
@@ -71,7 +71,7 @@ This project uses Markdown ([Marked](https://marked.js.org/)) with [Marked Defau
     {
       backgroundColor: '\\var(--rose)',
       content: md`
-### Known issues
+## Known issues
 
 Since slide content is added between **ticks**(\`) in a Typescript file, ticks can't be used for code.
 
@@ -87,9 +87,10 @@ p {
     {
       backgroundColor: '\\var(--yellow)',
       content: md`
-## Live examples support
+## Live examples
 
 <!--RemoveButtonEn-->
+
       `,
     },
   ],

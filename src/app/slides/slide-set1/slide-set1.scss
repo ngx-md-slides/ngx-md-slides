@@ -16,23 +16,24 @@
       text-align: center;
     }
 
-    ::ng-deep .project-name a {
+    ::ng-deep a {
       display: inline-flex;
-      margin-block-start: calc(1.5 * var(--unit));
-      gap: calc(1 * var(--unit));
+      gap: 0.3lh;
       justify-content: center;
       align-items: center;
-      font-size: 0.5em;
+      font-size: 0.9em;
       background: var(--inverted-text);
-      border-radius: calc(2 * var(--unit));
-      padding: calc(1.5 * var(--unit)) calc(2.5 * var(--unit));
+      margin-top: 0.3lh;
+      padding: 0.3lh 0.5lh;
+      border-radius: 0.3lh;
 
       &:hover {
         box-shadow: 0 0 var(--shadow-spread) 0 var(--shadow-color);
       }
 
       img {
-        width: calc(5 * var(--unit));
+        height: 0.8lh;
+        width: auto;
       }
     }
   }

@@ -3,12 +3,12 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 const md = String.raw;
 
 const roSlideSetTranslations: TranslatedSlideSet = {
-  title: '\\Accesibilitatea web pe înțelesul tuturor',
+  title: '\\Bine ai venit la ngx-md-slides',
   slides: [
     {
       backgroundColor: '\\var(--purple)',
       content: md`
-# Bun venit la <br/><span class="project-name"><a href="https://github.com/ngx-md-slides/ngx-md-slides"><img alt="" src="favicon.svg">ngx-md-slides</a></span>
+# Bine ai venit la <br/><span class="project-name"><a href="https://github.com/ngx-md-slides/ngx-md-slides"><img alt="" src="favicon.svg">ngx-md-slides</a></span>
       `,
     },
     {
