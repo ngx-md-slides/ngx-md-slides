@@ -57,7 +57,7 @@
                    id="fixed-layout"
                    value="fixed"
                    name="layout"
-                   aria-describedby="fixed-layout-description"
+                   [attr.aria-describedby]="layout === 'fixed' ? 'fixed-layout-description' : null"
                    [(ngModel)]="layout"
                    (ngModelChange)="updateLayout()" />
             <label for="fixed-layout">{{'ui.fixedLayout' | translate}}</label>
@@ -67,7 +67,7 @@
                    id="flexible-layout"
                    value="flexible"
                    name="layout"
-                   aria-describedby="flexible-layout-description"
+                   [attr.aria-describedby]="layout === 'flexible' ? 'flexible-layout-description' : null"
                    [(ngModel)]="layout"
                    (ngModelChange)="updateLayout()" />
             <label for="flexible-layout">{{'ui.flexibleLayout' | translate}}</label>

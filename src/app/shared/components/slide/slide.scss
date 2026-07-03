@@ -2,8 +2,8 @@
   --background-color: var(--inverted-text);
   --slide-text: color-mix(in hsl, var(--background-color), var(--text) 85%);
   --slides-link-hover: color-mix(in hsl, var(--background-color), var(--text) 70%);
-  --slides-borders: color-mix(in hsl, var(--background-color), var(--text) 30%);
-  --slides-table-headers: color-mix(in hsl, var(--background-color), var(--text) 12%);
+  --slides-borders: color-mix(in hsl, var(--background-color), var(--text) 15%);
+  --slides-table-headers: color-mix(in hsl, var(--background-color), var(--text) 7%);
   --slides-background-light: color-mix(in hsl, var(--background-color), var(--inverted-text) 60%);
 
   position: relative;
@@ -108,6 +108,11 @@
     border-collapse: collapse;
     border: 2px solid var(--slides-borders);
     background: var(--slides-background-light);
+  }
+
+  ::ng-deep table caption {
+    padding: calc(0.5 * var(--unit)) 0 ;
+    font-size: 0.9em;
   }
 
   ::ng-deep table th {

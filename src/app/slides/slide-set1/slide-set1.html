@@ -3,7 +3,7 @@
 <app-slides-container>
   @for (item of slidesContent(); track $index; let i = $index) {
   <app-slide [id]="`slide-${i + 1}`"
-             [style]="`--background-color: ${item.backgroundColor}`">
+             [attr.style]="item.backgroundColor ? `--background-color: ${item.backgroundColor}` : null">
     <app-markdown [data]="item.content"></app-markdown>
   </app-slide>
   }

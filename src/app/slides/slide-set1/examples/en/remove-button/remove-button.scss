@@ -1,33 +1,28 @@
 :host {
-  display: inline-flex;
-  align-items: center;
-  gap: calc(1 * var(--unit));
-  flex-wrap: wrap;
-
-  button {
-    position: relative;
-    padding: calc(1 * var(--unit));
-    display: inline-flex;
+  .buttons {
+    display: flex;
     gap: calc(1 * var(--unit));
-    min-height: 0;
 
-    svg {
-      --icon-size: calc(2 * var(--unit));
-      width: var(--icon-size);
-      height: var(--icon-size);
-    }
+    button {
+      display: inline-flex;
+      gap: calc(1 * var(--unit));
+      padding: calc(0.5 * var(--unit)) calc(1 * var(--unit));
+      min-height: 0;
 
-    &:active {
-      scale: 0.95;
-      opacity: 1;
-
-      &::after {
-        content: '';
-        opacity: 1;
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+      svg {
+        --icon-size: calc(2 * var(--unit));
+        width: var(--icon-size);
+        height: var(--icon-size);
       }
+    }
+  }
+
+  .emoji-container {
+    margin-top: calc(2 * var(--unit));
+    text-wrap: auto;
+
+    .cat {
+      font-size: 2.5em;
     }
   }
 }
