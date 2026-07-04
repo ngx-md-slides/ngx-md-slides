@@ -5,9 +5,10 @@
 
     button {
       display: inline-flex;
-      gap: calc(1 * var(--unit));
-      padding: calc(0.5 * var(--unit)) calc(1 * var(--unit));
+      gap: calc(0.8 * var(--unit));
+      padding: calc(0.3 * var(--unit)) calc(0.5 * var(--unit));
       min-height: 0;
+      font-size: 0.8em;
 
       svg {
         --icon-size: calc(2 * var(--unit));
@@ -22,7 +23,7 @@
     text-wrap: auto;
 
     .cat {
-      font-size: 2.5em;
+      font-size: 1.5em;
     }
   }
 }

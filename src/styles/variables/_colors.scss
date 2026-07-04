@@ -13,51 +13,51 @@
   --shadow-color: light-dark(rgba(0 0 0 / 0.2), rgb(0 0 0));
 
   /**  SLIDE BACKGROUND COLORS: **/
-  --slide-background-transparency: 85%;
+  --slide-background-transparency: 89%;
 
   --red: color-mix(
     in srgb,
-    oklch(70% 0.32 25),
+    oklch(70% 0.3 25),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --orange: color-mix(
     in srgb,
-    oklch(70% 0.29 70),
+    oklch(70% 0.27 70),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --yellow: color-mix(
     in srgb,
-    oklch(75% 0.28 95),
+    oklch(75% 0.26 95),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --lime: color-mix(
     in srgb,
-    oklch(72% 0.27 130),
+    oklch(72% 0.25 130),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --green: color-mix(
     in srgb,
-    oklch(65% 0.26 145),
+    oklch(65% 0.21 145),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --emerald: color-mix(
     in srgb,
-    oklch(62% 0.25 160),
+    oklch(62% 0.18 160),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --teal: color-mix(
     in srgb,
-    oklch(60% 0.25 175),
+    oklch(60% 0.16 175),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --cyan: color-mix(
     in srgb,
-    oklch(65% 0.24 195),
+    oklch(65% 0.14 195),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --azure: color-mix(
     in srgb,
-    oklch(60% 0.25 215),
+    oklch(60% 0.16 215),
     var(--inverted-text) var(--slide-background-transparency)
   );
   --blue: color-mix(

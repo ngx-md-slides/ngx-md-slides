@@ -36,14 +36,14 @@
   </button>
 </div>
 
+<p role="status">Cats counter: {{catsCounter()}}</p>
+
 
 <div class="emoji-container">
-
-  @for (ceva of [].constructor(catsCounter()); let i = $index; track i) {
+  @for (dummyItem of [].constructor(catsCounter()); let i = $index; track i) {
   <span class="cat">😺</span>
   }
   @empty {
-  <span id="empty-state">No cats.</span>
+  <span id="empty-state">No cats...</span>
   }
-
 </div>

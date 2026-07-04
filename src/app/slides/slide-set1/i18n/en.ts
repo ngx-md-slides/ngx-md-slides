@@ -3,7 +3,7 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 const md = String.raw;
 
 const enSlideSet1Translations: TranslatedSlideSet = {
-  title: '\\Welcome to ngx-md-slides',
+  title: '\\Welcome to ngx-md-slides!',
   slides: [
     {
       backgroundColor: '\\var(--purple)',
@@ -14,51 +14,50 @@ const enSlideSet1Translations: TranslatedSlideSet = {
     {
       backgroundColor: '\\var(--purple)',
       content: md`
-## What is this?
+## What is ngx-md-slides?
 
 It's a tool that helps you **create slides** using only code.
       `,
     },
     {
-      backgroundColor: '\\var(--indigo)',
+      backgroundColor: '\\var(--blue)',
       content: md`
 ## Features
 
 - Accessibility
-- Multi language support
-- Light/dark mode support
-- Markdown and HTML/CSS support
-- Live demo support (Angular components)
+- Multi language
+- Light/dark mode
+- Markdown and HTML/CSS
+- [Live examples](/web-a11y-for-everyone#live-examples) (Angular components)
       `,
     },
     {
       backgroundColor: '\\var(--azure)',
       content: md`
-## How to use?
+## How to use
 
-- [Fork this project](https://github.com/ngx-md-slides/ngx-md-slides/fork) and modify it however you wish.
-- [Check out the source code of this slide set](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/slide-set1/i18n/en.ts) and [Read the guide](add link later).
-- Open another slide set using the <code>Menu</code> button, or change the settings using the <code>Settings</code> button.
-
-`,
+- [Fork this project](https://github.com/ngx-md-slides/ngx-md-slides/fork) and modify it however you wish
+- [Read the usage guide](add link later) for more details
+- Or [check out the source code of this slide set](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/slide-set1/i18n/en.ts) first if you're curious
+      `,
     },
     {
-      backgroundColor: '\\var(--green)',
+      backgroundColor: '\\var(--orange)',
       content: md`
-## Markdown support
+## Markdown
 
-This project uses Markdown ([Marked](https://marked.js.org/)) with [Marked Default Options](https://marked.js.org/using_advanced#options).
+This project uses Markdown ([Marked](https://marked.js.org/)) with [default options](https://marked.js.org/using_advanced#options).
 
-**Important:** Use HTML over Markdown to provide better accessibility. E.g. Use an HTML table with a caption instead of a Markdown table.
+**Important:** Use HTML over Markdown to provide better accessibility. E.g. Use an HTML table with a caption.
 
 <table align="center" style="caption-side: bottom">
-  <caption>Animals I wish to see in real life</caption>
+  <caption>Animals I wish to see before I die</caption>
   <tr>
     <th>Animal name</th>
     <th>Image</th>
   </tr>
   <tr>
-    <td><a href="https://en.wikipedia.org/wiki/Ezo_flying_squirrel">Ezo flying squirrel</a></td>
+    <td>Ezo flying squirrel</td>
     <td style="padding: 0;">
       <img style="display: flex; width: auto; height: 4lh"
            src="img/ezo-squirrel.png"
@@ -71,17 +70,37 @@ This project uses Markdown ([Marked](https://marked.js.org/)) with [Marked Defau
     {
       backgroundColor: '\\var(--rose)',
       content: md`
-## Known issues
+## Limitations
 
-Since slide content is added between **ticks**(\`) in a Typescript file, ticks can't be used for code.
+Ticks(\`) can't be used for code. Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
 
-Make sure to use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks. Example:
+<table align="center">
+  <caption>Triple tilde code example</caption>
+  <tr>
+    <th>Code</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+~~~CSS
+p {
+  color: pink;
+}
+~~~
+</pre>
+</td>
+<td>
 
 ~~~CSS
 p {
   color: pink;
 }
 ~~~
+
+</td>
+</tr>
+</table>
       `,
     },
     {
@@ -89,8 +108,29 @@ p {
       content: md`
 ## Live examples
 
+Add Angular components in Markdown by mentioning the **component name** in an HTML comment.
+
+<table align="center">
+  <caption>Live example with cats</caption>
+  <tr>
+    <th>Code</th>
+    <th style="width: 50%">Result</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+
+&lt;!--RemoveButtonEn--&gt;
+
+</pre>
+</td>
+<td>
+
 <!--RemoveButtonEn-->
 
+</td>
+</tr>
+</table>
       `,
     },
   ],

@@ -1,5 +1,5 @@
 :host {
-  --background-color: var(--inverted-text);
+  --background-color: var(--inverted-text); //default color for no inline background styling
   --slide-text: color-mix(in hsl, var(--background-color), var(--text) 85%);
   --slides-link-hover: color-mix(in hsl, var(--background-color), var(--text) 70%);
   --slides-borders: color-mix(in hsl, var(--background-color), var(--text) 15%);
@@ -111,12 +111,16 @@
   }
 
   ::ng-deep table caption {
-    padding: calc(0.5 * var(--unit)) 0 ;
+    padding: calc(0.5 * var(--unit)) 0;
     font-size: 0.9em;
   }
 
   ::ng-deep table th {
     background-color: var(--slides-table-headers);
+    text-shadow:
+      var(--inverted-text) 1px 1px 2px,
+      var(--inverted-text) 0 1px 32px,
+      var(--inverted-text) 0 1px 64px;
   }
 
   ::ng-deep table th,
