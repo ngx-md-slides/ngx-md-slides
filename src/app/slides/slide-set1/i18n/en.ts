@@ -4,6 +4,12 @@ const md = String.raw;
 
 const enSlideSet1Translations: TranslatedSlideSet = {
   title: '\\Welcome to ngx-md-slides!',
+  examples: {
+    addButton: '\\Add cat',
+    removeButton: '\\Remove all cats',
+    counter: '\\Cats counter',
+    emptyState: '\\No cats...'
+  },
   slides: [
     {
       backgroundColor: '\\var(--purple)',

@@ -4,6 +4,12 @@ const md = String.raw;
 
 const roSlideSetTranslations: TranslatedSlideSet = {
   title: '\\Bine ai venit la ngx-md-slides!',
+  examples: {
+    addButton: '\\Adaugă pisică',
+    removeButton: '\\Șterge toate pisicile',
+    counter: '\\Număr de pisici',
+    emptyState: '\\Nu sunt pisici...',
+  },
   slides: [
     {
       backgroundColor: '\\var(--purple)',
@@ -121,13 +127,13 @@ Adaugă componente Angular în Markdown prin menționarea numelui componentei î
     <td>
       <pre>
 
-&lt;!--RemoveButtonRo--&gt;
+&lt;!--RemoveButtonEn--&gt;
 
 </pre>
 </td>
 <td>
 
-<!--RemoveButtonRo-->
+<!--RemoveButtonEn-->
 
 </td>
 </tr>

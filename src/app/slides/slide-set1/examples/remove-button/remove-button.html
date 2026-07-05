@@ -14,7 +14,7 @@
       <path d="M5 12h14"></path>
       <path d="M12 5v14"></path>
     </svg>
-    <span>Adaugă pisică</span>
+    <span>{{'sets.set1.examples.addButton' | translate}}</span>
   </button>
 
   <button (click)="reset()">
@@ -32,17 +32,17 @@
       <path d="M18 6 6 18"></path>
       <path d="m6 6 12 12"></path>
     </svg>
-    <span>Șterge toate pisicile</span>
+    <span>{{'sets.set1.examples.removeButton' | translate}}</span>
   </button>
 </div>
 
-<p role="status">Cats counter: {{catsCounter()}}</p>
+<p role="status">{{'sets.set1.examples.counter' | translate}}: {{catsCounter()}}</p>
 
 <div class="emoji-container">
   @for (dummyItem of [].constructor(catsCounter()); let i = $index; track i) {
   <span class="cat">😺</span>
   }
   @empty {
-  <span id="empty-state">No cats...</span>
+  <span id="empty-state">{{'sets.set1.examples.emptyState' | translate}}</span>
   }
 </div>

@@ -1,11 +1,13 @@
 import { Component, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-remove-button-ro',
+  selector: 'app-remove-button-en',
   templateUrl: './remove-button.html',
+  imports: [TranslatePipe],
   styleUrl: './remove-button.scss',
 })
-export class RemoveButtonRo {
+export class RemoveButtonEn {
   catsCounter = signal(0);
 
   addCats(): void {
