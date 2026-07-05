@@ -8,7 +8,7 @@ const enSlideSet1Translations: TranslatedSlideSet = {
     addButton: '\\Add cat',
     removeButton: '\\Remove all cats',
     counter: '\\Cats counter',
-    emptyState: '\\No cats...'
+    emptyState: '\\No cats...',
   },
   slides: [
     {
@@ -53,24 +53,6 @@ It's a tool that helps you **create slides** using only code.
 ## Markdown
 
 This project uses Markdown ([Marked](https://marked.js.org/)) with [default options](https://marked.js.org/using_advanced#options).
-
-**Important:** Use HTML over Markdown to provide better accessibility. E.g. Use an HTML table with a caption.
-
-<table align="center" style="caption-side: bottom">
-  <caption>Animals I wish to see before I die</caption>
-  <tr>
-    <th>Animal name</th>
-    <th>Image</th>
-  </tr>
-  <tr>
-    <td>Ezo flying squirrel</td>
-    <td style="padding: 0;">
-      <img style="display: flex; width: auto; height: 4lh"
-           src="img/ezo-squirrel.png"
-           alt="A photo of an Ezo flying squirrel. It looks like a regular squirrel but it's cuter, smaller, rounder, has very big black eyes.">
-    </td>
-  </tr>
-</table>
       `,
     },
     {

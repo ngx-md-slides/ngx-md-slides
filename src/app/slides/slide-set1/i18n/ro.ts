@@ -53,25 +53,6 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
 ## Markdown
 
 Acest proiect folosește Markdown ([Marked](https://marked.js.org/)) cu [opțiuni predefinite](https://marked.js.org/using_advanced#options).
-
-**Important:** Folosește HTML pentru a oferi o accesibilitate sporită.
-E.g. Folosește un tabel HTML cu o legendă/<code>caption</code>.
-
-<table align="center" style="caption-side: bottom">
-  <caption>Animale pe care doresc să le văd înainte de a muri</caption>
-  <tr>
-    <th>Nume animal</th>
-    <th>Imagine</th>
-  </tr>
-  <tr>
-    <td>Veverița zburătoare Ezo</td>
-    <td style="padding: 0;">
-      <img style="display: flex; width: auto; height: 4lh"
-           src="img/ezo-squirrel.png"
-           alt="O poză cu o veveriță zburătoare Ezo. Arată ca o veveriță obișnuită, doar că e mai drăguță, mai mică, mai rotundă și are ochi mari și negri.">
-    </td>
-  </tr>
-</table>
       `,
     },
     {
