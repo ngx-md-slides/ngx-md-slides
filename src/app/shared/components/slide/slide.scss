@@ -1,5 +1,6 @@
 :host {
-  --background-color: var(--inverted-text); //default color for no inline background styling
+  --background-color: var(--inverted-text); /* default color for no inline background styling */
+
   --slide-text: color-mix(in hsl, var(--background-color), var(--text) 85%);
   --slides-link-hover: color-mix(in hsl, var(--background-color), var(--text) 70%);
   --slides-borders: color-mix(in hsl, var(--background-color), var(--text) 15%);
@@ -16,147 +17,11 @@
   padding: 2.2lh;
   background: var(--background-color);
   color: var(--slide-text);
-
-  ::ng-deep .slide-number {
-    position: absolute;
-    top: 0;
-    left: calc(var(--spacing) / -6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8em;
-    padding: 0 0.4em;
-    translate: -100%;
-    z-index: -1;
-    background: var(--inverted-text);
-    border-radius: var(--spacing);
-    opacity: 0.8;
-  }
-
-  ::ng-deep * {
-    text-wrap: balance;
-    word-break: break-word;
-    flex-wrap: wrap;
-  }
-
-  ::ng-deep :first-child {
-    margin-top: 0;
-  }
-
-  ::ng-deep :last-child {
-    margin-bottom: 0;
-  }
-
-  ::ng-deep a {
-    color: var(--slide-text);
-    font-weight: 700;
-  }
-
-  ::ng-deep a:hover {
-    color: var(--slides-link-hover);
-  }
-
-  ::ng-deep hr {
-    border: 0.1em solid var(--slides-borders);
-    height: 0.1em;
-    border-radius: var(--radius);
-  }
-
-  ::ng-deep img {
-    width: 100%;
-    height: auto;
-  }
-
-  ::ng-deep blockquote {
-    border: 0.1em solid var(--slides-borders);
-    border-left: 0.3lh solid var(--slides-borders);
-    margin: 0;
-    padding-block-start: 0.4lh;
-    padding-block-end: 0.4lh;
-    padding-inline-start: 0.6lh;
-    padding-inline-end: 0.6lh;
-    border-radius: var(--radius);
-    background: var(--slides-background-light);
-  }
-
-  ::ng-deep ul {
-    margin-block-start: 0.5lh !important;
-    margin-block-end: 0.5lh !important;
-    padding-inline-start: 1.2lh !important;
-  }
-
-  ::ng-deep li {
-    margin-block-start: 0.3lh !important;
-    margin-block-end: 0.3lh !important;
-  }
-
-  ::ng-deep code.hljs {
-    background: oklch(0 0 347 / 0.87);
-    font-family: var(--code-font);
-    border-radius: var(--radius);
-  }
-
-  ::ng-deep code:not(.hljs) {
-    background: var(--slides-background-light);
-    font-family: var(--code-font);
-    padding: 0.12em 0.2em;
-    border-radius: var(--radius);
-  }
-
-  ::ng-deep table {
-    border-collapse: collapse;
-    border: 0.1em solid var(--slides-borders);
-    background: var(--slides-background-light);
-  }
-
-  ::ng-deep table caption {
-    padding: 0.2lh;
-    font-size: 0.9em;
-  }
-
-  ::ng-deep table th {
-    background-color: var(--slides-table-headers);
-    text-shadow:
-      var(--inverted-text) 0.05em 0.05em 0.1em,
-      var(--inverted-text) 0 0.05em 1.2em,
-  }
-
-  ::ng-deep table th,
-  ::ng-deep table td {
-    padding: 0.4em 0.6em;
-    border: 0.1em solid var(--slides-borders);
-  }
-
-  &:focus-visible {
-    outline-offset: 4px;
-  }
 }
 
 :host-context(.flexible-layout) {
   :host {
     border-radius: var(--radius);
-
-    ::ng-deep img.fullscreen {
-      display: flex;
-      object-fit: cover;
-    }
-
-    ::ng-deep .side-by-side {
-      height: 100%;
-
-      img {
-        width: 100%;
-
-        &:not(:last-child) {
-          border-bottom: 2lh solid transparent;
-        }
-      }
-    }
-
-    &:has(img.fullscreen),
-    &:has(.side-by-side) {
-      padding: 0 !important;
-    }
   }
 }
 
@@ -164,23 +29,17 @@
   :host {
     font-size: 2cqi;
 
-    ::ng-deep .side-by-side {
-      height: 100%;
-    }
-
-    &:has(.side-by-side) {
-      padding: 0 !important;
-    }
-
     aspect-ratio: 16 / 9;
     overflow-x: visible;
     overflow-y: clip;
+  }
+}
 
-    ::ng-deep img.fullscreen {
-      aspect-ratio: 16 / 9;
-      position: absolute;
-      inset: 0;
-      object-fit: cover;
+:host-context(.fullscreen.fixed-layout) {
+  :host {
+    /* Hide focus outline of the main slide shown in fullscreen */
+    &:focus-visible {
+      outline: none;
     }
   }
 }

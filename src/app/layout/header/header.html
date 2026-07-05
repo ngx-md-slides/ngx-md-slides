@@ -120,13 +120,11 @@
             class="inline-group"
             aria-labelledby="max-width-label">
         <button (click)="decreaseWidth()"
-                [disabled]="isDecreaseButtonDisabled()"
                 class="plus-minus-button">
           <span class="sr-only">{{ 'ui.decreaseMaxWidth' | translate}}</span>
           <span aria-hidden="true">-</span>
         </button>
         <button (click)="increaseWidth()"
-                [disabled]="isIncreaseButtonDisabled()"
                 class="plus-minus-button">
           <span class="sr-only">{{ 'ui.increaseMaxWidth' | translate}}</span>
           <span aria-hidden="true">+</span>
