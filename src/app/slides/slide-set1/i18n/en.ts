@@ -43,7 +43,7 @@ It's a tool that helps you **create slides** using only code.
 ## How to use
 
 - [Fork this project](https://github.com/ngx-md-slides/ngx-md-slides/fork) and modify it however you wish
-- [Read the usage guide](add link later) for more details
+- Read the usage guide (work in progress) for more details
 - Or [check out the source code of this slide set](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/slide-set1/i18n/en.ts) first if you're curious
       `,
     },

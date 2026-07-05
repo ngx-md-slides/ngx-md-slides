@@ -43,7 +43,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
 ## Cum se folosește
 
 - [Dai Fork la acest proiect](https://github.com/ngx-md-slides/ngx-md-slides/fork) și-l modifici cum dorești
-- [Citește ghidul de utilizare](add link later) pentru mai multe detalii
+- Citește ghidul de utilizare (în desfășurare) pentru mai multe detalii
 - Sau [vezi codul sursă al acestui set de slide-uri](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/slide-set1/i18n/en.ts) mai întâi dacă ești curios
       `,
     },
