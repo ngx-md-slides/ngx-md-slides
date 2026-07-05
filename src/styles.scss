@@ -45,7 +45,7 @@
     align-items: center;
     font: inherit;
     background: var(--controls-background);
-    border: 0.1em solid var(--controls-border);
+    border: 0.15rem solid var(--controls-border);
     padding: 0 calc(var(--spacing) / 3);
 
     &:not([disabled]):active {
@@ -64,7 +64,7 @@
   }
 
   [popover] {
-    border: 0.1em solid var(--background);
+    border: 0.15rem solid var(--background);
     padding: calc(var(--spacing) / 3);
     border-radius: var(--radius);
     margin-top: 8px;

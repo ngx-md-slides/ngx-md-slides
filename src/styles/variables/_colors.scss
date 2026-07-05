@@ -13,10 +13,10 @@
   --shadow-color: light-dark(rgba(0 0 0 / 0.2), rgb(0 0 0));
   --controls-border: light-dark(
     color-mix(var(--grey), var(--background) 60%),
-    color-mix(var(--grey), var(--background) 50%)
+    color-mix(var(--grey), var(--background) 40%)
   );
   --controls-hover: light-dark(
-    color-mix(var(--grey), var(--inverted-text) 80%),
+    color-mix(var(--grey), var(--inverted-text) 87%),
     color-mix(var(--grey), var(--background) 60%)
   );
   --controls-background: var(--background-transparent);
