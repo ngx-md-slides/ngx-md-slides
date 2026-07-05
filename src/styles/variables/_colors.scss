@@ -5,12 +5,25 @@
   --link-color: var(--accent);
   --background: light-dark(rgb(230 230 240), rgb(15 15 25));
   --light-grey: rgba(117 117 137 / 0.15);
-  --dark-grey: rgba(117 117 137 / 0.7);
+  --grey: rgb(127, 127, 137);
   --background-transparent: light-dark(
     rgba(255, 255, 255, var(--background-transparency)),
     rgba(35, 35, 45, var(--background-transparency))
   );
   --shadow-color: light-dark(rgba(0 0 0 / 0.2), rgb(0 0 0));
+  --controls-border: light-dark(
+    color-mix(var(--grey), var(--background) 60%),
+    color-mix(var(--grey), var(--background) 50%)
+  );
+  --controls-hover: light-dark(
+    color-mix(var(--grey), var(--inverted-text) 80%),
+    color-mix(var(--grey), var(--background) 60%)
+  );
+  --controls-background: var(--background-transparent);
+  --checked-controls-background: light-dark(
+    oklch(from var(--grey) calc(l + 0.32) c h),
+    oklch(from var(--grey) calc(l - 0.45) c h)
+  );
 
   /**  SLIDE BACKGROUND COLORS: **/
   --slide-background-transparency: 89%;

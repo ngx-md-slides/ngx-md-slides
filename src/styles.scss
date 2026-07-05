@@ -44,8 +44,8 @@
     display: inline-flex;
     align-items: center;
     font: inherit;
-    background: var(--background);
-    border: 2px solid var(--shadow-color);
+    background: var(--controls-background);
+    border: 0.1em solid var(--controls-border);
     padding: 0 calc(var(--spacing) / 3);
 
     &:not([disabled]):active {
@@ -64,7 +64,7 @@
   }
 
   [popover] {
-    border: 2px solid var(--background);
+    border: 0.1em solid var(--background);
     padding: calc(var(--spacing) / 3);
     border-radius: var(--radius);
     margin-top: 8px;
@@ -84,14 +84,7 @@
     border-radius: var(--radius);
 
     &:not([disabled]):hover {
-      box-shadow:
-        inset 0 0 0 1px
-          light-dark(rgba(255 255 255 / 0.85), color-mix(in hsl, var(--accent), transparent 80%)),
-        inset 0 0 0 50px
-          light-dark(
-            color-mix(in hsl, var(--accent), transparent 94%),
-            color-mix(in hsl, var(--background), transparent 30%)
-          );
+      background: var(--controls-hover);
     }
   }
 
