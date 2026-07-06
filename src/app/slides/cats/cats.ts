@@ -4,18 +4,15 @@ import { Slide } from '@shared/components/slide/slide';
 import { SlidesContainer } from '@shared/components/slides-container/slides-container';
 import { SlideSet } from 'app/shared/components/slide-set/slide-set';
 import { Markdown } from '@shared/components/markdown/markdown';
-import { A11yIcon } from '@shared/components/icons/a11y-icon/a11y-icon';
-import { RemoveButtonEn } from './examples/remove-button/remove-button';
 import { TableOfContents } from 'app/shared/components/table-of-contents/table-of-contents';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-slide-set1',
+  selector: 'app-cats',
   imports: [SlidesContainer, Slide, Markdown, TableOfContents, TranslatePipe],
-  templateUrl: './slide-set1.html',
-  styleUrl: './slide-set1.scss',
+  templateUrl: './cats.html',
+  styleUrl: './cats.scss',
 })
-export class SlideSet1 extends SlideSet {
-  override setName = 'sets.set1.slides';
-  override components = [A11yIcon, RemoveButtonEn];
+export class Cats extends SlideSet {
+  override setName = 'sets.cats.slides';
 }

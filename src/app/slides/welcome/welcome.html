@@ -1,0 +1,15 @@
+<app-table-of-contents [contents]="slidesContent"></app-table-of-contents>
+
+<app-slides-container>
+  @for (item of slidesContent(); track $index; let i = $index) {
+  <app-slide [id]="`slide-${i + 1}`"
+             [attr.style]="item.backgroundColor ? `--background-color: ${item.backgroundColor}` : null">
+    <app-markdown [data]="item.content"></app-markdown>
+  </app-slide>
+  }
+
+  @if (slidesContent().length === 0) {
+  <h1 class="no-slides">{{'ui.noSlides' | translate}}</h1>
+  }
+
+</app-slides-container>

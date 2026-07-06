@@ -37,8 +37,8 @@ src
 |____ layout ...
 |____ shared ...
 |____ slides <-- all slide sets
-|______ slide-set1 <-- demo slide set
-|________ i18n <-- translations for slide-set1
+|______ welcome <-- demo slide set
+|________ i18n <-- translations for welcome
 ```
 
 ## How to run

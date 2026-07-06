@@ -1,4 +1,5 @@
-import roSlideSetTranslations from '@slides/slide-set1/i18n/ro';
+import roWelcomeTranslations from '@slides/welcome/i18n/ro';
+import roCatsTranslations from '@slides/cats/i18n/ro';
 
 const ro = {
   ui: {
@@ -36,7 +37,8 @@ const ro = {
     exitFullscreen: '\\Nu se prezintă. Fullscreen dezactivat.'
   },
   sets: {
-    set1: roSlideSetTranslations,
+    welcome: roWelcomeTranslations,
+    cats: roCatsTranslations
   },
 };
 

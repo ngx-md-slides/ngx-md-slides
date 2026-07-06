@@ -1,4 +1,5 @@
-import enSlideSet1Translations from '@slides/slide-set1/i18n/en';
+import enWelcomeTranslations from '@slides/welcome/i18n/en';
+import enCatsTranslations from '@slides/cats/i18n/en';
 
 const en = {
   ui: {
@@ -36,7 +37,8 @@ const en = {
     exitFullscreen: '\\Not presenting. Fullscreen disabled.'
   },
   sets: {
-    set1: enSlideSet1Translations,
+    welcome: enWelcomeTranslations,
+    cats: enCatsTranslations
   },
 };
 

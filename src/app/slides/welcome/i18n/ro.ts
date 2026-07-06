@@ -2,7 +2,7 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 
 const md = String.raw;
 
-const roSlideSetTranslations: TranslatedSlideSet = {
+const roWelcomeTranslations: TranslatedSlideSet = {
   title: '\\Bine ai venit la ngx-md-slides!',
   examples: {
     addButton: '\\Adaugă pisică',
@@ -44,7 +44,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
 
 - [Dai Fork la acest proiect](https://github.com/ngx-md-slides/ngx-md-slides/fork) și-l modifici cum dorești
 - Citește ghidul de utilizare (în desfășurare) pentru mai multe detalii
-- Sau [vezi codul sursă al acestui set de slide-uri](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/slide-set1/i18n/en.ts) mai întâi dacă ești curios
+- Sau [vezi codul sursă al acestui set de slide-uri](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/welcome/i18n/en.ts) mai întâi dacă ești curios
       `,
     },
     {
@@ -124,4 +124,4 @@ p {
   ],
 };
 
-export default roSlideSetTranslations;
+export default roWelcomeTranslations;

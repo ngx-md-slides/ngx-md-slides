@@ -3,13 +3,18 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'web-a11y-for-everyone',
+    redirectTo: 'welcome',
     pathMatch: 'full',
   },
   {
-    path: 'web-a11y-for-everyone',
-    loadComponent: () => import('./slides/slide-set1/slide-set1').then((m) => m.SlideSet1),
-    data: { title: 'sets.set1.title' },
+    path: 'welcome',
+    loadComponent: () => import('./slides/welcome/welcome').then((m) => m.Welcome),
+    data: { title: 'sets.welcome.title' },
+  },
+  {
+    path: 'cats',
+    loadComponent: () => import('./slides/cats/cats').then((m) => m.Cats),
+    data: { title: 'sets.cats.title' },
   },
   {
     path: '**',

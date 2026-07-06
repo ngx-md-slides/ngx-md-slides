@@ -2,7 +2,7 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 
 const md = String.raw;
 
-const enSlideSet1Translations: TranslatedSlideSet = {
+const enWelcomeTranslations: TranslatedSlideSet = {
   title: '\\Welcome to ngx-md-slides!',
   examples: {
     addButton: '\\Add cat',
@@ -44,7 +44,7 @@ It's a tool that helps you **create slides** using only code.
 
 - [Fork this project](https://github.com/ngx-md-slides/ngx-md-slides/fork) and modify it however you wish
 - Read the usage guide (work in progress) for more details
-- Or [check out the source code of this slide set](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/slide-set1/i18n/en.ts) first if you're curious
+- Or [check out the source code of this slide set](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/welcome/i18n/en.ts) first if you're curious
       `,
     },
     {
@@ -124,4 +124,4 @@ p {
   ],
 };
 
-export default enSlideSet1Translations;
+export default enWelcomeTranslations;
