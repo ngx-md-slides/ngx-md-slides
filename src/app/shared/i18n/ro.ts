@@ -31,7 +31,9 @@ const ro = {
     external: '\\extern',
     noSlides: '\\Nu există conținut de afișat...',
     tableOfContents: '\\Cuprins',
-    noHeadings: '\\Nu există titluri de afișat...'
+    noHeadings: '\\Nu există titluri de afișat...',
+    requestFullscreen: '\\Se prezintă. Fullscreen activat.',
+    exitFullscreen: '\\Nu se prezintă. Fullscreen dezactivat.'
   },
   sets: {
     set1: roSlideSetTranslations,

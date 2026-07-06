@@ -11,6 +11,8 @@ import { SettingsIcon } from '@shared/components/icons/settings-icon/settings-ic
 import { PresentationIcon } from '@shared/components/icons/presentation-icon/presentation-icon';
 import { routes } from 'app/app.routes';
 import { LocalStorageService } from '@shared/services/local-storage.service';
+import { NotificationService } from 'app/shared/services/notification.service';
+import { fromEvent } from 'rxjs';
 
 const WIDTH_STEP = 10;
 const WIDTH_MIN = 10;
@@ -34,6 +36,7 @@ export class Header implements OnInit, AfterViewInit {
   stateService = inject(StateService);
   document = inject(DOCUMENT);
   translateService = inject(TranslateService);
+  notificationService = inject(NotificationService);
   localStorageService = inject(LocalStorageService);
   state: State = {};
   layout?: Layout;
@@ -63,7 +66,7 @@ export class Header implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     if (typeof this.document !== 'undefined') {
-      this.document.addEventListener('fullscreenchange', () => {
+      fromEvent(this.document, 'fullscreenchange').subscribe(() => {
         if (this.document.fullscreenElement === null) {
           this.exitFullscreen();
         }
@@ -74,10 +77,8 @@ export class Header implements OnInit, AfterViewInit {
   exitFullscreen(): void {
     this.document.documentElement.classList.remove('fullscreen');
     this.updateFullscreenStateAndUI(false);
-
-    if (this.document.fullscreenElement === null) {
-      this.focusCurrentSlide();
-    }
+    this.focusCurrentSlide();
+    this.notificationService.notify(this.translateService.instant('ui.exitFullscreen'));
   }
 
   setInitialLayout(): void {
@@ -207,6 +208,7 @@ export class Header implements OnInit, AfterViewInit {
         this.document.documentElement.classList.add('fullscreen');
         this.updateFullscreenStateAndUI(true);
         this.focusCurrentSlide(true);
+        this.notificationService.notify(this.translateService.instant('ui.requestFullscreen'));
       });
     }
   }
@@ -219,7 +221,7 @@ export class Header implements OnInit, AfterViewInit {
 
     if (currentSlideElement) {
       requestAnimationFrame(() => {
-        if(!isScrollOnly) {
+        if (!isScrollOnly) {
           currentSlideElement.setAttribute('tabindex', '0');
           currentSlideElement.focus();
         }
@@ -257,4 +259,7 @@ export class Header implements OnInit, AfterViewInit {
     const menuPopover = this.document.getElementById('main-menu');
     menuPopover?.hidePopover();
   }
+}
+function takeFirst(arg0: number): import('rxjs').OperatorFunction<Event, unknown> {
+  throw new Error('Function not implemented.');
 }

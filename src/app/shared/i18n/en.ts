@@ -31,7 +31,9 @@ const en = {
     external: '\\external',
     noSlides: '\\No slides to display...',
     tableOfContents: '\\Table of Contents',
-    noHeadings: '\\No headings to display...'
+    noHeadings: '\\No headings to display...',
+    requestFullscreen: '\\Presenting. Fullscreen activated.',
+    exitFullscreen: '\\Not presenting. Fullscreen disabled.'
   },
   sets: {
     set1: enSlideSet1Translations,
