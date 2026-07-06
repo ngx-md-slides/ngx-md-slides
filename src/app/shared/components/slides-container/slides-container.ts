@@ -49,15 +49,39 @@ export class SlidesContainer {
       : '100%';
   }
 
+  @HostListener('focusin')
+  handleFocusin() {
+    const activeElement = this.document.activeElement;
+
+    if (activeElement && activeElement.matches(':focus-visible')) {
+      this.state.activeElement = activeElement;
+      this.stateService.setState(this.state);
+
+      const closestSlide = activeElement?.closest('app-slide');
+
+      closestSlide?.scrollIntoView({
+        behavior: 'instant',
+        block: 'center',
+      });
+    }
+  }
+
   @HostListener('keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
-    const allowedKeys = ['ArrowRight', 'ArrowLeft', 'Home', 'End', 'PageUp', 'PageDown'];
+    const allowedKeysInFullscreen = [
+      'ArrowRight',
+      'ArrowLeft',
+      'Home',
+      'End',
+      'PageUp',
+      'PageDown',
+    ];
 
     if (
       !this.allSlides ||
       this.stateService.getState()().layout === 'flexible' ||
       !this.stateService.getState()().isFullscreen ||
-      !allowedKeys.includes(event.key)
+      !allowedKeysInFullscreen.includes(event.key)
     )
       return;
 

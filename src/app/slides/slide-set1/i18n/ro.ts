@@ -56,6 +56,36 @@ Acest proiect folosește Markdown ([Marked](https://marked.js.org/)) cu [opțiun
       `,
     },
     {
+      backgroundColor: '\\var(--yellow)',
+      content: md`
+## Exemple live
+
+Adaugă componente Angular în Markdown prin menționarea numelui componentei într-un comentariu HTML.
+
+<table align="center">
+  <caption>Exemplu live cu pisici</caption>
+  <tr>
+    <th>Cod</th>
+    <th style="width: 50%">Rezultat</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+
+&lt;!--RemoveButtonEn--&gt;
+
+</pre>
+</td>
+<td>
+
+<!--RemoveButtonEn-->
+
+</td>
+</tr>
+</table>
+      `,
+    },
+    {
       backgroundColor: '\\var(--rose)',
       content: md`
 ## Limitări
@@ -85,36 +115,6 @@ p {
   color: pink;
 }
 ~~~
-
-</td>
-</tr>
-</table>
-      `,
-    },
-    {
-      backgroundColor: '\\var(--yellow)',
-      content: md`
-## Exemple live
-
-Adaugă componente Angular în Markdown prin menționarea numelui componentei într-un comentariu HTML.
-
-<table align="center">
-  <caption>Exemplu live cu pisici</caption>
-  <tr>
-    <th>Cod</th>
-    <th style="width: 50%">Rezultat</th>
-  </tr>
-  <tr>
-    <td>
-      <pre>
-
-&lt;!--RemoveButtonEn--&gt;
-
-</pre>
-</td>
-<td>
-
-<!--RemoveButtonEn-->
 
 </td>
 </tr>

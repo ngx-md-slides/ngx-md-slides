@@ -32,7 +32,7 @@ const ro = {
     noSlides: '\\Nu există conținut de afișat...',
     tableOfContents: '\\Cuprins',
     noHeadings: '\\Nu există titluri de afișat...',
-    requestFullscreen: '\\Se prezintă. Fullscreen activat.',
+    requestFullscreen: '\\Se prezintă. Fullscreen activat. Apasă Escape pentru a dezactiva.',
     exitFullscreen: '\\Nu se prezintă. Fullscreen dezactivat.'
   },
   sets: {

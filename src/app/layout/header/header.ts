@@ -213,17 +213,26 @@ export class Header implements OnInit, AfterViewInit {
     }
   }
 
-  focusCurrentSlide(isPresentMode = false, isScrollOnly = false): void {
-    const currentSlide = this.stateService.getState()().currentSlide ?? 0;
+  focusCurrentSlide(isRequestingFullscreen = false, isScrollOnly = false): void {
+    const activeElement = this.stateService.getState()().activeElement;
+    let currentSlideElement;
 
-    const currentSlideElement =
-      this.document.querySelectorAll<HTMLElement>('app-slide')[currentSlide];
+    if (activeElement) {
+      currentSlideElement = activeElement?.closest('app-slide');
+    } else {
+      const currentSlide = this.stateService.getState()().currentSlide ?? 0;
+      currentSlideElement = this.document.querySelectorAll<HTMLElement>('app-slide')[currentSlide];
+    }
 
     if (currentSlideElement) {
       requestAnimationFrame(() => {
         if (!isScrollOnly) {
-          currentSlideElement.setAttribute('tabindex', '0');
-          currentSlideElement.focus();
+          if (activeElement) {
+            (activeElement as HTMLElement)?.focus();
+          } else {
+            currentSlideElement?.setAttribute('tabindex', '0');
+            (currentSlideElement as HTMLElement)?.focus();
+          }
         }
 
         currentSlideElement.scrollIntoView({
@@ -231,7 +240,7 @@ export class Header implements OnInit, AfterViewInit {
           block: 'center',
         });
 
-        if (!isPresentMode && !isScrollOnly) {
+        if (!isRequestingFullscreen && !isScrollOnly) {
           currentSlideElement.removeAttribute('tabindex');
         }
       });
@@ -259,7 +268,4 @@ export class Header implements OnInit, AfterViewInit {
     const menuPopover = this.document.getElementById('main-menu');
     menuPopover?.hidePopover();
   }
-}
-function takeFirst(arg0: number): import('rxjs').OperatorFunction<Event, unknown> {
-  throw new Error('Function not implemented.');
 }

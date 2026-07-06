@@ -56,6 +56,36 @@ This project uses Markdown ([Marked](https://marked.js.org/)) with [default opti
       `,
     },
     {
+      backgroundColor: '\\var(--yellow)',
+      content: md`
+## Live examples
+
+Add Angular components in Markdown by mentioning the **component name** in an HTML comment.
+
+<table align="center">
+  <caption>Live example with cats</caption>
+  <tr>
+    <th>Code</th>
+    <th style="width: 50%">Result</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+
+&lt;!--RemoveButtonEn--&gt;
+
+</pre>
+</td>
+<td>
+
+<!--RemoveButtonEn-->
+
+</td>
+</tr>
+</table>
+      `,
+    },
+    {
       backgroundColor: '\\var(--rose)',
       content: md`
 ## Limitations
@@ -85,36 +115,6 @@ p {
   color: pink;
 }
 ~~~
-
-</td>
-</tr>
-</table>
-      `,
-    },
-    {
-      backgroundColor: '\\var(--yellow)',
-      content: md`
-## Live examples
-
-Add Angular components in Markdown by mentioning the **component name** in an HTML comment.
-
-<table align="center">
-  <caption>Live example with cats</caption>
-  <tr>
-    <th>Code</th>
-    <th style="width: 50%">Result</th>
-  </tr>
-  <tr>
-    <td>
-      <pre>
-
-&lt;!--RemoveButtonEn--&gt;
-
-</pre>
-</td>
-<td>
-
-<!--RemoveButtonEn-->
 
 </td>
 </tr>

@@ -14,7 +14,7 @@ const en = {
     fixedLayout: '\\Fixed',
     fixedLayoutDescription: '\\Maintain an aspect ratio of 16:9 (zoom not supported).',
     flexibleLayout: '\\Flexible',
-    flexibleLayoutDescription: '\\Allow web page behavior (content can be zoomed).',
+    flexibleLayoutDescription: '\\Allow web page behavior (zoom supported).',
     maxWidth: '\\Maximum width',
     decreaseMaxWidth: '\\Decrease maximum width',
     increaseMaxWidth: '\\Increase maximum width',
@@ -32,7 +32,7 @@ const en = {
     noSlides: '\\No slides to display...',
     tableOfContents: '\\Table of Contents',
     noHeadings: '\\No headings to display...',
-    requestFullscreen: '\\Presenting. Fullscreen activated.',
+    requestFullscreen: '\\Presenting. Fullscreen activated. Press Escape to exit.',
     exitFullscreen: '\\Not presenting. Fullscreen disabled.'
   },
   sets: {

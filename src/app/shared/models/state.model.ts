@@ -6,7 +6,8 @@ export interface State {
   maxWidth?: number;
   theme?: Theme;
   isFullscreen?: boolean;
-  currentSlide?: number;
   language?: string;
+  currentSlide?: number;
   activeHeading?: Element;
+  activeElement?: Element;
 }
