@@ -34,7 +34,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
 - Multiple limbi
 - Mod luminos/întunecat
 - Markdown și HTML/CSS
-- [Exemple live](/web-a11y-for-everyone#exemple-live) (componente Angular)
+- [Exemple live](#exemple-live) (componente Angular)
       `,
     },
     {
