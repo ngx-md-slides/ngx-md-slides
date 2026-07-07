@@ -70,13 +70,13 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
 
       /* Angular bug: https://github.com/angular/angular/issues/55383
       Viewport Scroller is used because Angular doesn't take into account CSS solutions such as "scroll-margin-top". */
-      if (navigationEvent instanceof Scroll) {
-        const element = this.document.querySelector(`#${navigationEvent.anchor}`);
+      // if (navigationEvent instanceof Scroll) {
+      //   const element = this.document.querySelector(`#${navigationEvent.anchor}`);
 
-        if (element) {
-          this.viewportScroller.setOffset([0, ANCHOR_SCROLL_OFFSET]);
-        }
-      }
+      //   if (element) {
+      //     this.viewportScroller.setOffset([0, ANCHOR_SCROLL_OFFSET]);
+      //   }
+      // }
     });
   }
 

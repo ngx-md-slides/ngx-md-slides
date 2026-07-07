@@ -6,6 +6,7 @@ import {
   DOCUMENT,
   Renderer2,
   afterNextRender,
+  ElementRef,
 } from '@angular/core';
 import { State } from '@shared/models/state.model';
 import { StateService } from '@shared/services/state.service';
@@ -23,6 +24,7 @@ export class SlidesContainer {
   stateService = inject(StateService);
   renderer = inject(Renderer2);
   document = inject(DOCUMENT);
+  elementRef = inject(ElementRef);
   allSlides?: NodeListOf<HTMLElement>;
   state: State = {};
   currentSlide = 0;
@@ -32,8 +34,8 @@ export class SlidesContainer {
   constructor() {
     afterNextRender({
       read: () => {
-        if (typeof this.document !== 'undefined') {
-          this.allSlides = this.document.querySelectorAll('app-slide');
+        if (typeof this.elementRef !== 'undefined') {
+          this.allSlides = this.elementRef.nativeElement.querySelectorAll('app-slide');
         }
 
         this.addSlideNumber();
