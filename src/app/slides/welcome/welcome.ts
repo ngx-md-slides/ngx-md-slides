@@ -4,7 +4,7 @@ import { Slide } from '@shared/components/slide/slide';
 import { SlidesContainer } from '@shared/components/slides-container/slides-container';
 import { SlideSet } from 'app/shared/components/slide-set/slide-set';
 import { Markdown } from '@shared/components/markdown/markdown';
-import { RemoveButton } from './examples/remove-button/remove-button';
+import { MyExample } from './examples/remove-button/my-example';
 import { TableOfContents } from 'app/shared/components/table-of-contents/table-of-contents';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -16,5 +16,5 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Welcome extends SlideSet {
   override setName = 'sets.welcome.slides';
-  override components = [RemoveButton];
+  override components = [MyExample];
 }

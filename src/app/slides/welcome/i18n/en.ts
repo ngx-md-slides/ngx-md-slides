@@ -72,13 +72,13 @@ Add Angular components in Markdown by mentioning the **component name** in an HT
     <td>
       <pre>
 
-&lt;!--RemoveButtonEn--&gt;
+&lt;!--MyExample--&gt;
 
 </pre>
 </td>
 <td>
 
-<!--RemoveButtonEn-->
+<!--MyExample-->
 
 </td>
 </tr>

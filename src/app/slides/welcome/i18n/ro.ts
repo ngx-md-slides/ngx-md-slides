@@ -72,13 +72,13 @@ Adaugă componente Angular în Markdown prin menționarea numelui componentei î
     <td>
       <pre>
 
-&lt;!--RemoveButtonEn--&gt;
+&lt;!--MyExample--&gt;
 
 </pre>
 </td>
 <td>
 
-<!--RemoveButtonEn-->
+<!--MyExample-->
 
 </td>
 </tr>

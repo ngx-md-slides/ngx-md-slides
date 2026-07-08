@@ -6,7 +6,7 @@ import { SlideSet } from 'app/shared/components/slide-set/slide-set';
 import { Markdown } from '@shared/components/markdown/markdown';
 import { TableOfContents } from 'app/shared/components/table-of-contents/table-of-contents';
 import { TranslatePipe } from '@ngx-translate/core';
-import { RemoveButton } from '../welcome/examples/remove-button/remove-button';
+import { MyExample } from '../welcome/examples/remove-button/my-example';
 
 @Component({
   selector: 'app-cats',
@@ -16,5 +16,5 @@ import { RemoveButton } from '../welcome/examples/remove-button/remove-button';
 })
 export class Cats extends SlideSet {
   override setName = 'sets.cats.slides';
-  override components = [RemoveButton];
+  override components = [MyExample];
 }

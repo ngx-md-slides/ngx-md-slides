@@ -91,7 +91,7 @@
     .option {
       display: grid;
       grid-template-columns: subgrid;
-      grid-column-gap: calc(var(--spacing) / 2);
+      grid-column-gap: var(--spacing);
       grid-column: 1 / -1;
       align-items: baseline;
       min-height: var(--min-height-controls);

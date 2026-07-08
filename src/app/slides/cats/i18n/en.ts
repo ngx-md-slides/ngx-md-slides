@@ -10,7 +10,7 @@ const enCatsTranslations: TranslatedSlideSet = {
       content: md`
 # Cats
 
-<!--RemoveButtonEn-->
+<!--MyExample-->
       `,
     },
     {

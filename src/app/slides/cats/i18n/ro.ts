@@ -10,7 +10,7 @@ const roCatsTranslations: TranslatedSlideSet = {
       content: md`
 # Pisici
 
-<!--RemoveButtonEn-->
+<!--MyExample-->
       `,
     },
     {

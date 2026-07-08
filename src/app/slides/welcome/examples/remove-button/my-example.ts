@@ -2,12 +2,12 @@ import { Component, signal } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-remove-button',
-  templateUrl: './remove-button.html',
+  selector: 'app-my-example',
+  templateUrl: './my-example.html',
   imports: [TranslatePipe],
-  styleUrl: './remove-button.scss',
+  styleUrl: './my-example.scss',
 })
-export class RemoveButton {
+export class MyExample {
   catsCounter = signal(0);
 
   addCats(): void {
