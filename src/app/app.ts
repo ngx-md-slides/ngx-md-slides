@@ -9,7 +9,7 @@ import {
   WritableSignal,
 } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { RouterLink, RouterOutlet, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { RouterLink, RouterOutlet, Router, NavigationEnd, ActivatedRoute, Scroll } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -21,7 +21,7 @@ import { State } from './shared/models/state.model';
 
 /* When skipping to headings, the focused element goes underneath the header element.
 This values is used as a scroll offset from the top */
-// const ANCHOR_SCROLL_OFFSET = 250;
+const ANCHOR_SCROLL_OFFSET = 250;
 
 @Component({
   selector: 'app-root',
@@ -63,13 +63,13 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
 
       /* Angular bug: https://github.com/angular/angular/issues/55383
       Viewport Scroller is used because Angular doesn't take into account CSS solutions such as "scroll-margin-top". */
-      // if (navigationEvent instanceof Scroll) {
-      //   const element = this.document.querySelector(`#${navigationEvent.anchor}`);
+      if (navigationEvent instanceof Scroll) {
+        const element = this.document.querySelector(`#${navigationEvent.anchor}`);
 
-      //   if (element) {
-      //     this.viewportScroller.setOffset([0, ANCHOR_SCROLL_OFFSET]);
-      //   }
-      // }
+        if (element) {
+          this.viewportScroller.setOffset([0, ANCHOR_SCROLL_OFFSET]);
+        }
+      }
     });
   }
 
