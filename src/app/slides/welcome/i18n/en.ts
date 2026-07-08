@@ -34,7 +34,7 @@ It's a tool that helps you **create slides** using only code.
 - Multi language
 - Light/dark mode
 - Markdown and HTML/CSS
-- [Live examples](./#live-examples) (Angular components)
+- [Live examples](#live-examples) (Angular components)
       `,
     },
     {
