@@ -122,13 +122,13 @@
              aria-labelledby="width-label">
           <button (click)="decreaseWidth()"
                   class="plus-minus-button"
-                  aria-describedby="decrease-button-disabled">
+                  [attr.aria-describedby]="isDecreaseButtonDisabled() ? 'decrease-button-disabled' : null">
             <span class="sr-only">{{ 'ui.decreaseWidth' | translate}}</span>
             <span aria-hidden="true">-</span>
           </button>
           <button (click)="increaseWidth()"
                   class="plus-minus-button"
-                  aria-describedby="increase-button-disabled">
+                  [attr.aria-describedby]="isIncreaseButtonDisabled() ? 'increase-button-disabled' : null">
             <span class="sr-only">{{ 'ui.increaseWidth' | translate}}</span>
             <span aria-hidden="true">+</span>
           </button>
