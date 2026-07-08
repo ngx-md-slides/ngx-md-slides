@@ -15,7 +15,7 @@ A way to make multi-lingual presentations, using Markdown and Angular components
 - Theme options (light, dark, system)
 - Slide number (upper-left corner of the slide)
 - Web view (zoom-able)
-- Max width settings
+- Width settings
 - Routing (switch between slide sets)
 - Language switcher and i18n setup (translations) - only 2 languages for now
 - Responsive UI

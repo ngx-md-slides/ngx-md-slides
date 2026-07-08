@@ -40,7 +40,7 @@ export class Header implements OnInit, AfterViewInit {
   localStorageService = inject(LocalStorageService);
   state: State = {};
   layout?: Layout;
-  maxWidth?: number;
+  width?: number;
   theme?: Theme = 'system';
   language: ContentLanguage = 'en';
   routes: Routes;
@@ -59,7 +59,7 @@ export class Header implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.setInitialLayout();
-    this.setInitialMaxWidth();
+    this.setInitialWidth();
     this.setInitialTheme();
     this.setInitialLanguage();
   }
@@ -92,15 +92,15 @@ export class Header implements OnInit, AfterViewInit {
     this.updateLayout(true);
   }
 
-  setInitialMaxWidth(): void {
-    const initialMaxWidthLocalStorage = this.localStorageService.getLocalStorage()?.maxWidth;
+  setInitialWidth(): void {
+    const initialWidthLocalStorage = this.localStorageService.getLocalStorage()?.width;
 
-    if (initialMaxWidthLocalStorage) {
-      this.maxWidth = initialMaxWidthLocalStorage;
+    if (initialWidthLocalStorage) {
+      this.width = initialWidthLocalStorage;
     } else {
-      this.maxWidth = this.stateService.getState()().maxWidth;
+      this.width = this.stateService.getState()().width;
     }
-    this.updateMaxWidth(true);
+    this.updateWidth(true);
   }
 
   setInitialTheme(): void {
@@ -144,14 +144,14 @@ export class Header implements OnInit, AfterViewInit {
     );
   }
 
-  updateMaxWidth(noLocalStorageChanges = false): void {
-    this.state.maxWidth = this.maxWidth;
+  updateWidth(noLocalStorageChanges = false): void {
+    this.state.width = this.width;
     this.stateService.setState(this.state);
 
     this.focusCurrentSlide(false, true);
 
     if (!noLocalStorageChanges) {
-      this.localStorageService.setToLocalStorage({ maxWidth: this.maxWidth });
+      this.localStorageService.setToLocalStorage({ width: this.width });
     }
   }
 
@@ -183,23 +183,23 @@ export class Header implements OnInit, AfterViewInit {
   }
 
   isDecreaseButtonDisabled(): boolean {
-    return !this.maxWidth || this.maxWidth < WIDTH_MIN + WIDTH_STEP;
+    return !this.width || this.width < WIDTH_MIN + WIDTH_STEP;
   }
 
   isIncreaseButtonDisabled(): boolean {
-    return !this.maxWidth || this.maxWidth > WIDTH_MAX - WIDTH_STEP;
+    return !this.width || this.width > WIDTH_MAX - WIDTH_STEP;
   }
 
   decreaseWidth(): void {
-    if (!this.maxWidth || this.isDecreaseButtonDisabled()) return;
-    this.maxWidth = this.maxWidth - WIDTH_STEP;
-    this.updateMaxWidth();
+    if (!this.width || this.isDecreaseButtonDisabled()) return;
+    this.width = this.width - WIDTH_STEP;
+    this.updateWidth();
   }
 
   increaseWidth(): void {
-    if (!this.maxWidth || this.isIncreaseButtonDisabled()) return;
-    this.maxWidth = this.maxWidth + WIDTH_STEP;
-    this.updateMaxWidth();
+    if (!this.width || this.isIncreaseButtonDisabled()) return;
+    this.width = this.width + WIDTH_STEP;
+    this.updateWidth();
   }
 
   async present(): Promise<void> {

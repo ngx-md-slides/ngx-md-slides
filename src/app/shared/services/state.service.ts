@@ -4,7 +4,7 @@ import { State } from '@shared/models/state.model';
 
 const DEFAULT_STATE: State = {
   layout: 'fixed',
-  maxWidth: 70,
+  width: 70,
   language: 'en',
   isFullscreen: false,
   currentSlide: 0

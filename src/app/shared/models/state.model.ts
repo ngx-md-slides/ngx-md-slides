@@ -3,7 +3,7 @@ export type Theme = 'light' | 'dark' | 'system';
 
 export interface State {
   layout?: Layout;
-  maxWidth?: number;
+  width?: number;
   theme?: Theme;
   isFullscreen?: boolean;
   language?: string;

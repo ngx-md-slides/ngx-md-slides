@@ -13,12 +13,14 @@ const ro = {
     noteText: '\\Schimbările se aplică instant',
     layout: '\\Aspect',
     fixedLayout: '\\Fix',
-    fixedLayoutDescription: '\\Menține un raport de 16:9 (nu se poate da zoom).',
+    fixedLayoutDescription: '\\Menține un raport de 16:9 (nu se poate da zoom)',
     flexibleLayout: '\\Flexibil',
-    flexibleLayoutDescription: '\\Permite un comportament de pagină web (se poate da zoom).',
-    maxWidth: '\\Lățime maximă',
-    decreaseMaxWidth: '\\Micșorează lățimea maximă',
-    increaseMaxWidth: '\\Mărește lățimea maximă',
+    flexibleLayoutDescription: '\\Permite un comportament de pagină web (se poate da zoom)',
+    width: '\\Lățime',
+    decreaseWidth: '\\Micșorează lățimea',
+    increaseWidth: '\\Mărește lățimea',
+    decreaseButtonDisabled: '\\Lățimea minimă atinsă',
+    increaseButtonDisabled: '\\Lățimea maximă atinsă',
     theme: '\\Temă',
     light: '\\Luminos',
     dark: '\\Întunecat',
@@ -34,11 +36,11 @@ const ro = {
     tableOfContents: '\\Cuprins',
     noHeadings: '\\Nu există titluri de afișat...',
     requestFullscreen: '\\Se prezintă. Fullscreen activat. Apasă Escape pentru a dezactiva.',
-    exitFullscreen: '\\Nu se prezintă. Fullscreen dezactivat.'
+    exitFullscreen: '\\Nu se prezintă. Fullscreen dezactivat.',
   },
   sets: {
     welcome: roWelcomeTranslations,
-    cats: roCatsTranslations
+    cats: roCatsTranslations,
   },
 };
 

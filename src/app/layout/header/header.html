@@ -115,22 +115,34 @@
 
     <div class="option">
       <span class="span-label"
-            id="max-width-label">{{'ui.maxWidth' | translate}}</span>
-      <span role="group"
-            class="inline-group"
-            aria-labelledby="max-width-label">
-        <button (click)="decreaseWidth()"
-                class="plus-minus-button">
-          <span class="sr-only">{{ 'ui.decreaseMaxWidth' | translate}}</span>
-          <span aria-hidden="true">-</span>
-        </button>
-        <button (click)="increaseWidth()"
-                class="plus-minus-button">
-          <span class="sr-only">{{ 'ui.increaseMaxWidth' | translate}}</span>
-          <span aria-hidden="true">+</span>
-        </button>
-        <output class="margin-left">{{maxWidth}}%</output>
-      </span>
+            id="width-label">{{'ui.width' | translate}}</span>
+      <div>
+        <div role="group"
+             class="inline-group"
+             aria-labelledby="width-label">
+          <button (click)="decreaseWidth()"
+                  class="plus-minus-button"
+                  aria-describedby="decrease-button-disabled">
+            <span class="sr-only">{{ 'ui.decreaseWidth' | translate}}</span>
+            <span aria-hidden="true">-</span>
+          </button>
+          <button (click)="increaseWidth()"
+                  class="plus-minus-button"
+                  aria-describedby="increase-button-disabled">
+            <span class="sr-only">{{ 'ui.increaseWidth' | translate}}</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <output class="margin-left">{{width}}%</output>
+        </div>
+        @if(isDecreaseButtonDisabled()) {
+        <p class="hint"
+           id="decrease-button-disabled">{{'ui.decreaseButtonDisabled' | translate}}</p>
+        }
+        @if(isIncreaseButtonDisabled()) {
+        <p class="hint"
+           id="increase-button-disabled">{{'ui.increaseButtonDisabled' | translate}}</p>
+        }
+      </div>
     </div>
 
     <div role="group"

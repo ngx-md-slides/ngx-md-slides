@@ -45,9 +45,9 @@ export class SlidesContainer {
   }
 
   @HostBinding('style.width')
-  get maxWidth() {
-    return this.stateService.getState()().maxWidth && !this.stateService.getState()().isFullscreen
-      ? `${this.stateService.getState()().maxWidth}%`
+  get width() {
+    return this.stateService.getState()().width && !this.stateService.getState()().isFullscreen
+      ? `${this.stateService.getState()().width}%`
       : '100%';
   }
 
