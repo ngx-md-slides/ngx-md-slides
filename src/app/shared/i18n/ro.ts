@@ -27,6 +27,8 @@ const ro = {
     system: '\\Sistem',
     language: '\\Limbă',
     present: '\\Prezintă',
+    press: '\\Apasă',
+    or: '\\sau',
     notFoundTitle: '\\Pagina nu a fost găsită',
     notFoundSubtitle: '\\Încearcă una din paginile din meniu',
     footerText: '\\Conținut personalizat pentru subsol aici...',

@@ -27,6 +27,8 @@ const en = {
     system: '\\System',
     language: '\\Language',
     present: '\\Present',
+    press: '\\Press',
+    or: '\\or',
     notFoundTitle: '\\Page not found',
     notFoundSubtitle: '\\Try one of the pages from the menu instead',
     footerText: '\\Custom footer content goes here...',
