@@ -196,11 +196,14 @@
   @if(layout === 'fixed') {
   <button (click)="present()"
           id="present"
-          class="header-option">
+          class="header-option"
+          aria-describedby="keyboard-shortcut-info">
     <app-presentation-icon class="icon"></app-presentation-icon>
     <span class="sr-only-mobile">{{'ui.present' | translate}}</span>
     <span aria-hidden="true"
-          class="kbd-shortcut">(<kbd>Ctrl</kbd> + <kbd>F5</kbd>)
+          id="keyboard-shortcut-info"
+          class="tooltip">
+      <kbd>Shift</kbd> + <kbd>F5</kbd> / <kbd>⌘</kbd> + <kbd>Return</kbd>
     </span>
   </button>
   }

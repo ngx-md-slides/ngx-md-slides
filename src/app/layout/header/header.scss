@@ -13,6 +13,7 @@
   padding: calc(var(--spacing) / 4);
 
   button {
+    position: relative;
     display: inline-flex;
     align-items: center;
     background: var(--controls-background);
@@ -27,6 +28,32 @@
 
     &[disabled] {
       opacity: 0.5;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .tooltip {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: calc(100% + var(--spacing) / 6);
+      right: 0;
+      text-wrap: nowrap;
+      color: var(--inverted-text);
+      background: color-mix(in hsl, var(--text), transparent 10%);
+      border-radius: var(--radius);
+      font-size: 0.9em;
+      padding: calc(var(--spacing) / 6) calc(var(--spacing) / 3);
+
+      kbd {
+        -webkit-text-stroke: 0.5px currentColor;
+      }
     }
   }
 
@@ -272,12 +299,6 @@
 
 :host-context(.fullscreen) {
   :host {
-    display: none;
-  }
-}
-
-@media screen and (width <= 756px) {
-  .kbd-shortcut {
     display: none;
   }
 }

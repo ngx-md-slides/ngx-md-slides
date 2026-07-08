@@ -47,7 +47,7 @@ export class Header implements OnInit, AfterViewInit {
 
   @HostListener('document:keydown', ['$event'])
   handlePresentKeys(event: KeyboardEvent) {
-    if (this.stateService.getState()().layout === 'fixed' && event.ctrlKey && event.key === 'F5') {
+    if (this.stateService.getState()().layout === 'fixed' && ((event.shiftKey && event.key === 'F5') || (event.metaKey && event.key === 'Enter'))) {
       event.preventDefault();
       this.present();
     }

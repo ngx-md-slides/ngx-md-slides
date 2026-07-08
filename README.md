@@ -8,7 +8,7 @@ A way to make multi-lingual presentations, using Markdown and Angular components
 - Add reusable components support (via comment in Markdown code with the name of the Angular component)
 - Fullscreen option (via "Present" button)
 - Keyboard navigation
-  - `Ctrl` + `F5` for fullscreen
+  - `Shift` + `F5` for fullscreen
   - `Left arrow` and `Page up`, in fullscreen mode, for slide navigation
   - `Right arrow` and `Page down`, in fullscreen mode, for slide navigation
   - `Home` for going to the first slide and `End` for going to the last slide, in fullscreen mode
