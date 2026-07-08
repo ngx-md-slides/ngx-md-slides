@@ -5,7 +5,7 @@ const en = {
   ui: {
     menu: '\\Menu',
     settings: '\\Settings',
-    siteTitle: '\\Teodora Chiosa Slides',
+    siteTitle: '\\Slides',
     skipToPresent: '\\Skip to "Present"',
     skipToNavigation: '\\Skip to "Menu"',
     skipToSlides: '\\Skip to main content',
