@@ -33,7 +33,7 @@ Create multi-language presentations, using Markdown, HTML, and Angular component
 ### Prerequisites
 
 - "I want to modify this project" - Angular knowledge is required.
-- "I just want to use the project to make Markdown/HTML only slides" - Markdown, HTML and CSS knowledge required.
+- "I just want to use the project to make Markdown/HTML-only slides" - Markdown, HTML and CSS knowledge required.
 
 ### Folder structure
 
