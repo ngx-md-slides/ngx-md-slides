@@ -20,7 +20,7 @@ Create multi-language presentations, using Markdown, HTML, and Angular component
 - Slide number (upper-left corner of the slide)
 - Layout options
   - Fixed - Maintain an aspect ratio of 16:9 (zoom not supported)
-  - Flexinle - Allow web page behavior (zoom supported)
+  - Flexible - Allow web page behavior (zoom supported)
 - Width settings
 - Mneu/routing (switch between slide sets)
 - Language switcher and i18n setup (translations). Currently supports 2 languages but more can be added.
