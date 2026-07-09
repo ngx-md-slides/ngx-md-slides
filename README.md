@@ -56,7 +56,7 @@ In your Markdown code, add an HTML comment with the name of the live example com
 
 Due to the fact that Markdown code is added to Typescript variables via backticks(\`), backticks cannot be used to write code in Markdown because they will trigger Typescript compilation errors.
 
-Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
+**Workaround**: Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
 
 | Don't   |      Do     |
 |:----------:|:-------------:|
