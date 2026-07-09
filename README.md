@@ -1,36 +1,42 @@
-# ngx-md-slides
+<div align="center">
+  <div><img style="width: 200px; height: auto;" width="554" height="554" alt="avatar2" src="https://github.com/user-attachments/assets/1dbacedd-a8d0-4637-a848-17c3f7e11ab3" /></div>
+  <a href="https://ngx-md-slides.vercel.app/">Demo</a>
+  <h1>ngx-md-slides</h1>
+</div>
 
-A way to make multi-lingual presentations, using Markdown and Angular components for live examples.
+Create multi-language presentations, using Markdown, HTML, and Angular components for live examples.
 
 ## Features:
 
-- Markdown support
-- Add reusable components support (via comment in Markdown code with the name of the Angular component)
+- Markdown and HTML/CSS 
+- Live examples (Angular components)
 - Fullscreen option (via "Present" button)
 - Keyboard navigation
-  - `Shift` + `F5` for fullscreen
+  - `Shift` + `F5` or `⌘` + `Return` for fullscreen
   - `Left arrow` and `Page up`, in fullscreen mode, for slide navigation
   - `Right arrow` and `Page down`, in fullscreen mode, for slide navigation
-  - `Home` for going to the first slide and `End` for going to the last slide, in fullscreen mode
+  - `Home` for going to the first slide and `End` for going to the last slide in fullscreen mode
 - Theme options (light, dark, system)
 - Slide number (upper-left corner of the slide)
-- Web view (zoom-able)
+- Layout options
+  - Fixed - Maintain an aspect ratio of 16:9 (zoom not supported)
+  - Flexinle - Allow web page behavior (zoom supported)
 - Width settings
-- Routing (switch between slide sets)
-- Language switcher and i18n setup (translations) - only 2 languages for now
+- Mneu/routing (switch between slide sets)
+- Language switcher and i18n setup (translations). Currently supports 2 languages but more can be added.
 - Responsive UI
+- Table of Contents
 - Accessibility tested (WCAG 2.2 AA)
 
-## To do:
+## How to use
 
-- [ ] Add total number of pages and a "jump to page" feature
-- [ ] Perform periodic accessibility checks (WCAG 2.2 minimum) 
-- [ ] Add Accessibility statement
-- [ ] Save presentation as PDF (?)
-- [ ] Add loading states
-- [ ] Implement non-hardcoded languages (and use a `select` element)
+### Prerequisites
 
-## Folder structure
+- "I want to modify this project" - Angular knowledge is required.
+- "I just want to use the project to make Markdown/HTML only slides" - Markdown, HTML and CSS knowledge required.
+
+### Folder structure
+
 ```
 src
 |__ app
@@ -43,10 +49,10 @@ src
 
 ## How to run
 
-- clone/fork and clone this project
-- run `npm install` in the "ngx-md-slides" folder
-- run `npm run start` for local development
-- edit the example slide sets
+- Clone/Fork and clone this project
+- Run `npm install` in the "ngx-md-slides" folder
+- Run `npm run start` for local development
+- Edit the translations in one of the slide sets to get started
 
 ## Credits
 
