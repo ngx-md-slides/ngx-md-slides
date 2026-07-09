@@ -46,6 +46,20 @@ src
 |______ welcome <-- demo slide set
 |________ i18n <-- translations for welcome
 ```
+### Adding live examples
+
+In your Markdown code, add an HTML comment with the name of the live example component you want to use. For example:
+
+`<!--MyExample-->`
+
+### Limitations
+
+Due to the fact that Markdown code is added to Typescript variables via backticks(\`), backticks cannot be used to write code in Markdown because they will trigger Typescript compilation errors.
+
+| Don't   |      Do     |
+|:----------:|:-------------:|
+| &#96;code&#96; | `<code></code>` |
+| &#96;&#96;&#96; p { color: pink; } &#96;&#96;&#96; | `~~~ p { color: pink; } ~~~` |
 
 ## How to run
 
