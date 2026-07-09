@@ -22,7 +22,7 @@ Create multi-language presentations, using Markdown, HTML, and Angular component
   - Fixed - Maintain an aspect ratio of 16:9 (zoom not supported)
   - Flexible - Allow web page behavior (zoom supported)
 - Width settings
-- Mneu/routing (switch between slide sets)
+- Menu/routing (switch between slide sets)
 - Language switcher and i18n setup (translations). Currently supports 2 languages but more can be added.
 - Responsive UI
 - Table of Contents
