@@ -46,6 +46,7 @@ src
 |______ welcome <-- demo slide set
 |________ i18n <-- translations for welcome
 ```
+
 ### Adding live examples
 
 In your Markdown code, add an HTML comment with the name of the live example component you want to use. For example:
@@ -54,7 +55,7 @@ In your Markdown code, add an HTML comment with the name of the live example com
 
 ### Limitations
 
-Due to the fact that Markdown code is added to Typescript variables via backticks(\`), backticks cannot be used to write code in Markdown because they will trigger Typescript compilation errors.
+Due to the fact that Markdown code is added to Typescript constants via backticks(\`), backticks cannot be used to write code in Markdown because they will trigger Typescript compilation errors.
 
 **Workaround**: Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
 
@@ -69,6 +70,11 @@ Due to the fact that Markdown code is added to Typescript variables via backtick
 - Run `npm install` in the "ngx-md-slides" folder
 - Run `npm run start` for local development
 - Edit the translations in one of the slide sets to get started
+
+## Recommended extensions 
+
+- [Array Index Inlay](https://marketplace.visualstudio.com/items?itemName=antfu.array-index-inlay) to make it easier to know which slide you're currently editing
+- [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) to highlight Markdown and HTML code in Typescript files
 
 ## Credits
 
