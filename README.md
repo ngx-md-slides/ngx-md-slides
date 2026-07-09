@@ -65,7 +65,7 @@ Due to the fact that Markdown code is added to Typescript variables via backtick
 
 ## How to run
 
-- Clone/Fork and clone this project
+- Clone/Fork this project
 - Run `npm install` in the "ngx-md-slides" folder
 - Run `npm run start` for local development
 - Edit the translations in one of the slide sets to get started
