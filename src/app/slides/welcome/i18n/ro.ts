@@ -3,7 +3,7 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 const md = String.raw;
 
 const roWelcomeTranslations: TranslatedSlideSet = {
-  title: '\\Bine ai venit la ngx-md-slides!',
+  title: '\\Bine ai venit!',
   examples: {
     addButton: '\\Adaugă pisică',
     removeButton: '\\Șterge toate pisicile',

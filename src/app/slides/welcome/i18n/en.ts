@@ -3,7 +3,7 @@ import { TranslatedSlideSet } from '@shared/models/translation.model';
 const md = String.raw;
 
 const enWelcomeTranslations: TranslatedSlideSet = {
-  title: '\\Welcome to ngx-md-slides!',
+  title: '\\Welcome!',
   examples: {
     addButton: '\\Add cat',
     removeButton: '\\Remove all cats',

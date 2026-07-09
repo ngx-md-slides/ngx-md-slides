@@ -5,7 +5,7 @@ const ro = {
   ui: {
     menu: '\\Meniu',
     settings: '\\Setări',
-    siteTitle: '\\Slide-uri Teodora Chiosa',
+    siteTitle: '\\ngx-md-slides',
     skipToPresent: '\\Sari la "Prezintă"',
     skipToNavigation: '\\Sari la "Meniu"',
     skipToSlides: '\\Sari la conținutul principal',
