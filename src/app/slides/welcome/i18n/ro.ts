@@ -90,7 +90,7 @@ Adaugă componente Angular în Markdown prin menționarea numelui componentei î
       content: md`
 ## Limitări
 
-Tickurile(\`) nu pot fi folosite pentru cod. Folosește HTML <code>code</code> pentru cod pe aceeași linie și triplu **tilda**(\~) pentru cod pe mai multe linii.
+Backtickurile(\`) nu pot fi folosite pentru cod. Folosește HTML <code>code</code> pentru cod pe aceeași linie și triplu **tilda**(\~) pentru cod pe mai multe linii.
 
 <table align="center" style="caption-side: bottom">
   <caption>Exemplu de cod cu triplu tilda</caption>

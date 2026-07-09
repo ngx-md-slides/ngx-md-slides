@@ -90,7 +90,7 @@ Add Angular components in Markdown by mentioning the **component name** in an HT
       content: md`
 ## Limitations
 
-Ticks(\`) can't be used for code. Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
+Backticks(\`) cannot be used for code. Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
 
 <table align="center">
   <caption>Triple tilde code example</caption>
