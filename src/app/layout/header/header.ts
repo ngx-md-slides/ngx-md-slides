@@ -47,7 +47,10 @@ export class Header implements OnInit, AfterViewInit {
 
   @HostListener('document:keydown', ['$event'])
   handlePresentKeys(event: KeyboardEvent) {
-    if (this.stateService.getState()().layout === 'fixed' && ((event.shiftKey && event.key === 'F5') || (event.metaKey && event.key === 'Enter'))) {
+    if (
+      this.stateService.getState()().layout === 'fixed' &&
+      ((event.shiftKey && event.key === 'F5') || (event.metaKey && event.key === 'Enter'))
+    ) {
       event.preventDefault();
       this.present();
     }
@@ -213,6 +216,28 @@ export class Header implements OnInit, AfterViewInit {
     }
   }
 
+  updateFullscreenStateAndUI(isFullscreen: boolean): void {
+    this.state.isFullscreen = isFullscreen;
+    this.stateService.setState(this.state);
+  }
+
+  updateLanguage(language: ContentLanguage, noLocalStorageChanges = false): void {
+    this.translateService.use(language);
+    this.document.documentElement.setAttribute('lang', language);
+
+    this.state.language = language;
+    this.stateService.setState(this.state);
+
+    if (!noLocalStorageChanges) {
+      this.localStorageService.setToLocalStorage({ language: language });
+    }
+  }
+
+  closeMenuPopover(): void {
+    const menuPopover = this.document.getElementById('main-menu');
+    menuPopover?.hidePopover();
+  }
+
   focusCurrentSlide(isRequestingFullscreen = false, isScrollOnly = false): void {
     const activeElement = this.stateService.getState()().activeElement;
     let currentSlideElement;
@@ -245,27 +270,5 @@ export class Header implements OnInit, AfterViewInit {
         }
       });
     }
-  }
-
-  updateFullscreenStateAndUI(isFullscreen: boolean): void {
-    this.state.isFullscreen = isFullscreen;
-    this.stateService.setState(this.state);
-  }
-
-  updateLanguage(language: ContentLanguage, noLocalStorageChanges = false): void {
-    this.translateService.use(language);
-    this.document.documentElement.setAttribute('lang', language);
-
-    this.state.language = language;
-    this.stateService.setState(this.state);
-
-    if (!noLocalStorageChanges) {
-      this.localStorageService.setToLocalStorage({ language: language });
-    }
-  }
-
-  closeMenuPopover(): void {
-    const menuPopover = this.document.getElementById('main-menu');
-    menuPopover?.hidePopover();
   }
 }
