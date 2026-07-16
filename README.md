@@ -1,7 +1,9 @@
 <div align="center">
   <div><img style="width: 200px; height: auto;" width="554" height="554" alt="avatar2" src="https://github.com/user-attachments/assets/1dbacedd-a8d0-4637-a848-17c3f7e11ab3" /></div>
-  <a href="https://ngx-md-slides.vercel.app/">Simple demo</a>
-  <a href="https://slides.chiosa.dev/web-a11y-for-everyone">Real slide content demo</a>
+  <div>
+    <a href="https://ngx-md-slides.vercel.app/">Simple demo</a>
+    <a href="https://slides.chiosa.dev/web-a11y-for-everyone">Real slide content demo</a>
+  </div>
   <h1>ngx-md-slides</h1>
 </div>
 
