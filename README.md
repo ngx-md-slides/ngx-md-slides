@@ -11,6 +11,10 @@
 
 Create multi-language presentations, using Markdown, HTML, and Angular components for live examples.
 
+> [!CAUTION]
+> This project is a work in progress and might contain bugs.
+> Please report any issues in the [Issues](https://github.com/ngx-md-slides/ngx-md-slides/issues) tab.
+
 ## Features:
 
 - Markdown and HTML/CSS 
