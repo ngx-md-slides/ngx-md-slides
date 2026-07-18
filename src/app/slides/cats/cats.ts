@@ -11,8 +11,7 @@ import { MyExample } from '../welcome/examples/remove-button/my-example';
 @Component({
   selector: 'app-cats',
   imports: [SlidesContainer, Slide, Markdown, TableOfContents, TranslatePipe],
-  templateUrl: './cats.html',
-  styleUrl: './cats.scss',
+  templateUrl: './cats.html'
 })
 export class Cats extends SlideSet {
   override setName = 'sets.cats.slides';
