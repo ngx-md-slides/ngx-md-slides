@@ -33,7 +33,7 @@ export class SlidesContainer {
 
   constructor() {
     afterNextRender({
-      read: () => {
+      write: () => {
         if (typeof this.elementRef !== 'undefined') {
           this.allSlides = this.elementRef.nativeElement.querySelectorAll('app-slide');
         }

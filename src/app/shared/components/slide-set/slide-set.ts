@@ -35,7 +35,7 @@ export class SlideSet implements AfterViewInit, OnDestroy {
 
   constructor() {
     afterRenderEffect({
-      read: () => {
+      write: () => {
         if (this.components?.length && this.slidesContent()) {
           this.updateSamePageLinks();
           this.attachComponents();
