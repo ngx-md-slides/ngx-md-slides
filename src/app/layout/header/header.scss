@@ -185,10 +185,6 @@
         display: flex;
         border-radius: 0;
 
-        label {
-          border-radius: 0;
-        }
-
         &:first-of-type {
           border-radius: calc(var(--radius) - 0.05em);
 
@@ -235,6 +231,7 @@
           min-height: calc(var(--min-height-controls) - 4px);
           min-width: max-content;
           padding: 0 calc(var(--spacing) / 3);
+          border-radius: 0;
         }
 
         input:checked {
