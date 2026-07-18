@@ -119,6 +119,11 @@ const enCatsTranslations: TranslatedSlideSet = {
 ## Rose
       `,
     },
+    {
+      content: md`
+## No color
+      `,
+    },
   ],
 };
 

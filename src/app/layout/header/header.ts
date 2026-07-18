@@ -41,7 +41,7 @@ export class Header implements OnInit, AfterViewInit {
   state: State = {};
   layout?: Layout;
   width?: number;
-  theme?: Theme = 'system';
+  theme: Theme = 'system';
   language: ContentLanguage = 'en';
   routes: Routes;
 
@@ -125,10 +125,10 @@ export class Header implements OnInit, AfterViewInit {
     const initialLanguageLocalStorage = this.localStorageService.getLocalStorage()?.language;
     if (initialLanguageLocalStorage) {
       this.language = initialLanguageLocalStorage as ContentLanguage;
+      this.updateLanguage(this.language, true);
     } else {
       this.language = this.stateService.getState()().language as ContentLanguage;
     }
-    this.updateLanguage(this.language, true);
   }
 
   updateLayout(noLocalStorageChanges = false): void {
@@ -180,7 +180,7 @@ export class Header implements OnInit, AfterViewInit {
     if (typeof this.document !== 'undefined') {
       this.document.documentElement.style.setProperty(
         'color-scheme',
-        this.theme === 'dark' ? 'dark' : this.theme === 'light' ? 'light' : 'light dark',
+        ['light', 'dark'].includes(this.theme) ? this.theme as string : 'light dark',
       );
     }
   }

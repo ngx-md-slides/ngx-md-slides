@@ -119,6 +119,11 @@ const roCatsTranslations: TranslatedSlideSet = {
 ## Rose
       `,
     },
+    {
+      content: md`
+## Fără culoare
+      `,
+    },
   ],
 };
 
