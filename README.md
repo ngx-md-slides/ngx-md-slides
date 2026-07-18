@@ -16,6 +16,7 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=ngx-md-slides_ngx-md-slides&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=ngx-md-slides_ngx-md-slides)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ngx-md-slides_ngx-md-slides&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ngx-md-slides_ngx-md-slides)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ngx-md-slides_ngx-md-slides&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ngx-md-slides_ngx-md-slides)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ngx-md-slides_ngx-md-slides&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ngx-md-slides_ngx-md-slides)
 
 Create multi-language presentations, using Markdown, HTML, and Angular components for live examples.
 
