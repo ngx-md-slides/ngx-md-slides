@@ -55,7 +55,7 @@ export class SlidesContainer {
   handleFocusin() {
     const activeElement = this.document.activeElement;
 
-    if (activeElement && activeElement.matches(':focus-visible')) {
+    if (activeElement?.matches(':focus-visible')) {
       this.state.activeElement = activeElement;
       this.stateService.setState(this.state);
 
