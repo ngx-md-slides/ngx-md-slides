@@ -1,12 +1,11 @@
 import { TranslatedSlideSet } from '@shared/models/translation.model';
-
-const md = String.raw;
+import md from 'app/shared/markdown-compiler';
 
 const roCatsTranslations: TranslatedSlideSet = {
-  title: '\\Pisici',
+  title: 'Pisici',
   slides: [
     {
-      backgroundColor: '\\var(--purple)',
+      backgroundColor: 'var(--purple)',
       content: md`
 # Pisici
 
@@ -14,7 +13,7 @@ const roCatsTranslations: TranslatedSlideSet = {
       `,
     },
     {
-      backgroundColor: '\\var(--teal)',
+      backgroundColor: 'var(--teal)',
       content: md`
 ## O imagine cu o pisică
 
@@ -25,97 +24,97 @@ const roCatsTranslations: TranslatedSlideSet = {
       `,
     },
     {
-      backgroundColor: '\\var(--red)',
+      backgroundColor: 'var(--red)',
       content: md`
 ## Red
       `,
     },
     {
-      backgroundColor: '\\var(--orange)',
+      backgroundColor: 'var(--orange)',
       content: md`
 ## Orange
       `,
     },
     {
-      backgroundColor: '\\var(--yellow)',
+      backgroundColor: 'var(--yellow)',
       content: md`
 ## Yellow
       `,
     },
     {
-      backgroundColor: '\\var(--lime)',
+      backgroundColor: 'var(--lime)',
       content: md`
 ## Lime
       `,
     },
     {
-      backgroundColor: '\\var(--green)',
+      backgroundColor: 'var(--green)',
       content: md`
 ## Green
       `,
     },
     {
-      backgroundColor: '\\var(--emerald)',
+      backgroundColor: 'var(--emerald)',
       content: md`
 ## Emerald
       `,
     },
     {
-      backgroundColor: '\\var(--teal)',
+      backgroundColor: 'var(--teal)',
       content: md`
 ## Teal
       `,
     },
     {
-      backgroundColor: '\\var(--cyan)',
+      backgroundColor: 'var(--cyan)',
       content: md`
 ## Cyan
       `,
     },
     {
-      backgroundColor: '\\var(--azure)',
+      backgroundColor: 'var(--azure)',
       content: md`
 ## Azure
       `,
     },
     {
-      backgroundColor: '\\var(--blue)',
+      backgroundColor: 'var(--blue)',
       content: md`
 ## Blue
       `,
     },
     {
-      backgroundColor: '\\var(--indigo)',
+      backgroundColor: 'var(--indigo)',
       content: md`
 ## Indigo
       `,
     },
     {
-      backgroundColor: '\\var(--violet)',
+      backgroundColor: 'var(--violet)',
       content: md`
 ## Violet
       `,
     },
     {
-      backgroundColor: '\\var(--purple)',
+      backgroundColor: 'var(--purple)',
       content: md`
 ## Purple
       `,
     },
     {
-      backgroundColor: '\\var(--magenta)',
+      backgroundColor: 'var(--magenta)',
       content: md`
 ## Magenta
       `,
     },
     {
-      backgroundColor: '\\var(--pink)',
+      backgroundColor: 'var(--pink)',
       content: md`
 ## Pink
       `,
     },
     {
-      backgroundColor: '\\var(--rose)',
+      backgroundColor: 'var(--rose)',
       content: md`
 ## Rose
       `,

@@ -1,24 +1,23 @@
 import { TranslatedSlideSet } from '@shared/models/translation.model';
-
-const md = String.raw;
+import md from 'app/shared/markdown-compiler';
 
 const roWelcomeTranslations: TranslatedSlideSet = {
-  title: '\\Bine ai venit!',
+  title: 'Bine ai venit!',
   examples: {
-    addButton: '\\Adaugă pisică',
-    removeButton: '\\Șterge toate pisicile',
-    counter: '\\Număr de pisici',
-    emptyState: '\\Nu sunt pisici...',
+    addButton: 'Adaugă pisică',
+    removeButton: 'Șterge toate pisicile',
+    counter: 'Număr de pisici',
+    emptyState: 'Nu sunt pisici...',
   },
   slides: [
     {
-      backgroundColor: '\\var(--purple)',
+      backgroundColor: 'var(--purple)',
       content: md`
 # Bine ai venit la <br/><span class="project-name"><a href="https://github.com/ngx-md-slides/ngx-md-slides"><img alt="" src="favicon.svg">ngx-md-slides</a></span>
       `,
     },
     {
-      backgroundColor: '\\var(--purple)',
+      backgroundColor: 'var(--purple)',
       content: md`
 ## Ce este ngx-md-slides?
 
@@ -26,7 +25,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
       `,
     },
     {
-      backgroundColor: '\\var(--blue)',
+      backgroundColor: 'var(--blue)',
       content: md`
 ## Funcționalități
 
@@ -38,7 +37,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
       `,
     },
     {
-      backgroundColor: '\\var(--azure)',
+      backgroundColor: 'var(--azure)',
       content: md`
 ## Cum se folosește
 
@@ -48,7 +47,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
       `,
     },
     {
-      backgroundColor: '\\var(--orange)',
+      backgroundColor: 'var(--orange)',
       content: md`
 ## Markdown
 
@@ -56,7 +55,7 @@ Acest proiect folosește Markdown ([Marked](https://marked.js.org/)) cu [opțiun
       `,
     },
     {
-      backgroundColor: '\\var(--yellow)',
+      backgroundColor: 'var(--yellow)',
       content: md`
 ## Exemple live
 
@@ -86,7 +85,7 @@ Adaugă componente Angular în Markdown prin menționarea numelui componentei î
       `,
     },
     {
-      backgroundColor: '\\var(--rose)',
+      backgroundColor: 'var(--rose)',
       content: md`
 ## Limitări
 

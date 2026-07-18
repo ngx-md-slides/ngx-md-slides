@@ -1,24 +1,23 @@
 import { TranslatedSlideSet } from '@shared/models/translation.model';
-
-const md = String.raw;
+import md from 'app/shared/markdown-compiler';
 
 const enWelcomeTranslations: TranslatedSlideSet = {
-  title: '\\Welcome!',
+  title: 'Welcome!',
   examples: {
-    addButton: '\\Add cat',
-    removeButton: '\\Remove all cats',
-    counter: '\\Cats counter',
-    emptyState: '\\No cats...',
+    addButton: 'Add cat',
+    removeButton: 'Remove all cats',
+    counter: 'Cats counter',
+    emptyState: 'No cats...',
   },
   slides: [
     {
-      backgroundColor: '\\var(--purple)',
+      backgroundColor: 'var(--purple)',
       content: md`
 # Welcome to <br/><a href="https://github.com/ngx-md-slides/ngx-md-slides"><img alt="" src="favicon.svg">ngx-md-slides</a>
       `,
     },
     {
-      backgroundColor: '\\var(--purple)',
+      backgroundColor: 'var(--purple)',
       content: md`
 ## What is ngx-md-slides?
 
@@ -26,7 +25,7 @@ It's a tool that helps you **create slides** using only code.
       `,
     },
     {
-      backgroundColor: '\\var(--blue)',
+      backgroundColor: 'var(--blue)',
       content: md`
 ## Features
 
@@ -38,7 +37,7 @@ It's a tool that helps you **create slides** using only code.
       `,
     },
     {
-      backgroundColor: '\\var(--azure)',
+      backgroundColor: 'var(--azure)',
       content: md`
 ## How to use
 
@@ -48,7 +47,7 @@ It's a tool that helps you **create slides** using only code.
       `,
     },
     {
-      backgroundColor: '\\var(--orange)',
+      backgroundColor: 'var(--orange)',
       content: md`
 ## Markdown
 
@@ -56,7 +55,7 @@ This project uses Markdown ([Marked](https://marked.js.org/)) with [default opti
       `,
     },
     {
-      backgroundColor: '\\var(--yellow)',
+      backgroundColor: 'var(--yellow)',
       content: md`
 ## Live examples
 
@@ -86,7 +85,7 @@ Add Angular components in Markdown by mentioning the **component name** in an HT
       `,
     },
     {
-      backgroundColor: '\\var(--rose)',
+      backgroundColor: 'var(--rose)',
       content: md`
 ## Limitations
 
