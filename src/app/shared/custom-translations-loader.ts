@@ -1,18 +1,25 @@
 import { Injectable } from '@angular/core';
 import { TranslateLoader } from '@ngx-translate/core';
-import { Observable, from } from 'rxjs';
+import { Observable, of } from 'rxjs';
+
+import enTranslations from '@shared/i18n/en';
+import roTranslations from '@shared/i18n/ro';
 
 @Injectable()
 export class CustomTranslationsLoader implements TranslateLoader {
-  private translations = {
-    en: () => import('@shared/i18n/en').then((module) => module.default),
-    ro: () => import('@shared/i18n/ro').then((module) => module.default),
+  private readonly translations = {
+    en: enTranslations,
+    ro: roTranslations,
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getTranslation(lang: keyof typeof this.translations): Observable<any> {
-    const translation = this.translations[lang]();
+    const translation = this.translations[lang];
 
-    return from(translation);
+    if (translation) {
+      return of(translation);
+    }
+
+    return of({});
   }
 }
