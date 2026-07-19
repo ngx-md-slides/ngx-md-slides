@@ -4,8 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-menu-icon',
   imports: [],
   templateUrl: './menu-icon.html',
-  styleUrl: './menu-icon.scss',
 })
-export class MenuIcon {
-
-}
+export class MenuIcon {}
