@@ -8,12 +8,12 @@ export const routes: Routes = [
   },
   {
     path: 'welcome',
-    loadComponent: () => import('./slides/welcome/welcome').then((m) => m.Welcome),
+    loadComponent: () => import('./presentations/welcome/welcome').then((m) => m.Welcome),
     data: { title: 'presentations.welcome.title' },
   },
   {
     path: 'cats',
-    loadComponent: () => import('./slides/cats/cats').then((m) => m.Cats),
+    loadComponent: () => import('./presentations/cats/cats').then((m) => m.Cats),
     data: { title: 'presentations.cats.title' },
   },
   {

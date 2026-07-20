@@ -1,5 +1,5 @@
-import roWelcomeTranslations from '@slides/welcome/i18n/ro';
-import roCatsTranslations from '@slides/cats/i18n/ro';
+import roWelcomeTranslations from '@presentations/welcome/i18n/ro';
+import roCatsTranslations from '@presentations/cats/i18n/ro';
 
 const ro = {
   ui: {

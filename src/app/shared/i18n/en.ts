@@ -1,5 +1,5 @@
-import enWelcomeTranslations from '@slides/welcome/i18n/en';
-import enCatsTranslations from '@slides/cats/i18n/en';
+import enWelcomeTranslations from '@presentations/welcome/i18n/en';
+import enCatsTranslations from '@presentations/cats/i18n/en';
 
 const en = {
   ui: {
