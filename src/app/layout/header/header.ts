@@ -6,7 +6,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { State, Theme, Layout } from '@shared/models/state.model';
 import { ContentLanguage } from '@shared/models/content-language.model';
 import { StateService } from '@shared/services/state.service';
-import { MenuIcon } from '@shared/components/icons/menu-icon/menu-icon';
+import { FolderOpenIcon } from 'app/shared/components/icons/folder-open-icon/folder-open-icon';
 import { SettingsIcon } from '@shared/components/icons/settings-icon/settings-icon';
 import { PresentationIcon } from '@shared/components/icons/presentation-icon/presentation-icon';
 import { routes } from 'app/app.routes';
@@ -25,7 +25,7 @@ const WIDTH_MAX = 100;
     TranslatePipe,
     RouterLink,
     RouterLinkActive,
-    MenuIcon,
+    FolderOpenIcon,
     SettingsIcon,
     PresentationIcon,
   ],

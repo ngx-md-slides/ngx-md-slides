@@ -21,10 +21,10 @@ export class Slide {
       : '-1';
   }
 
-  @HostBinding('style.boxShadow')
-  get boxShadow() {
+  @HostBinding('style.border')
+  get border() {
     return this.stateService.getState()().isFullscreen
       ? 'none'
-      : '0 0 var(--shadow-spread) 0 var(--shadow-color)';
+      : '1px solid var(--border-color-transparent)';
   }
 }

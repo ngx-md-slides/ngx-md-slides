@@ -21,7 +21,7 @@ import { State } from './shared/models/state.model';
 
 /* When skipping to headings, the focused element goes underneath the header element.
 This values is used as a scroll offset from the top */
-const ANCHOR_SCROLL_OFFSET = 250;
+const ANCHOR_SCROLL_OFFSET = 100;
 
 @Component({
   selector: 'app-root',

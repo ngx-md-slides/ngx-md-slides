@@ -27,10 +27,6 @@
       padding: 0.3lh 0.5lh;
       border-radius: 0.3lh;
 
-      &:hover {
-        box-shadow: 0 0 var(--shadow-spread) 0 var(--shadow-color);
-      }
-
       img {
         height: 0.8lh;
         width: auto;

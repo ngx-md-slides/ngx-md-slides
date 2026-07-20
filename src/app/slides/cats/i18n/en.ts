@@ -18,7 +18,7 @@ const enCatsTranslations: TranslatedSlideSet = {
 ## A cat image
 
 <figure align="center">
-  <img src="https://live.staticflickr.com/154/404515315_fe7f651e9f_h.jpg" alt="A photo of an orange cat with white spots. The cat is sitting on a piece of fabric with flowers and leaves printed on it." style="width: 60%;">
+  <img src="https://live.staticflickr.com/154/404515315_fe7f651e9f_h.jpg" alt="A photo of an orange cat with white spots. The cat is sitting on a piece of fabric with flowers and leaves printed on it." style="width: 15lh;">
   <figcaption>"Cat" by <a href="https://www.flickr.com/photos/takahiko/404515315/in/photostream/">Takahiko Miyara on Flickr</a></figcaption>
 </figure>
       `,

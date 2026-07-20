@@ -3,11 +3,11 @@ import enCatsTranslations from '@slides/cats/i18n/en';
 
 const en = {
   ui: {
-    menu: 'Menu',
+    menu: 'Presentations',
     settings: 'Settings',
     siteTitle: 'ngx-md-slides',
     skipToPresent: 'Skip to "Present"',
-    skipToNavigation: 'Skip to "Menu"',
+    skipToNavigation: 'Skip to "Presentations"',
     skipToSlides: 'Skip to main content',
     noteTitle: 'Note',
     noteText: 'Changes apply instantly',
@@ -30,7 +30,7 @@ const en = {
     press: 'Press',
     or: 'or',
     notFoundTitle: 'Page not found',
-    notFoundSubtitle: 'Try one of the pages from the menu instead',
+    notFoundSubtitle: 'Open a presentation from the "Presentations" menu',
     footerText: 'Custom footer content goes here...',
     iconsCredit: 'Icons by',
     external: 'external',
@@ -38,7 +38,9 @@ const en = {
     tableOfContents: 'Table of Contents',
     noHeadings: 'No headings to display...',
     requestFullscreen: 'Presenting. Fullscreen activated. Press Escape to exit.',
-    exitFullscreen: 'Not presenting. Fullscreen disabled.'
+    exitFullscreen: 'Not presenting. Fullscreen disabled.',
+    hideToc: 'Hide Table of Contents',
+    showToc: 'Show Table of Contents'
   },
   sets: {
     welcome: enWelcomeTranslations,

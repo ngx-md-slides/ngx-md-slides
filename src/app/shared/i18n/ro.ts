@@ -3,11 +3,11 @@ import roCatsTranslations from '@slides/cats/i18n/ro';
 
 const ro = {
   ui: {
-    menu: 'Meniu',
+    menu: 'Prezentări',
     settings: 'Setări',
     siteTitle: 'ngx-md-slides',
     skipToPresent: 'Sari la "Prezintă"',
-    skipToNavigation: 'Sari la "Meniu"',
+    skipToNavigation: 'Sari la "Prezentări"',
     skipToSlides: 'Sari la conținutul principal',
     noteTitle: 'Notă',
     noteText: 'Schimbările se aplică instant',
@@ -30,7 +30,7 @@ const ro = {
     press: 'Apasă',
     or: 'sau',
     notFoundTitle: 'Pagina nu a fost găsită',
-    notFoundSubtitle: 'Încearcă una din paginile din meniu',
+    notFoundSubtitle: 'Deschide o prezentare din meniul "Prezentări"',
     footerText: 'Conținut personalizat pentru subsol aici...',
     iconsCredit: 'Iconițe',
     external: 'extern',
@@ -39,6 +39,8 @@ const ro = {
     noHeadings: 'Nu există titluri de afișat...',
     requestFullscreen: 'Se prezintă. Fullscreen activat. Apasă Escape pentru a dezactiva.',
     exitFullscreen: 'Nu se prezintă. Fullscreen dezactivat.',
+    hideToc: 'Ascunde cuprinsul',
+    showToc: 'Arată cuprinsul',
   },
   sets: {
     welcome: roWelcomeTranslations,
