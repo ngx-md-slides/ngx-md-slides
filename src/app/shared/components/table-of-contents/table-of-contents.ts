@@ -25,7 +25,9 @@ import { PanelLeftOpenIcon } from '../icons/panel-left-open-icon/panel-left-open
 
 const SCROLL_MARGIN_OFFSET = 100;
 /* _mixins.scss should also be updated */
-const MEDIA_BREAKPOINT = 560;
+const SMALL_WIDTH = 570;
+/* _mixins.scss should also be updated */
+const SMALL_HEIGHT = 500;
 
 @Component({
   selector: 'app-table-of-contents',
@@ -67,7 +69,7 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
             this.elementRef.nativeElement.querySelector('.toc-container');
 
           if (typeof window !== 'undefined') {
-            const smallerWidthMedia = window.matchMedia(`(width <= ${MEDIA_BREAKPOINT}px)`);
+            const smallerWidthMedia = window.matchMedia(`(width <= ${SMALL_WIDTH}px)`);
 
             if (!smallerWidthMedia.matches && activeTOCLink) {
               scrollContainer!.scrollTop = activeTOCLink.offsetTop - SCROLL_MARGIN_OFFSET;
@@ -105,7 +107,7 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
       const resizeObserver = new ResizeObserver((entries) => {
         for (const entry of entries) {
           const headerHeight = `${entry.borderBoxSize[0].blockSize}px`;
-          const smallerHeightMedia = window.matchMedia(`(height <= ${MEDIA_BREAKPOINT}px)`);
+          const smallerHeightMedia = window.matchMedia(`(height <= ${SMALL_HEIGHT}px)`);
 
           if (smallerHeightMedia.matches) {
             this.renderer.setStyle(tocElement, 'top', 0);
