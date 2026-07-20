@@ -13,6 +13,8 @@ import { routes } from 'app/app.routes';
 import { LocalStorageService } from '@shared/services/local-storage.service';
 import { NotificationService } from 'app/shared/services/notification.service';
 import { fromEvent } from 'rxjs';
+import { PlusIcon } from 'app/shared/components/icons/plus-icon/plus-icon';
+import { MinusIcon } from 'app/shared/components/icons/minus-icon/minus-icon';
 
 const WIDTH_STEP = 10;
 const WIDTH_MIN = 10;
@@ -28,6 +30,8 @@ const WIDTH_MAX = 100;
     FolderOpenIcon,
     SettingsIcon,
     PresentationIcon,
+    PlusIcon,
+    MinusIcon
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss',

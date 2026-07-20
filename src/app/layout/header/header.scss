@@ -85,7 +85,6 @@
       grid-column-gap: var(--spacing);
       grid-column: 1 / -1;
       align-items: baseline;
-      min-height: var(--min-height-controls);
       padding: 0 calc(var(--spacing) / 3);
 
       :last-child {
@@ -180,7 +179,7 @@
         label {
           display: inline-flex;
           align-items: center;
-          min-height: calc(var(--min-height-controls) - 4px);
+          height: var(--min-height-controls);
           min-width: max-content;
           padding: 0 calc(var(--spacing) / 3);
           border-radius: 0;

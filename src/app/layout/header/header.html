@@ -123,14 +123,14 @@
           <button (click)="decreaseWidth()"
                   class="plus-minus-button"
                   [attr.aria-describedby]="isDecreaseButtonDisabled() ? 'decrease-button-disabled' : null">
+            <app-minus-icon class="icon"></app-minus-icon>
             <span class="sr-only">{{ 'ui.decreaseWidth' | translate}}</span>
-            <span aria-hidden="true">-</span>
           </button>
           <button (click)="increaseWidth()"
                   class="plus-minus-button"
                   [attr.aria-describedby]="isIncreaseButtonDisabled() ? 'increase-button-disabled' : null">
+            <app-plus-icon class="icon"></app-plus-icon>
             <span class="sr-only">{{ 'ui.increaseWidth' | translate}}</span>
-            <span aria-hidden="true">+</span>
           </button>
           <output class="margin-left">{{width}}%</output>
         </div>
@@ -203,7 +203,8 @@
     <span aria-hidden="true"
           id="keyboard-shortcut-info"
           class="tooltip">
-      {{'ui.press' | translate}} <kbd>Shift</kbd> + <kbd>F5</kbd> {{'ui.or' | translate}} <kbd>⌘</kbd> + <kbd>Return</kbd>
+      {{'ui.press' | translate}} <kbd>Shift</kbd> + <kbd>F5</kbd> {{'ui.or' | translate}} <kbd>⌘</kbd> +
+      <kbd>Return</kbd>
     </span>
   </button>
   }
