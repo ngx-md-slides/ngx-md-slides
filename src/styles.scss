@@ -107,6 +107,7 @@
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
     padding: 0 calc(var(--spacing) / 3);
+    min-width: var(--min-height-controls);
     min-height: var(--min-height-controls);
 
     &:not([disabled]):active {
