@@ -1,7 +1,7 @@
-import { TranslatedSlideSet } from '@shared/models/translation.model';
+import { TranslatedPresentation } from '@shared/models/translation.model';
 import md from 'app/shared/markdown-compiler';
 
-const roWelcomeTranslations: TranslatedSlideSet = {
+const roWelcomeTranslations: TranslatedPresentation = {
   title: 'Bine ai venit!',
   examples: {
     addButton: 'Adaugă pisică',

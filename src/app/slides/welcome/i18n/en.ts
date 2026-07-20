@@ -1,7 +1,7 @@
-import { TranslatedSlideSet } from '@shared/models/translation.model';
+import { TranslatedPresentation } from '@shared/models/translation.model';
 import md from 'app/shared/markdown-compiler';
 
-const enWelcomeTranslations: TranslatedSlideSet = {
+const enWelcomeTranslations: TranslatedPresentation = {
   title: 'Welcome!',
   examples: {
     addButton: 'Add cat',

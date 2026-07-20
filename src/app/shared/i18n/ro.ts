@@ -42,7 +42,7 @@ const ro = {
     hideToc: 'Ascunde cuprinsul',
     showToc: 'Arată cuprinsul',
   },
-  sets: {
+  presentations: {
     welcome: roWelcomeTranslations,
     cats: roCatsTranslations,
   },

@@ -42,7 +42,7 @@ const en = {
     hideToc: 'Hide Table of Contents',
     showToc: 'Show Table of Contents'
   },
-  sets: {
+  presentations: {
     welcome: enWelcomeTranslations,
     cats: enCatsTranslations
   },

@@ -90,7 +90,7 @@
       box-shadow: 0 0 0 0 transparent;
     }
     15% {
-      box-shadow: 0 0 0 8px color-mix(in hsl, var(--text), transparent 50%);
+      box-shadow: 0 0 0 0.2lh color-mix(in hsl, var(--text), transparent 50%);
     }
     100% {
       box-shadow: 0 0 0 0 transparent;

@@ -26,12 +26,12 @@
 
 > [!CAUTION]
 > **This project is a work in progress and might contain bugs!**
-> 
+>
 > Please report any issues in the [Issues](https://github.com/ngx-md-slides/ngx-md-slides/issues) tab.
 
 ## Features:
 
-- Markdown and HTML/CSS 
+- Markdown and HTML/CSS
 - Live examples (Angular components)
 - Fullscreen option (via "Present" button)
 - Keyboard navigation
@@ -45,8 +45,8 @@
   - Fixed - Maintain an aspect ratio of 16:9 (zoom not supported)
   - Flexible - Allow web page behavior (zoom supported)
 - Width settings
-- Multiple slide sets
-- Language switcher and i18n setup (translations). Currently supports 2 languages but more can be added.
+- Multiple presentations (slide decks)
+- Language switcher and i18n setup (translations). Currently supports 2 languages but more can be easily added.
 - Responsive UI
 - Table of Contents
 - Accessibility tested (WCAG 2.2 AA)
@@ -65,9 +65,9 @@ src
 |__ app
 |____ layout ...
 |____ shared ...
-|____ slides <-- all slide sets
-|______ welcome <-- demo slide set
-|________ i18n <-- translations for welcome
+|____ presentations <-- all presentations
+|______ welcome <-- demo presentation
+|________ i18n <-- translations for the "welcome" presentation
 ```
 
 ### Adding live examples
@@ -82,9 +82,9 @@ Due to the fact that Markdown code is added to Typescript constants via backtick
 
 **Workaround**: Use the HTML <code>code</code> tag for inline code and the triple **tilde**(\~) for code blocks.
 
-| Don't   |      Do     |
-|:----------:|:-------------:|
-| &#96;code&#96; | `<code></code>` |
+|                       Don't                        |              Do              |
+| :------------------------------------------------: | :--------------------------: |
+|                   &#96;code&#96;                   |       `<code></code>`        |
 | &#96;&#96;&#96; p { color: pink; } &#96;&#96;&#96; | `~~~ p { color: pink; } ~~~` |
 
 ## How to run
@@ -92,9 +92,9 @@ Due to the fact that Markdown code is added to Typescript constants via backtick
 - Clone/Fork this project
 - Run `npm install` in the "ngx-md-slides" folder
 - Run `npm run start` for local development
-- Edit the translations in one of the slide sets to get started
+- Edit the translations in one of the presentations to get started
 
-## Recommended extensions 
+## Recommended extensions
 
 - [Array Index Inlay](https://marketplace.visualstudio.com/items?itemName=antfu.array-index-inlay) to make it easier to know which slide you're currently editing
 - [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) to highlight Markdown and HTML code in Typescript files

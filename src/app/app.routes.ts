@@ -9,12 +9,12 @@ export const routes: Routes = [
   {
     path: 'welcome',
     loadComponent: () => import('./slides/welcome/welcome').then((m) => m.Welcome),
-    data: { title: 'sets.welcome.title' },
+    data: { title: 'presentations.welcome.title' },
   },
   {
     path: 'cats',
     loadComponent: () => import('./slides/cats/cats').then((m) => m.Cats),
-    data: { title: 'sets.cats.title' },
+    data: { title: 'presentations.cats.title' },
   },
   {
     path: '**',

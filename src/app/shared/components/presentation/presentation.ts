@@ -18,10 +18,10 @@ import { TranslatedSlide } from '@shared/models/translation.model';
 import { CurrentRouteService } from 'app/shared/services/current-route.service';
 
 @Component({
-  selector: 'app-slide-set',
+  selector: 'app-presentation',
   template: ``,
 })
-export class SlideSet implements AfterViewInit, OnDestroy {
+export class Presentation implements AfterViewInit, OnDestroy {
   setName = '';
   attachComponentService = inject(AttachComponentService);
   translateService = inject(TranslateService);

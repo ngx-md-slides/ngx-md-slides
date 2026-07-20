@@ -1,7 +1,7 @@
-import { TranslatedSlideSet } from '@shared/models/translation.model';
+import { TranslatedPresentation } from '@shared/models/translation.model';
 import md from 'app/shared/markdown-compiler';
 
-const roCatsTranslations: TranslatedSlideSet = {
+const roCatsTranslations: TranslatedPresentation = {
   title: 'Pisici',
   slides: [
     {
