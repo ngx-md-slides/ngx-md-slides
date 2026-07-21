@@ -1,6 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideRouter, withEnabledBlockingInitialNavigation, withInMemoryScrolling } from '@angular/router';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import {
   provideTranslateService,
@@ -17,8 +16,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(
       routes,
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
+      withEnabledBlockingInitialNavigation()
     ),
-    provideClientHydration(withEventReplay()),
     provideTranslateService({
       loader: {
         provide: TranslateLoader,

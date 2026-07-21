@@ -1,5 +1,5 @@
 import { TranslatedPresentation } from '@shared/models/translation.model';
-import md from 'app/shared/markdown-compiler';
+import md from '@shared/markdown-compiler';
 
 const enWelcomeTranslations: TranslatedPresentation = {
   title: 'Welcome!',
@@ -21,7 +21,7 @@ const enWelcomeTranslations: TranslatedPresentation = {
       content: md`
 ## What is ngx-md-slides?
 
-It's a tool that helps you **create slides** using only code.
+It's a tool that helps you **create presentations** using only code.
       `,
     },
     {
@@ -43,7 +43,7 @@ It's a tool that helps you **create slides** using only code.
 
 - [Fork this project](https://github.com/ngx-md-slides/ngx-md-slides/fork) and modify it however you wish
 - Read the usage guide (work in progress) for more details
-- Or [check out the source code of this slide set](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/welcome/i18n/en.ts) first if you're curious
+- Or [check out the source code of this presentation](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/presentations/welcome/i18n/en.ts) first if you're curious
       `,
     },
     {

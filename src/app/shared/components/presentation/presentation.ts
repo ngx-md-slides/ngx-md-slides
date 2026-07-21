@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 
 import { AttachComponentService } from '@shared/services/attach-component.service';
 import { TranslatedSlide } from '@shared/models/translation.model';
-import { CurrentRouteService } from 'app/shared/services/current-route.service';
+import { CurrentRouteService } from '@shared/services/current-route.service';
 
 @Component({
   selector: 'app-presentation',

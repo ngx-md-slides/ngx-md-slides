@@ -28,13 +28,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: calc(var(--spacing) / 15);
 
     .logo-title {
       font-weight: 700;
     }
 
     .logo-subtitle {
-      font-size: 0.85em;
+      font-size: 0.8em;
     }
   }
 
@@ -179,6 +180,7 @@
         label {
           display: inline-flex;
           align-items: center;
+          gap: calc(var(--spacing) / 4);
           height: calc(var(--min-height-controls) - 2px); //minus the borders
           min-width: max-content;
           padding: 0 calc(var(--spacing) / 3);
@@ -194,7 +196,6 @@
               content: '✓' / '';
               display: flex;
               align-items: center;
-              margin-left: calc(var(--spacing) / 5);
               font-size: 13px;
             }
           }
@@ -220,6 +221,7 @@
     a {
       display: flex;
       align-items: center;
+      gap: calc(var(--spacing) / 4);
       padding: 0 calc(var(--spacing) / 3);
       color: inherit;
       text-decoration: none;
@@ -237,7 +239,6 @@
           content: '✓' / '';
           display: inline-flex;
           align-items: center;
-          margin-left: calc(var(--spacing) / 5);
           font-size: 13px;
         }
       }
@@ -245,6 +246,18 @@
       &:hover,
       &:focus-visible {
         background: var(--controls-hover);
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ::ng-deep svg {
+          --svg-size: 18px;
+          height: var(--svg-size);
+          width: var(--svg-size);
+        }
       }
     }
   }

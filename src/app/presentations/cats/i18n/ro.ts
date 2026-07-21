@@ -1,5 +1,5 @@
 import { TranslatedPresentation } from '@shared/models/translation.model';
-import md from 'app/shared/markdown-compiler';
+import md from '@shared/markdown-compiler';
 
 const roCatsTranslations: TranslatedPresentation = {
   title: 'Pisici',

@@ -1,7 +1,7 @@
 @use 'scss/mixins' as *;
 
 :host {
-  --toc-width: 250px;
+  --toc-width: 300px;
   --toc-toggle-button-width: var(--min-height-controls);
 
   position: sticky;
@@ -69,6 +69,7 @@
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin-left: -1px;
 
     .tooltip {
       right: unset;
@@ -103,10 +104,10 @@
     position: static;
     top: 0 !important;
     height: auto !important;
-    max-height: 50vh;
     width: 100%;
 
     .toc-container {
+      max-height: 50vh;
       border-bottom-right-radius: var(--radius);
       border-right: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);

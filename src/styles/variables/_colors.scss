@@ -12,8 +12,8 @@
   --shadow-color: light-dark(rgba(0 0 0 / 0.2), rgb(0 0 0));
   --backdrop-color: light-dark(rgba(10, 10, 20, 0.1), rgba(10, 10, 20, 0.2));
   --border-color: light-dark(
-    color-mix(var(--grey), var(--background) 60%),
-    color-mix(var(--grey), var(--background) 40%)
+    color-mix(var(--grey), var(--background) 65%),
+    color-mix(var(--grey), var(--background) 45%)
   );
   --border-color-transparent: light-dark(
     color-mix(in hsl, var(--border-color), white 20%),
@@ -25,8 +25,8 @@
   );
   --controls-background: var(--background-transparent);
   --checked-controls-background: light-dark(
-    oklch(from var(--grey) calc(l + 0.32) c h),
-    oklch(from var(--grey) calc(l - 0.45) c h)
+    oklch(from var(--grey) calc(l + 0.32) calc(c - 0.01) h),
+    oklch(from var(--grey) calc(l - 0.45) calc(c - 0.01) h)
   );
 
   /**  SLIDE BACKGROUND COLORS: **/

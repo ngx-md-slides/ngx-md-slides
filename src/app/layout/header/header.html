@@ -1,5 +1,5 @@
 <div class="left-container">
-  <button id="menu-title"
+  <button id="presentations"
           class="header-option menu"
           commandfor="main-menu"
           command="toggle-popover"
@@ -9,7 +9,7 @@
   </button>
 
   <dialog popover
-          aria-labelledby="menu-title"
+          aria-labelledby="presentations"
           id="main-menu">
     <nav id="nav"
          tabindex="-1">
@@ -19,7 +19,9 @@
          [fragment]="'slides-start'"
          routerLinkActive="active"
          ariaCurrentWhenActive="page"
-         (click)="closeMenuPopover()">{{route.data?.['title'] | translate}}
+         (click)="closeMenuPopover()">
+        <app-file-icon class="icon"></app-file-icon>
+        {{route.data?.['title'] | translate}}
       </a>
       }
       }
@@ -186,7 +188,7 @@
 </div>
 
 <div class="logo">
-  <span class="logo-title">Slides</span>
+  <span class="logo-title">ngx-md-slides</span>
   <span class="logo-subtitle">
     by <a href="https://chiosa.dev">Teodora Chiosa</a>
   </span>

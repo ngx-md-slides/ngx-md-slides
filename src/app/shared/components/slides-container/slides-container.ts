@@ -168,6 +168,15 @@ export class SlidesContainer {
 
           this.currentSlide = middleIndex;
           this.state.currentSlide = this.currentSlide;
+
+          // Assume scrolling means you've abandoned keyboard navigation and you want to present the slide you're currently looking at:
+          if (
+            this.allSlides &&
+            this.stateService.getState()().activeElement?.closest('app-slide') !==
+              this.allSlides[this.currentSlide]
+          ) {
+            this.state.activeElement = undefined;
+          }
           this.stateService.setState(this.state);
 
           if (typeof this.allSlides !== 'undefined') {

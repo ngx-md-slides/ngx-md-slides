@@ -15,13 +15,14 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { State } from 'app/shared/models/state.model';
-import { TranslatedSlide } from 'app/shared/models/translation.model';
-import { CurrentRouteService } from 'app/shared/services/current-route.service';
-import { StateService } from 'app/shared/services/state.service';
 import { Subscription } from 'rxjs';
-import { PanelLeftCloseIcon } from '../icons/panel-left-close-icon/panel-left-close-icon';
-import { PanelLeftOpenIcon } from '../icons/panel-left-open-icon/panel-left-open-icon';
+
+import { State } from '@shared/models/state.model';
+import { TranslatedSlide } from '@shared/models/translation.model';
+import { CurrentRouteService } from '@shared/services/current-route.service';
+import { StateService } from '@shared/services/state.service';
+import { PanelLeftCloseIcon } from '@shared/components/icons/panel-left-close-icon/panel-left-close-icon';
+import { PanelLeftOpenIcon } from '@shared/components/icons/panel-left-open-icon/panel-left-open-icon';
 
 const SCROLL_MARGIN_OFFSET = 100;
 /* _mixins.scss should also be updated */

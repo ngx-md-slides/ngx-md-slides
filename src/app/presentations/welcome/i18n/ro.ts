@@ -1,5 +1,5 @@
 import { TranslatedPresentation } from '@shared/models/translation.model';
-import md from 'app/shared/markdown-compiler';
+import md from '@shared/markdown-compiler';
 
 const roWelcomeTranslations: TranslatedPresentation = {
   title: 'Bine ai venit!',
@@ -21,7 +21,7 @@ const roWelcomeTranslations: TranslatedPresentation = {
       content: md`
 ## Ce este ngx-md-slides?
 
-Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
+Este un tool care te ajută să **creezi prezentări** folosind numai cod.
       `,
     },
     {
@@ -43,7 +43,7 @@ Este un tool care te ajută să **creezi slide-uri** folosind numai cod.
 
 - [Dai Fork la acest proiect](https://github.com/ngx-md-slides/ngx-md-slides/fork) și-l modifici cum dorești
 - Citește ghidul de utilizare (în desfășurare) pentru mai multe detalii
-- Sau [vezi codul sursă al acestui set de slide-uri](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/slides/welcome/i18n/en.ts) mai întâi dacă ești curios
+- Sau [vezi codul sursă al acestui set de slide-uri](https://github.com/ngx-md-slides/ngx-md-slides/blob/master/src/app/presentations/welcome/i18n/ro.ts) mai întâi dacă ești curios
       `,
     },
     {

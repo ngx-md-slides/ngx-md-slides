@@ -2,19 +2,20 @@ import { AfterViewInit, Component, DOCUMENT, HostListener, inject, OnInit } from
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive, Routes } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { fromEvent } from 'rxjs';
 
 import { State, Theme, Layout } from '@shared/models/state.model';
 import { ContentLanguage } from '@shared/models/content-language.model';
 import { StateService } from '@shared/services/state.service';
-import { FolderOpenIcon } from 'app/shared/components/icons/folder-open-icon/folder-open-icon';
+import { FolderOpenIcon } from '@shared/components/icons/folder-open-icon/folder-open-icon';
 import { SettingsIcon } from '@shared/components/icons/settings-icon/settings-icon';
 import { PresentationIcon } from '@shared/components/icons/presentation-icon/presentation-icon';
-import { routes } from 'app/app.routes';
+import { PlusIcon } from '@shared/components/icons/plus-icon/plus-icon';
+import { MinusIcon } from '@shared/components/icons/minus-icon/minus-icon';
+import { FileIcon } from '@shared/components/icons/file-icon/file-icon';
 import { LocalStorageService } from '@shared/services/local-storage.service';
-import { NotificationService } from 'app/shared/services/notification.service';
-import { fromEvent } from 'rxjs';
-import { PlusIcon } from 'app/shared/components/icons/plus-icon/plus-icon';
-import { MinusIcon } from 'app/shared/components/icons/minus-icon/minus-icon';
+import { NotificationService } from '@shared/services/notification.service';
+import { routes } from 'app/app.routes';
 
 const WIDTH_STEP = 10;
 const WIDTH_MIN = 10;
@@ -31,7 +32,8 @@ const WIDTH_MAX = 100;
     SettingsIcon,
     PresentationIcon,
     PlusIcon,
-    MinusIcon
+    MinusIcon,
+    FileIcon,
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
@@ -184,7 +186,7 @@ export class Header implements OnInit, AfterViewInit {
     if (typeof this.document !== 'undefined') {
       this.document.documentElement.style.setProperty(
         'color-scheme',
-        ['light', 'dark'].includes(this.theme) ? this.theme as string : 'light dark',
+        ['light', 'dark'].includes(this.theme) ? (this.theme as string) : 'light dark',
       );
     }
   }
