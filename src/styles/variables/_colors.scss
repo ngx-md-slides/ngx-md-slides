@@ -6,8 +6,8 @@
   --background: light-dark(rgb(230 230 240), rgb(15 15 25));
   --grey: rgb(127, 127, 137);
   --background-transparent: light-dark(
-    rgba(255, 255, 255, var(--background-transparency)),
-    rgba(35, 35, 45, var(--background-transparency))
+    rgb(255, 255, 255),
+    rgb(35, 35, 45)
   );
   --shadow-color: light-dark(rgba(0 0 0 / 0.2), rgb(0 0 0));
   --backdrop-color: light-dark(rgba(10, 10, 20, 0.1), rgba(10, 10, 20, 0.2));
